@@ -41,14 +41,14 @@
     <!-- section form * -->
     <form class="program-selection-form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="program-selection-form__header">
-        <h1 class="program-selection-form__title form-title-h1">подбор программы</h1>
+        <h1 class="program-selection-form__title-h1">подбор программы</h1>
         <p class="program-selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
       </div>
 
       <div class="program-selection-form__wrapper">
         <div class="program-selection-form__cat-data cat-data">
-          <h2 class="visually-hidden">Имя и данные кота</h2>
+          <h2 class="cat-data__title program-selection-form__title-h2 program-selection-form__title-h2--hidden">Имя и данные кота</h2>
 
           <div class="cat-data__block-wrapper">
             <label class="cat-data__label program-selection-form__label" for="field-cat-name">ИМЯ:*</label>
@@ -67,7 +67,7 @@
         </div>
 
         <div class="program-selection-form__target-program target-program">
-          <h2 class="visually-hidden">Цель программы</h2>
+          <h2 class="target-program__title program-selection-form__title-h2 program-selection-form__title-h2--hidden">Цель программы</h2>
           <div class="target-program__block-wrapper">
             <input class="target-program__input program-selection-form__input-radio program-selection-form__input-radio--checked" type="radio" name="target-program" value="slim" id="field-target-slim"
               checked>
@@ -88,7 +88,7 @@
       </div>
 
       <div class="program-selection-form__cat-owner-data cat-owner-data">
-        <h2 class="program-selection-form__title-h2">Контактные данные (владельца кота)</h2>
+        <h2 class="cat-owner-data__title program-selection-form__title-h2">Контактные данные (владельца кота)</h2>
 
         <div class="cat-owner-data__block-wrapper">
           <label class="cat-owner-data__label program-selection-form__label" for="field-cat-owner-email">Email:*</label>
