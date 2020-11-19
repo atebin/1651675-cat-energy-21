@@ -1,1 +1,19 @@
-// Начните писать стили здесь
+// GLOBAL
+
+@import "global/variables.scss";
+@import "global/common.scss";
+
+
+// PAGES
+
+@import "pages/index/page.scss";
+@import "pages/index/page-header.scss";
+@import "pages/index/page-main.scss";
+
+
+// BLOCKS
+
+@import "blocks/main-nav-toggle__decor.scss";
+@import "blocks/main-nav-list__decor.scss";
+@import "blocks/main-nav-list.scss";
+@import "blocks/programs-list.scss";

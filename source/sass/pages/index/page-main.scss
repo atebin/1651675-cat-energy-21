@@ -1,0 +1,35 @@
+// *** LAYOUT ONLY !!!
+
+.page-main {
+
+  &__top-banner {
+
+    margin: 0;
+    padding: 27px 0 0;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $breakpoint-desctop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  /*&__programs {
+
+  }*/
+
+  &__programs-list{
+
+    @media screen and (min-width: $breakpoint-desctop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+}

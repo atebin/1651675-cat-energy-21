@@ -1,0 +1,54 @@
+// *** LAYOUT ONLY
+
+.programs-list {
+
+  &__item {
+    display: flex;
+  }
+
+  &__header,
+  &__footer {
+    display: flex;
+  }
+
+  &__image-medium,
+  &__image-size-m {
+
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    @media screen and (min-width: $breakpoint-desctop) {
+      display: none;
+    }
+  }
+
+  &__image-size-s {
+
+    display: block;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $breakpoint-desctop) {
+      display: none;
+    }
+  }
+
+  &__image-size-l {
+
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $breakpoint-desctop) {
+      display: block;
+    }
+  }
+
+}
