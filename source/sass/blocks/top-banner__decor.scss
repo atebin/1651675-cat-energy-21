@@ -1,0 +1,36 @@
+// *** COLOR - DECOR - FONT
+
+.top-banner {
+  /* empty */
+
+  .top-banner__background {
+    &::before {
+      position: absolute;
+      background-color: $sg--basic_green;
+      opacity: 0.85;
+      content: "";
+      width: 320px;
+      height: 302px;
+    }
+  }
+
+  .top-banner__action {
+    @include set-font("Oswald", 14px, 18px, uppercase);
+    background-color: $sg--basic_green;
+    color: $gl--white;
+    border: none;
+  }
+
+  .top-banner__title {
+    @include set-font("Oswald", 36px, 36px);
+    font-weight: 400;
+    text-align: center;
+    color: $gl--white;
+  }
+
+  .top-banner__slogan {
+    @include set-font("Oswald", 14px, 14px, uppercase);
+    text-align: center;
+    color: $gl--white;
+  }
+}

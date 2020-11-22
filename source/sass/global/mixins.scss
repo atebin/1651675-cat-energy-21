@@ -1,0 +1,8 @@
+// FONTS
+
+@mixin set-font($name, $size, $line, $transform: "none") {
+  font-family: $name, sans-serif;
+  font-size: $size;
+  line-height: $line;
+  text-transform: $transform;
+}

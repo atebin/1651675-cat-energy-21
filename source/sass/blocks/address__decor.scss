@@ -10,4 +10,16 @@
   .address__info {
     background-color: $gl--white;
   }
+
+  .address__message {
+    @include set-font("Oswald", 16px, 18px, uppercase);
+    font-weight: 400;
+    color: $gl--gray_na2;
+  }
+
+  .address__location {
+    @include set-font("Arial", 14px, 20px);
+    font-weight: 400;
+    color: $sg--special_dark_grey;
+  }
 }

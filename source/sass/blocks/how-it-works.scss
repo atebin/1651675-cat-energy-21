@@ -14,7 +14,7 @@
   $number--left: 33px;
   // --- variable ---
 
-  margin: 0;
+  //margin: 0;
   padding: 0;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
@@ -32,6 +32,10 @@
     justify-content: space-between;
     width: 100%;
 
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
     @media screen and (min-width: $gl--breakpoint--tablet) {
       display: block;
       width: calc((100% - #{$item--interval-h--tablet}) / 2);
@@ -45,7 +49,7 @@
   }
 
   .how-it-works__icons {
-    /* empty */
+    margin-right: 20px;
   }
 
   .how-it-works__icon-size-s {

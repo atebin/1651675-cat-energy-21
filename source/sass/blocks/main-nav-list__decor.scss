@@ -23,13 +23,15 @@
   }
 
   .main-nav-list__link {
-
-    display: inline-block;
-    color: $color-text;
     text-decoration: none;
+    display: inline-block;
+
+    @include set-font("Oswald", 20px, 20px, uppercase);
+    font-weight: 500;
+    color: $gl--black;
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      color: $color-text--theme-dark;
+      color: $gl--white;
     }
   }
 }

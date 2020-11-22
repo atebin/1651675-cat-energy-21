@@ -1,0 +1,39 @@
+// *** LAYOUT ONLY !!!
+
+.top-banner {
+  /* empty */
+
+  .top-banner__wrapper {
+    position: relative;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  .top-banner__title {
+    margin: 27px 0 25px;
+  }
+
+  .top-banner__active-element {
+    position: absolute;
+    z-index: -1;
+    top: 167px;
+    left: 0;
+    right: 0;
+  }
+
+  .top-banner__background {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: -20px;
+    right: -20px;
+  }
+
+  .top-banner__action {
+    width: 100%;
+    height: 40px;
+  }
+}

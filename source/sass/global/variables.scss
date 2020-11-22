@@ -1,15 +1,37 @@
 // BREAKPOINT
 
-$gl--breakpoint--mobile: 360px;//768px;
-$gl--breakpoint--tablet: 768px;//768px;
-$gl--breakpoint--desctop: 1440px;//1440px;
+$gl--breakpoint--mobile: 320px;
+$gl--breakpoint--tablet: 768px;
+$gl--breakpoint--desctop: 1440px;
+
+$gl--padding-side--mobile: 20px;
+$gl--padding-side--tablet: 30px;
+$gl--padding-side--desctop: 110px;
+
+$gl--padding-top--mobile: 12px;
+$gl--padding-top--tablet: 24px;
+$gl--padding-top--desctop: 53px;
+
+$gl--padding-bottom--mobile: 22px;
+$gl--padding-bottom--tablet: 61px;
+$gl--padding-bottom--desctop: 58px;
+
+$gl--width--mobile: $gl--breakpoint--mobile - 2 * $gl--padding-side--mobile;
+$gl--width--tablet: $gl--breakpoint--tablet - 2 * $gl--padding-side--tablet;
+$gl--width--desctop: $gl--breakpoint--desctop - 2 * $gl--padding-side--desctop;
 
 // COLORS
 
-$sg--basic_grey: #f2f2f2; //styleguide
-$sg--special_grey: #cdcdcd; //styleguide
+//styleguide
+$sg--basic_grey: #f2f2f2;
+$sg--special_grey: #cdcdcd;
+$sg--special_dark_grey: #444444;
+$sg--basic_green: #68b738;
 
 $gl--white: #ffffff; // Нет в styleguide!
+$gl--black: #000000; // Нет в styleguide!
+$gl--gray_na1: #d9d9d9;
+$gl--gray_na2: #111111;
 
 $color-text: #000000;
 $color-text--theme-light: #000000;

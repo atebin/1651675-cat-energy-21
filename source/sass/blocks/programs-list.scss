@@ -1,16 +1,37 @@
 // *** LAYOUT ONLY
 
 .programs-list {
-  margin: 0;
   padding: 0;
 
   .programs-list__item {
     display: flex;
+    min-height: 266px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 22px 22px 18px;
   }
 
-  .programs-list__header,
+  .programs-list__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .programs-list__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
   .programs-list__footer {
     display: flex;
+    height: 38px;
+    box-sizing: border-box;
+    padding-top: 15px;
+  }
+
+  .programs-list__goto_catalog {
+    height: 16px; //    временно, до установки иконки
   }
 
   .programs-list__image-medium,

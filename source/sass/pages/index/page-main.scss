@@ -5,21 +5,12 @@
 
   .page-main__top-banner {
     margin: 0;
-    padding: 27px 0 0;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+    padding: 0; //27px 0 0;
   }
 
   .page-main__programs-list {
+    margin: 0 0 27px;
+
     @media screen and (min-width: $gl--breakpoint--desctop) {
       display: flex;
       flex-direction: row;

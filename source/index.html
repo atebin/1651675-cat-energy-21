@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
-  <!-- header ** -->
+  <!-- header *** -->
   <header class="page-header">
     <div class="page-header__wrapper">
       <ul class="page-header__logo-list">
@@ -83,17 +85,29 @@
 
   <main class="page-main">
 
-    <!-- section main-header ** -->
+    <!-- section main-header *** -->
     <section class="page-main__top-banner top-banner">
-      <h1 class="top-banner__title">Функциональное питание для котов</h1>
+      <div class="top-banner__wrapper">
+        <div class="top-banner__wrapper-top">
+          <h1 class="top-banner__title">Функциональное питание для котов</h1>
 
-      <div class="top-banner__slogan">Занялся собой? Займись котом!</div>
-      <div class="top-banner__active-element">
-        <!-- image через свойства css -->
-      </div>
-      <button class="top-banner__action" type="button">подобрать программу</button>
-      <div class="top-banner__background">
-        <!-- image через свойства css -->
+          <div class="top-banner__slogan">Занялся собой? Займись котом!</div>
+        </div>
+        <button class="top-banner__action" type="button">подобрать программу</button>
+        <div class="top-banner__active-element">
+          <img
+            src="./img/background/active-element-s.png"
+            width="280" height="270"
+            alt="Изображение бумажного стакана с кормом>"
+          >
+        </div>
+        <div class="top-banner__background">
+          <img
+            src="./img/background/background-banner-s.png"
+            width="320" height="302"
+            alt="Фоновое изображение кота"
+          >
+        </div>
       </div>
     </section>
 
@@ -105,17 +119,19 @@
       <div class="page-main__programs-list programs-list">
         <div class="programs-list__item">
           <div class="programs-list__info">
-            <div class="programs-list__header">
-              <img class="programs-list__image-size-s" src="./img/pict/cat_slim_s.png" width="50" height="53"
-                alt="Картинка раздела каталога slim">
-              <img class="programs-list__image-size-l" src="./img/pict/cat_slim_l.png" width="100" height="106"
-                alt="Картинка раздела каталога slim">
-              <div class="programs-list__target">Похудение</div>
-            </div>
+            <div class="programs-list__info-wrapper">
+              <div class="programs-list__header">
+                <img class="programs-list__image-size-s" src="./img/pict/cat_slim_s.png" width="50" height="53"
+                  alt="Картинка раздела каталога slim">
+                <img class="programs-list__image-size-l" src="./img/pict/cat_slim_l.png" width="100" height="106"
+                  alt="Картинка раздела каталога slim">
+                <div class="programs-list__target">Похудение</div>
+              </div>
 
-            <div class="programs-list__description">
-              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
-              поможет вашему питомцу сбросить лишний вес.
+              <div class="programs-list__description">
+                Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+                поможет вашему питомцу сбросить лишний вес.
+              </div>
             </div>
 
             <div class="programs-list__footer">
@@ -134,17 +150,19 @@
 
         <div class="programs-list__item">
           <div class="programs-list__info">
-            <div class="programs-list__header">
-              <img class="programs-list__image-size-s" src="./img/pict/cat_pro_s.png" width="67" height="50"
-                alt="Картинка раздела каталога pro">
-              <img class="programs-list__image-size-l" src="./img/pict/cat_pro_l.png" width="134" height="100"
-                alt="Картинка раздела каталога pro">
-              <div class="programs-list__target">Набор массы</div>
-            </div>
+            <div class="programs-list__info-wrapper">
+              <div class="programs-list__header">
+                <img class="programs-list__image-size-s" src="./img/pict/cat_pro_s.png" width="67" height="50"
+                  alt="Картинка раздела каталога pro">
+                <img class="programs-list__image-size-l" src="./img/pict/cat_pro_l.png" width="134" height="100"
+                  alt="Картинка раздела каталога pro">
+                <div class="programs-list__target">Набор массы</div>
+              </div>
 
-            <div class="programs-list__description">
-              Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
-              необходимые мышцы!
+              <div class="programs-list__description">
+                Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+                необходимые мышцы!
+              </div>
             </div>
 
             <div class="programs-list__footer">
@@ -335,6 +353,7 @@
     </section>
   </main>
 
+  <!-- footer *** -->
   <footer class="page-footer">
     <div class="page-footer__wrapper">
 
@@ -347,76 +366,78 @@
       </div>
 
       <div class="page-footer__social">
-        <ul class="page-footer__social-list">
-          <li class="page-footer__social-item">
-            <a class="page-footer__social-link" href="https://vk.com/htmlacademy">
-              <img
-                class="page__logo-size-s"
-                src="./img/logo/logo-social-vkontakte-s.png"
-                width="23" height="16"
-                alt="Иконка Вконтаке"
-              >
-              <img
-                class="page__logo-size-m"
-                src="./img/logo/logo-social-vkontakte-m-l.png"
-                width="30" height="22"
-                alt="Иконка Вконтаке"
-              >
-              <img
-                class="page__logo-size-l"
-                src="./img/logo/logo-social-vkontakte-m-l.png"
-                width="30" height="22"
-                alt="Иконка Вконтаке"
-              >
-            </a>
-          </li>
+        <div class="page-footer__social-wrapper">
+          <ul class="page-footer__social-list">
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link" href="https://vk.com/htmlacademy">
+                <img
+                  class="page__logo-size-s"
+                  src="./img/logo/logo-social-vkontakte-s.png"
+                  width="23" height="16"
+                  alt="Иконка Вконтаке"
+                >
+                <img
+                  class="page__logo-size-m"
+                  src="./img/logo/logo-social-vkontakte-m-l.png"
+                  width="30" height="22"
+                  alt="Иконка Вконтаке"
+                >
+                <img
+                  class="page__logo-size-l"
+                  src="./img/logo/logo-social-vkontakte-m-l.png"
+                  width="30" height="22"
+                  alt="Иконка Вконтаке"
+                >
+              </a>
+            </li>
 
-          <li class="page-footer__social-item">
-            <a class="page-footer__social-link" href="https://www.instagram.com/htmlacademy">
-              <img
-                class="page__logo-size-s"
-                src="./img/logo/logo-social-instagram-s.png"
-                width="16" height="16"
-                alt="Иконка Инстаграм"
-              >
-              <img
-                class="page__logo-size-m"
-                src="./img/logo/logo-social-instagram-m-l.png"
-                width="23" height="23"
-                alt="Иконка Вконтаке"
-              >
-              <img
-                class="page__logo-size-l"
-                src="./img/logo/logo-social-instagram-m-l.png"
-                width="23" height="23"
-                alt="Иконка Вконтаке"
-              >
-            </a>
-          </li>
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link" href="https://www.instagram.com/htmlacademy">
+                <img
+                  class="page__logo-size-s"
+                  src="./img/logo/logo-social-instagram-s.png"
+                  width="16" height="16"
+                  alt="Иконка Инстаграм"
+                >
+                <img
+                  class="page__logo-size-m"
+                  src="./img/logo/logo-social-instagram-m-l.png"
+                  width="23" height="23"
+                  alt="Иконка Вконтаке"
+                >
+                <img
+                  class="page__logo-size-l"
+                  src="./img/logo/logo-social-instagram-m-l.png"
+                  width="23" height="23"
+                  alt="Иконка Вконтаке"
+                >
+              </a>
+            </li>
 
-          <li class="page-footer__social-item">
-            <a class="page-footer__social-link" href="https://www.facebook.com/htmlacademy">
-              <img
-                class="page__logo-size-s"
-                src="./img/logo/logo-social-facebook-s.png"
-                width="22" height="22"
-                alt="Иконка Фэйсбук"
-              >
-              <img
-                class="page__logo-size-m"
-                src="./img/logo/logo-social-facebook-m-l.png"
-                width="28" height="33"
-                alt="Иконка Вконтаке"
-              >
-              <img
-                class="page__logo-size-l"
-                src="./img/logo/logo-social-facebook-m-l.png"
-                width="28" height="33"
-                alt="Иконка Вконтаке"
-              >
-            </a>
-          </li>
-        </ul>
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link" href="https://www.facebook.com/htmlacademy">
+                <img
+                  class="page__logo-size-s"
+                  src="./img/logo/logo-social-facebook-s.png"
+                  width="22" height="22"
+                  alt="Иконка Фэйсбук"
+                >
+                <img
+                  class="page__logo-size-m"
+                  src="./img/logo/logo-social-facebook-m-l.png"
+                  width="28" height="33"
+                  alt="Иконка Вконтаке"
+                >
+                <img
+                  class="page__logo-size-l"
+                  src="./img/logo/logo-social-facebook-m-l.png"
+                  width="28" height="33"
+                  alt="Иконка Вконтаке"
+                >
+              </a>
+            </li>
+          </ul>        </div>
+
       </div>
 
       <div class="page-footer__copyright">

@@ -7,8 +7,11 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 67px 71px 62px;
-    width: $gl--breakpoint--mobile;
+
+    min-height: 114px;
+    box-sizing: border-box;
+    padding: 0;
+    width: $gl--width--mobile;
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       /* empty */
@@ -34,7 +37,8 @@
 
   .address__map-size-s {
     display: block;
-    margin: 0 auto;
+    //margin: 0 auto;
+    margin-left: $gl--padding-side--mobile * (-1);
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       display: none;
@@ -42,8 +46,9 @@
   }
 
   .address__map-size-m {
-    margin: 0 auto;
+    //margin: 0 auto;
     display: none;
+    margin-left: $gl--padding-side--tablet * (-1);
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       display: block;
@@ -55,8 +60,9 @@
   }
 
   .address__map-size-l {
-    margin: 0 auto;
+    //margin: 0 auto;
     display: none;
+    margin-left: $gl--padding-side--desctop * (-1);
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       display: block;

@@ -8,4 +8,10 @@
     font-size: 280px;
     line-height: 1;
   }
+
+  .how-it-works__text {
+    @include set-font("Arial", 14px, 18px);
+    font-weight: 400;
+    color: $sg--special_dark_grey;
+  }
 }
