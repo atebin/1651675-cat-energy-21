@@ -1,0 +1,65 @@
+// *** LAYOUT ONLY !!!
+
+.address {
+  /* empty */
+
+  .address__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 67px 71px 62px;
+    width: $gl--breakpoint--mobile;
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      /* empty */
+    }
+  }
+
+  .address__location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .address__map {
+    position: relative;
+  }
+
+  .address__pointer {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+  }
+
+  .address__map-size-s {
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+  }
+
+  .address__map-size-m {
+    margin: 0 auto;
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: block;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: none;
+    }
+  }
+
+  .address__map-size-l {
+    margin: 0 auto;
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: block;
+    }
+  }
+}

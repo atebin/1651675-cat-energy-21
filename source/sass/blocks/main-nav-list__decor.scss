@@ -1,34 +1,35 @@
 // *** COLOR - DECOR - FONT
 
 .main-nav-list {
-  &__item {
+  /* empty */
+
+  .main-nav-list__item {
 
     border-top: 1px solid $line-border-light;
     list-style: none;
     text-transform: uppercase;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       border-top: none;
     }
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       background-color: lightgreen;/* - временно, до установки картинки на фон в баннере*/
     }
 
-    &--active .main-nav-list__link{
-      display: inline-block;
-      border-bottom: 1px solid;;
+    &--active .main-nav-list__link {
+      border-bottom: 1px solid;
     }
   }
 
-  &__link {
+  .main-nav-list__link {
 
+    display: inline-block;
     color: $color-text;
     text-decoration: none;
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       color: $color-text--theme-dark;
     }
   }
-
 }

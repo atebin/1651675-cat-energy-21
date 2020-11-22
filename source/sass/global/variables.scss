@@ -1,9 +1,15 @@
 // BREAKPOINT
 
-$breakpoint-tablet: 768px;
-$breakpoint-desctop: 1440px;
+$gl--breakpoint--mobile: 360px;//768px;
+$gl--breakpoint--tablet: 768px;//768px;
+$gl--breakpoint--desctop: 1440px;//1440px;
 
 // COLORS
+
+$sg--basic_grey: #f2f2f2; //styleguide
+$sg--special_grey: #cdcdcd; //styleguide
+
+$gl--white: #ffffff; // Нет в styleguide!
 
 $color-text: #000000;
 $color-text--theme-light: #000000;

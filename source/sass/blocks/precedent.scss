@@ -1,0 +1,53 @@
+// *** LAYOUT ONLY !!!
+
+.precedent {
+
+  // --- variable ---
+  $item--width--mobile: 124px;
+  $item--width--tablet: 162px;
+
+  $item--size-ratio: 1.5;
+
+  $item--interval-h--mobile: 31px;
+  $item--interval-h--tablet: 42px;
+  // --- variable ---
+
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    display: block;
+  }
+
+  .precedent__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-width: $item--width--mobile * 2 + $item--interval-h--mobile;
+    max-width: ($item--width--mobile * 2 + $item--interval-h--mobile) * $item--size-ratio;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: $item--width--tablet * 2 + $item--interval-h--tablet;
+    }
+  }
+
+  .precedent__item {
+    width: calc((100% - $item--interval-h--mobile) / 2);
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: calc((100% - $item--interval-h--tablet) / 2);
+    }
+
+    &--special {
+      width: 100%;
+    }
+  }
+}

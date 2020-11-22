@@ -1,4 +1,43 @@
+// *** LAYOUT ONLY !!!
+
 .page {
   margin: 0;
   padding: 0;
+
+
+  .page__logo-size-s {
+    display: inline-block;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: none;
+    }
+  }
+
+  .page__logo-size-m {
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: inline-block;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: none;
+    }
+  }
+
+  .page__logo-size-l {
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: inline-block;
+    }
+  }
 }

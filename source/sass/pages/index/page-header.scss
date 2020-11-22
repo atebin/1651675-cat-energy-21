@@ -1,18 +1,16 @@
 // *** LAYOUT ONLY
 
 .page-header {
-
-  // *** COLOR
-  color: $color-text;
+  /* empty */
 
   ////////////////////////////////////////////////////////////////////////////
   // wrapper
 
-  &__wrapper {
+  .page-header__wrapper {
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -21,86 +19,36 @@
   ////////////////////////////////////////////////////////////////////////////
   // logo
 
-  &__logo-list {
-
+  .page-header__logo-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    list-style: none;
 
     height: 66px;
     margin: 0;
     padding: 0;
 
-    @media screen and (min-width: $breakpoint-tablet) {
-      &__logo-list {
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  &__logo-icon-size-s {
-
-    display: inline-block;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $breakpoint-desctop) {
-      display: none;
-    }
-  }
-
-  &__logo-icon-size-m {
-
-    display: none;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      display: inline-block;
-    }
-
-    @media screen and (min-width: $breakpoint-desctop) {
-      display: none;
-    }
-  }
-
-  &__logo-icon-size-l {
-
-    display: none;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $breakpoint-desctop) {
-      display: inline-block;
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      justify-content: flex-start;
     }
   }
 
   ////////////////////////////////////////////////////////////////////////////
   // main-nav
 
-  &__main-nav-toggle {
-
-    @media screen and (min-width: $breakpoint-tablet) {
+  .page-header__main-nav-toggle {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       display: none;
     }
   }
 
-  &__main-nav-list {
-
+  .page-header__main-nav-list {
     display: flex;
     flex-direction: column;
 
-    margin: 0;
-    padding: 0;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       flex-direction: row;
       justify-content: flex-end;
     }
   }
-
 }

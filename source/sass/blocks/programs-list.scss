@@ -1,54 +1,52 @@
 // *** LAYOUT ONLY
 
 .programs-list {
+  margin: 0;
+  padding: 0;
 
-  &__item {
+  .programs-list__item {
     display: flex;
   }
 
-  &__header,
-  &__footer {
+  .programs-list__header,
+  .programs-list__footer {
     display: flex;
   }
 
-  &__image-medium,
-  &__image-size-m {
-
+  .programs-list__image-medium,
+  .programs-list__image-size-m {
     display: none;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       display: block;
     }
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       display: none;
     }
   }
 
-  &__image-size-s {
-
+  .programs-list__image-size-s {
     display: block;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       display: none;
     }
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       display: none;
     }
   }
 
-  &__image-size-l {
-
+  .programs-list__image-size-l {
     display: none;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       display: none;
     }
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       display: block;
     }
   }
-
 }

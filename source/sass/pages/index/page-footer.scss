@@ -1,0 +1,38 @@
+// *** LAYOUT ONLY
+
+.page-footer {
+  /* empty */
+
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: $gl--breakpoint--mobile;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: $gl--breakpoint--tablet;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      width: $gl--breakpoint--desctop;
+    }
+  }
+
+  .page-footer__logo {
+    text-align: center;
+  }
+
+  .page-footer__social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__copyright-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,27 @@
+// *** LAYOUT ONLY !!!
+
+.before-after {
+  /* empty */
+
+  .before-after__control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .before-after__control-check {
+    display: block;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+  }
+
+  .before-after__control-slide {
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: block;
+    }
+  }
+}

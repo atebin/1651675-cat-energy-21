@@ -1,35 +1,90 @@
 // *** LAYOUT ONLY !!!
 
 .page-main {
+  /* empty */
 
-  &__top-banner {
-
+  .page-main__top-banner {
     margin: 0;
     padding: 27px 0 0;
 
-    @media screen and (min-width: $breakpoint-tablet) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
 
-    @media screen and (min-width: $breakpoint-desctop) {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
-  /*&__programs {
-
-  }*/
-
-  &__programs-list{
-
-    @media screen and (min-width: $breakpoint-desctop) {
+  .page-main__programs-list {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
+  .page-main__steps-list {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .page-main__example {
+    .page-main__example-wrapper {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .page-main__example-info {
+      /* empty */
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        width: calc(100% - 690px);
+      }
+
+      .page-main__example-title {
+        /* empty */
+      }
+
+      .page-main__example-result {
+        /* empty */
+      }
+
+      .page-main__example-precedent {
+        /* empty */
+      }
+    }
+
+    .page-main__example-photo {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        width: 690px;
+      }
+    }
+  }
+
+  .page-main__address {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      position: relative;
+    }
+
+    .address__info {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        position: absolute;
+        z-index: 1;
+        top: 95px;
+        left: 110px;
+        bottom: 104px;
+      }
+    }
+  }
 }
