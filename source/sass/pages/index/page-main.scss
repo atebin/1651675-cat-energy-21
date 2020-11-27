@@ -1,0 +1,42 @@
+.page-main__programs-list {
+  margin: 0 0 27px;
+}
+
+.page-main__steps-title {
+  @include set-font("Oswald", 36px, 40px);
+  font-weight: 400;
+  color: $sg--black;
+  padding: 0 $gl--padding-side--mobile;
+  margin: 0 0 38px;
+}
+
+.page-main__steps {
+  margin: 0 0 42px;
+}
+
+.page-main__example {
+  padding: 27px $gl--padding-side--mobile 25px;
+  background-color: $sg--gray_na3;
+}
+
+.page-main__example-wrapper {
+  display: block;
+}
+
+.page-main__example-info {
+  margin: 0 0 42px;
+}
+
+.page-main__example-title {
+  @include set-font("Oswald", 36px, 40px);
+  font-weight: 400;
+  color: $sg--black;
+  margin: 0 0 33px;
+}
+
+.page-main__example-result {
+  @include set-font("Arial", 14px, 18px);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+  margin: 0 0 25px;
+}

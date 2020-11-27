@@ -1,0 +1,60 @@
+
+.precedent__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 0 34px;
+  padding: 0;
+  width: 100%;
+}
+
+.precedent__label {
+  @include set-font("Oswald", 14px, 20px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.precedent__value {
+  @include set-font("Oswald", 14px, 20px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.precedent__item {
+  text-align: center;
+  width: 100%;
+  border: none;
+
+
+  &--special {
+    width: calc((100% - 31px) / 2);
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid $sg--special_grey;
+    border-radius: 3px;
+
+    @include set-font("Oswald", 24px, 24px, uppercase);
+    font-weight: 400;
+    color: $sg--black;
+
+    .precedent__label {
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      top: 50px;
+      left: calc(50% - 38px);
+      width: 77px;
+      background-color: $sg--gray_na3;
+
+      @include set-font("Arial", 12px, 12px);
+      font-weight: 400;
+      color: $sg--special_dark_grey;
+      text-transform: none;
+    }
+  }
+}

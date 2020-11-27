@@ -1,0 +1,64 @@
+.top-banner__wrapper {
+  position: relative;
+  background-image: url("../../img/background/background-banner-s.png");
+  background-size: 320px 302px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: $gl--breakpoint--mobile;
+  margin: 0 auto 22px;
+  height: 480px;
+
+  &::before {
+    position: absolute;
+    background-color: $sg--basic_green;
+    opacity: 0.85;
+    content: "";
+    width: $gl--breakpoint--mobile;
+    height: 302px;
+    z-index: -1;
+  }
+}
+
+.top-banner__title {
+  margin: 27px 0 25px;
+
+  @include set-font("Oswald", 36px, 36px);
+  font-weight: 400;
+  text-align: center;
+  color: $sg--white;
+}
+
+.top-banner__action {
+  margin: 0 $gl--padding-side--mobile;
+  width: calc(100% - 2 * $gl--padding-side--mobile);
+  min-height: 40px;
+
+  @include set-font("Oswald", 14px, 18px, uppercase);
+  background-color: $sg--basic_green;
+  color: $sg--white;
+  border: none;
+}
+
+.top-banner__slogan {
+  @include set-font("Oswald", 14px, 14px, uppercase);
+  text-align: center;
+  color: $sg--white;
+}
+
+.top-banner__active-element {
+  position: absolute;
+  background-image: url("../../img/pict/active-element-s.png");
+  background-size: 280px 270px;
+  background-position: 20px 167px;
+  background-repeat: no-repeat;
+  content: "";
+  width: $gl--breakpoint--mobile;
+  height: calc(167px + 270px);
+}

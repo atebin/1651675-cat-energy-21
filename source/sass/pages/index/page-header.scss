@@ -1,0 +1,19 @@
+.page-header__wrapper {
+  margin: 0;
+}
+
+.page-header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 $gl--padding-side--mobile;
+  height: 66px;
+}
+
+.page-header__logo-link {
+  //cursor: pointer;
+}

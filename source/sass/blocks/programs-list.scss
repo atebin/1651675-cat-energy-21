@@ -1,0 +1,111 @@
+.programs-list {
+  padding: 0 $gl--padding-side--mobile;
+}
+
+.programs-list__item {
+  min-height: 266px;
+  box-sizing: border-box;
+  padding: 22px 22px 18px;
+
+  list-style: none;
+  background-color: $sg--basic_grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.programs-list__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.programs-list__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 71px;
+  margin-bottom: 22px;
+
+  @include set-font("Oswald", 24px, 37px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+
+  &--slim::after,
+  &--pro::after {
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--slim::after {
+    background-image: url("../../img/svg/cat_in_circle_slim.svg");
+    background-size: 50px 53px;
+    top: -8px;
+    left: -71px;
+    width: 50px;
+    height: 53px;
+  }
+
+  &--pro::after {
+    background-image: url("../../img/svg/cat_in_circle_pro.svg");
+    background-size: 67px 50px;
+    top: -8px;
+    left: calc(-71px - 8px);
+    width: 67px;
+    height: 50px;
+  }
+}
+
+.programs-list__big-picture {
+  display: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+
+  &--slim {
+    background-image: url("../../img/svg/cat_in_circle_slim.svg");
+    background-size: 200px 211px;
+    width: 200px;
+    height: 211px;
+  }
+
+  &--pro {
+    background-image: url("../../img/svg/cat_in_circle_pro.svg");
+    background-size: 268px 200px;
+    width: 268px;
+    height: 200px;
+  }
+}
+
+.programs-list__description {
+  @include set-font("Arial", 14px, 18px);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+}
+
+.programs-list__footer {
+  display: flex;
+
+  height: 38px;
+  box-sizing: border-box;
+  padding-top: 15px;
+
+  border-top: 1px solid $sg--gray_na1;
+}
+
+.programs-list__goto_catalog {
+  height: 16px; //    временно, до установки иконки
+}
+
+.programs-list__catalog-section-name {
+  @include set-font("Oswald", 16px, 16px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
