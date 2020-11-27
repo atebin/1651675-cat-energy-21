@@ -1,53 +1,60 @@
-// *** LAYOUT ONLY !!!
 
-.precedent {
+.precedent__wrapper {
+  display: flex;
+  justify-content: space-between;
 
-  // --- variable ---
-  $item--width--mobile: 124px;
-  $item--width--tablet: 162px;
+  margin: 0 0 34px;
+  padding: 0;
+  width: 100%;
+}
 
-  $item--size-ratio: 1.5;
+.precedent__label {
+  @include set-font("Oswald", 14px, 20px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
 
-  $item--interval-h--mobile: 31px;
-  $item--interval-h--tablet: 42px;
-  // --- variable ---
+.precedent__value {
+  @include set-font("Oswald", 14px, 20px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.precedent__item {
+  text-align: center;
+  width: 100%;
+  border: none;
 
 
-  @media screen and (min-width: $gl--breakpoint--tablet) {
+  &--special {
+    width: calc((100% - 31px) / 2);
+    height: 56px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid $sg--special_grey;
+    border-radius: 3px;
 
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    display: block;
-  }
+    @include set-font("Oswald", 24px, 24px, uppercase);
+    font-weight: 400;
+    color: $sg--black;
 
-  .precedent__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .precedent__label {
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      top: 50px;
+      left: calc(50% - 38px);
+      width: 77px;
+      background-color: $sg--gray_na3;
 
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    min-width: $item--width--mobile * 2 + $item--interval-h--mobile;
-    max-width: ($item--width--mobile * 2 + $item--interval-h--mobile) * $item--size-ratio;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      width: $item--width--tablet * 2 + $item--interval-h--tablet;
-    }
-  }
-
-  .precedent__item {
-    width: calc((100% - $item--interval-h--mobile) / 2);
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      width: calc((100% - $item--interval-h--tablet) / 2);
-    }
-
-    &--special {
-      width: 100%;
+      @include set-font("Arial", 12px, 12px);
+      font-weight: 400;
+      color: $sg--special_dark_grey;
+      text-transform: none;
     }
   }
 }

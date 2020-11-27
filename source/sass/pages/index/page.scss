@@ -1,60 +1,24 @@
-// *** LAYOUT ONLY !!!
-
 .page {
   margin: 0;
   padding: 0;
+}
 
-  .page__body {
-    margin: 0 auto;
+.page__body {
+  margin: 0 auto;
 
-    box-sizing: border-box;
-    padding: $gl--padding-top--mobile $gl--padding-side--mobile 0;
-    width: $gl--breakpoint--mobile;
+  box-sizing: border-box;
+  width: $gl--breakpoint--mobile;
+  padding: 0;
+}
 
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      padding: $gl--padding-top--tablet $gl--padding-side--tablet $gl--padding-bottom--tablet;
-      width: $gl--breakpoint--tablet;
-    }
+.page__logo-size-s {
+  display: inline-block;
+}
 
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      padding: $gl--padding-top--desctop $gl--padding-side--desctop $gl--padding-bottom--desctop;
-      width: $gl--breakpoint--desctop;
-    }
-  }
+.page__logo-size-m {
+  display: none;
+}
 
-  .page__logo-size-s {
-    display: inline-block;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: none;
-    }
-  }
-
-  .page__logo-size-m {
-    display: none;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: inline-block;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: none;
-    }
-  }
-
-  .page__logo-size-l {
-    display: none;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: none;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: inline-block;
-    }
-  }
+.page__logo-size-l {
+  display: none;
 }

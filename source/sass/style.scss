@@ -9,33 +9,17 @@
 
 // --- for index.html
 @import "blocks/top-banner.scss";
-@import "blocks/top-banner__decor.scss";
-// ---
-@import "blocks/main-nav-toggle__decor.scss";
-// ---
-@import "blocks/main-nav-list.scss";
-@import "blocks/main-nav-list__decor.scss";
-// ---
 @import "blocks/programs-list.scss";
-@import "blocks/programs-list__decor.scss";
-// ---
 @import "blocks/how-it-works.scss";
-@import "blocks/how-it-works__decor.scss";
-// ---
 @import "blocks/precedent.scss";
-@import "blocks/precedent__decor.scss";
-// ---
 @import "blocks/before-after.scss";
-// ---
+@import "blocks/main-nav-list.scss";
+@import "blocks/main-nav-toggle.scss";
 @import "blocks/address.scss";
-@import "blocks/address__decor.scss";
 
 // PAGES
 
 @import "pages/index/page.scss";
 @import "pages/index/page-header.scss";
-@import "pages/index/page-header__decor.scss";
 @import "pages/index/page-main.scss";
-@import "pages/index/page-main__decor.scss";
 @import "pages/index/page-footer.scss";
-@import "pages/index/page-footer__decor.scss";

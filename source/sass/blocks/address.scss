@@ -1,71 +1,62 @@
-// *** LAYOUT ONLY !!!
+.address__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.address {
-  /* empty */
+  min-height: 114px;
+  padding: 0 $gl--padding-side--mobile;
+  background-color: $sg--white;
+}
 
-  .address__info {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+.address__info-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
 
-    min-height: 114px;
-    box-sizing: border-box;
-    padding: 0;
-    width: $gl--width--mobile;
+  @include set-font("Arial", 14px, 20px);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
 
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      /* empty */
-    }
+  p {
+    margin: 0;
   }
+}
 
-  .address__location {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.address__info-message {
+  width: 50%;
+  margin: 0;
 
-  .address__map {
-    position: relative;
-  }
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--gray_na2;
+}
 
-  .address__pointer {
+.address__map {
+  position: relative;
+  background-image: url("../../img/pict/location_mobile.png");
+  background-size: 320px 362px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  width: $gl--breakpoint--mobile;
+  height: 362px;
+
+  &::before {
     position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
+    background-image: url("../../img/svg/map_pin.svg");
+    background-size: 57px 53px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
   }
+}
 
-  .address__map-size-s {
-    display: block;
-    //margin: 0 auto;
-    margin-left: $gl--padding-side--mobile * (-1);
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: none;
-    }
-  }
-
-  .address__map-size-m {
-    //margin: 0 auto;
-    display: none;
-    margin-left: $gl--padding-side--tablet * (-1);
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: block;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: none;
-    }
-  }
-
-  .address__map-size-l {
-    //margin: 0 auto;
-    display: none;
-    margin-left: $gl--padding-side--desctop * (-1);
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: block;
-    }
-  }
+.address__pointer {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
 }

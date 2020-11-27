@@ -1,81 +1,42 @@
-// *** LAYOUT ONLY !!!
+.page-main__programs-list {
+  margin: 0 0 27px;
+}
 
-.page-main {
-  /* empty */
+.page-main__steps-title {
+  @include set-font("Oswald", 36px, 40px);
+  font-weight: 400;
+  color: $sg--black;
+  padding: 0 $gl--padding-side--mobile;
+  margin: 0 0 38px;
+}
 
-  .page-main__top-banner {
-    margin: 0;
-    padding: 0; //27px 0 0;
-  }
+.page-main__steps {
+  margin: 0 0 42px;
+}
 
-  .page-main__programs-list {
-    margin: 0 0 27px;
+.page-main__example {
+  padding: 27px $gl--padding-side--mobile 25px;
+  background-color: $sg--gray_na3;
+}
 
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
+.page-main__example-wrapper {
+  display: block;
+}
 
-  .page-main__steps-list {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  }
+.page-main__example-info {
+  margin: 0 0 42px;
+}
 
-  .page-main__example {
-    .page-main__example-wrapper {
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
+.page-main__example-title {
+  @include set-font("Oswald", 36px, 40px);
+  font-weight: 400;
+  color: $sg--black;
+  margin: 0 0 33px;
+}
 
-    .page-main__example-info {
-      /* empty */
-
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        width: calc(100% - 690px);
-      }
-
-      .page-main__example-title {
-        /* empty */
-      }
-
-      .page-main__example-result {
-        /* empty */
-      }
-
-      .page-main__example-precedent {
-        /* empty */
-      }
-    }
-
-    .page-main__example-photo {
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        width: 690px;
-      }
-    }
-  }
-
-  .page-main__address {
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      position: relative;
-    }
-
-    .address__info {
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        position: absolute;
-        z-index: 1;
-        top: 95px;
-        left: 110px;
-        bottom: 104px;
-      }
-    }
-  }
+.page-main__example-result {
+  @include set-font("Arial", 14px, 18px);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+  margin: 0 0 25px;
 }
