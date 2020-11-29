@@ -12,8 +12,6 @@
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
   height: 66px;
-}
 
-.page-header__logo-link {
-  //cursor: pointer;
+  border-bottom: 1px solid $line-border-light;
 }

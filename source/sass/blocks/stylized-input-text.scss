@@ -1,0 +1,89 @@
+$stylized-input-text--height: 46px;
+$stylized-input-text--inner-interval: 14px;
+$stylized-input-text--border-width: 1px;
+
+.stylized-input-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  height: $stylized-input-text--height;
+}
+
+.stylized-input-text__label {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  margin-right: $stylized-input-text--inner-interval;
+
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+}
+
+.stylized-input-text__input {
+  display: block;
+  flex-grow: 50;
+  margin: 0;
+  min-height: $stylized-input-text--height - 2 * $stylized-input-text--border-width;
+  border: $stylized-input-text--border-width solid $sg--gray_na5;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    @include set-placeholder($sg--special_dark_grey, left, center);
+    @include set-font("Oswald", 16px, 18px, uppercase);
+    font-weight: 400;
+  }
+
+  &:hover {
+    border-color: $sg--special_grey;
+  }
+
+  &:focus {
+    border-color: $sg--special_dark_grey;
+    outline: $stylized-input-text--border-width solid $sg--special_dark_grey;
+  }
+
+  &:invalid {
+    border-color: $sg--status-error;
+    outline: $stylized-input-text--border-width solid $sg--status-error;
+  }
+
+  &--email {
+    // Увеличение паддинга для показа значка конверта правого отступа.
+    // Интервал между текстом и значком уменьшаем
+
+    padding-right: calc(5px + 18px + 16px);
+    position: relative;
+  }
+
+  &--email::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "fdfsf";
+
+    //background-image: url("../../img/svg/tick.svg");
+    //background-position: center center;
+    //background-size: 18px 13px;
+    //background-repeat: no-repeat;
+    padding: 0;
+    background-color: red;
+    box-sizing: border-box;
+    width: 18px;
+    height: 13px;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.stylized-button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 40px; // - переопределяемая величина
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  @include set-font("Oswald", 16px, 20px, uppercase);
+  font-weight: 400;
+  color: $sg--white;
+
+  &--green {
+    background-color: $sg--basic_green;
+  }
+
+  &--green:hover {
+    background-color: $sg--basic_green_2;
+  }
+
+  &--green:active {
+    color: rgba($sg--white, 0.3);
+    background-color: $sg--basic_green_2;
+  }
+}

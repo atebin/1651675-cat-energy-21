@@ -36,6 +36,9 @@
 }
 
 .top-banner__action {
+  // empty
+
+  /*
   margin: 0 $gl--padding-side--mobile;
   width: calc(100% - 2 * $gl--padding-side--mobile);
   min-height: 40px;
@@ -44,6 +47,7 @@
   background-color: $sg--basic_green;
   color: $sg--white;
   border: none;
+  */
 }
 
 .top-banner__slogan {
@@ -54,7 +58,7 @@
 
 .top-banner__active-element {
   position: absolute;
-  background-image: url("../../img/pict/active-element-s.png");
+  background-image: url("../../img/picture/active-element-s.png");
   background-size: 280px 270px;
   background-position: 20px 167px;
   background-repeat: no-repeat;

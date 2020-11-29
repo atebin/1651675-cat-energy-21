@@ -1,0 +1,106 @@
+.page-main-form__form-header {
+  margin: 27px 0 27px;
+  box-sizing: border-box;
+  padding: 0 $gl--padding-side--mobile;
+}
+
+.page-main-form__form-title {
+  margin: 0 0 37px;
+
+  @include set-font("Oswald", 36px, 36px);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.page-main-form__form-description {
+  margin: 0;
+
+  @include set-font("Oswald", 14px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.page-main-form__form-wrapper {
+  display: block;
+  margin: 0 0 27px;
+}
+
+////////////////////////////////////////////////////////////////
+// --- cat-data
+.page-main-form__form-cat-data {
+  margin: 0 0 23px;
+
+  .form-element-list__item {
+    min-height: 46px;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// --- target-program
+
+.page-main-form__form-target-program {
+  margin: 0 0 27px;
+
+  // ++++++++++++++++++++++++++++++++++++++++++++++
+  // специфика блока - рамки паддинги вверху и внизу
+  box-sizing: border-box;
+  padding: 21px $gl--padding-side--mobile 21px;
+
+  border-top: 1px solid $sg--gray_na1;
+  border-bottom: 1px solid $sg--gray_na1;
+  // ++++++++++++++++++++++++++++++++++++++++++++++
+
+  .form-element-list__item {
+    min-height: 30px;
+  }
+}
+
+.program-selection-form__target-program-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+////////////////////////////////////////////////////////////////
+// --- cat-owner-data
+.page-main-form__form-cat-owner-data {
+  margin: 0 0 27px;
+
+  .form-element-list__item {
+    min-height: 46px;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// --- comment
+.page-main-form__form-comment {
+  // empty
+}
+
+////////////////////////////////////////////////////////////////
+// --- additionally
+
+.page-main-form__form-additionally {
+  margin: 0 0 34px;
+
+  .form-element-list__item {
+    min-height: 30px;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// --- footer
+.page-main-form__form-footer {
+  // empty
+}
+
+.page-main-form__form-footer-submit {
+  margin: 0 0 21px;
+}
+
+.page-main-form__form-footer-legend {
+  margin: 0 0 32px;
+
+  @include set-font("Arial", 14px, 16px);
+  font-weight: 400;
+  color: $sg--black;
+  text-align: center;
+}

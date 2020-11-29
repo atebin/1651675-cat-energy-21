@@ -1,0 +1,98 @@
+$stylized-input-checkbox--height: 30px;
+$stylized-input-checkbox--inner-interval: 18px;
+$stylized-input-checkbox--border-width: 1px;
+
+.stylized-input-checkbox {
+  display: flex;
+  align-items: center;
+  height: $stylized-input-checkbox--height;
+}
+
+.stylized-input-checkbox__label {
+  margin-left: $stylized-input-radio--height + $stylized-input-radio--inner-interval;
+  padding: 0;
+
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey_2; // в макете просто черный... Что ставим???
+}
+
+.stylized-input-checkbox__input {
+  position: relative;
+  align-self: start;
+  //-webkit-appearance: none;/* Chrome */
+  //-moz-appearance: none;/* Firefox */
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled + .stylized-input-checkbox__label {
+    cursor: default;
+    color: $sg--gray_na4;
+  }
+
+  // стилизованная граница checkbox
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: $stylized-input-checkbox--height - 2 * $stylized-input-checkbox--border-width;
+    height: $stylized-input-checkbox--height - 2 * $stylized-input-checkbox--border-width;
+    border: $stylized-input-checkbox--border-width solid $sg--special_grey;
+    background-color: $sg--white;
+    top: 0;
+    left: 0;
+    //transition: border .1s linear;
+  }
+
+  &:hover::before {
+    border-color: $sg--gray_na4;
+  }
+
+  &:checked::before {
+    // empty
+  }
+
+  &:disabled::before {
+    border-color: $sg--gray_na4;
+  }
+
+  // стилизованная галочка для отметки выбранного checkbox
+
+  &::after {
+    display: block;
+    position: absolute;
+    background-image: url("../../img/svg/tick.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+    z-index: 2;
+    content: "";
+    width: 20px;
+    height: 16px;
+    color: $sg--basic_green;
+    //background-color: $sg--basic_green;
+    opacity: 0;
+    top: 7px;
+    left: 5px;
+    //transition: opacity .1s linear;
+  }
+
+  &:hover::after {
+    // empty
+  }
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &:disabled:checked::after {
+    //opacity: 0.3; // не снижаем прозрачность галочик для неактивного установленного чекбокса ???
+  }
+}

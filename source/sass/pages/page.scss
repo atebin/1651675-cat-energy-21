@@ -1,0 +1,13 @@
+.page {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.page__body {
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  padding: 0;
+  width: $gl--breakpoint--mobile;
+}
