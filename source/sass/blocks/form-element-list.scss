@@ -1,0 +1,36 @@
+.form-element-list {
+  box-sizing: border-box;
+  padding: 0 $gl--padding-side--mobile;
+}
+
+.form-element-list__item {
+  min-height: 50px; // - переопределяемая величина!
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.form-element-list__hr {
+  border: none;
+  height: 2px;
+  background-color: $sg--basic_green;
+  color: $sg--basic_green;
+
+  margin: calc(27px + 18px) 0 -18px;
+  margin-right: (-1) * $gl--padding-side--mobile;
+}
+
+.form-element-list__title {
+  margin: 0 0 32px;
+
+  @include set-font("Oswald", 24px, 26px);
+  font-weight: 400;
+  color: $sg--black;
+
+  &--hr {
+    display: inline-block;
+    background-color: $sg--white;
+    padding-right: $gl--padding-side--mobile;
+  }
+}

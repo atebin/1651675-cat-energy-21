@@ -1,0 +1,32 @@
+.stylized-textarea {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 13px 13px;
+  width: 100%;
+
+  border: 1px solid $sg--gray_na5;
+
+  resize: vertical;
+
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey;
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    @include set-placeholder($sg--special_dark_grey, left, top);
+    @include set-font("Oswald", 16px, 18px, uppercase);
+    font-weight: 400;
+  }
+
+  &:hover {
+    border-color: $sg--special_grey;
+  }
+
+  &:focus {
+    border-color: $sg--special_dark_grey;
+    outline: 1px solid $sg--special_dark_grey;
+  }
+}

@@ -12,15 +12,15 @@
 
 <body class="page__body">
   <!-- header *** -->
-  <header class="page-header">
+  <header class="page__body-header page-header">
     <div class="page-header__wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-link">
-          <img class="page-header__logo-icon" src="./img/logo/logo_mobile.svg" width="34" height="38"
+          <img class="page-header__logo-icon" src="./img/svg/logo_mobile.svg" width="34" height="38"
             title="Лого с иконкой CAT ENERGY">
         </a>
         <a class="page-header__logo-link">
-          <img class="page-header__logo-text" src="./img/logo/logo_text.svg" width="101" height="18"
+          <img class="page-header__logo-text" src="./img/svg/logo_text.svg" width="101" height="18"
             title="Лого с текстом CAT ENERGY">
         </a>
         <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
@@ -54,19 +54,21 @@
           <p class="top-banner__slogan">Занялся собой? Займись котом!</p>
         </div>
         <div class="top-banner__active-element"></div>
-        <button class="top-banner__action" type="button">подобрать программу</button>
+        <div class="top-banner__action form-element-list">
+          <button class="stylized-button stylized-button--green" type="button">подобрать программу</button>
+        </div>
       </div>
     </section>
   </header>
 
-  <main class="page-main">
+  <main class="page__body-main page-main-index">
 
     <!-- section programs *** -->
-    <section class="page-main__programs">
+    <section class="page-main-index__programs">
 
       <h2 class="visually-hidden">Программы питания для котов</h2>
 
-      <ul class="page-main__programs-list programs-list">
+      <ul class="page-main-index__programs-list programs-list">
         <li class="programs-list__item">
           <div class="programs-list__info">
             <div>
@@ -115,11 +117,11 @@
     </section>
 
     <!-- section steps *** -->
-    <section class="page-main__steps">
+    <section class="page-main-index__steps">
 
-      <h2 class="page-main__steps-title">Как это работает</h2>
+      <h2 class="page-main-index__steps-title">Как это работает</h2>
 
-      <ul class="page-main__steps-list how-it-works">
+      <ul class="page-main-index__steps-list how-it-works">
         <li class="how-it-works__item">
           <div class="how-it-works__icon how-it-works__icon--leaf"></div>
           <p class="how-it-works__text">
@@ -155,23 +157,23 @@
     </section>
 
     <!-- section example *** -->
-    <section class="page-main__example">
+    <section class="page-main-index__example">
 
       <h2 class="visually-hidden">Изменения в жизни кота Бориса</h2>
 
-      <div class="page-main__example-wrapper">
+      <div class="page-main-index__example-wrapper">
 
-        <article class="page-main__example-info">
+        <article class="page-main-index__example-info">
 
-          <h3 class="page-main__example-title">Живой пример</h3>
+          <h3 class="page-main-index__example-title">Живой пример</h3>
 
-          <p class="page-main__example-result">
+          <p class="page-main-index__example-result">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
             по-прежнему спит по 16 часов в день.
           </p>
 
-          <div class="page-main__example-precedent precedent">
+          <div class="page-main-index__example-precedent precedent">
 
             <ul class="precedent__wrapper">
               <li class="precedent__item precedent__item--special">
@@ -192,7 +194,7 @@
           </div>
         </article>
 
-        <article class="page-main__example-photo before-after">
+        <article class="page-main-index__example-photo before-after">
 
           <h3 class="visually-hidden">Слайдер с фото кота Бориса: до и после</h3>
 
@@ -215,11 +217,11 @@
     </section>
 
     <!-- section address ** -->
-    <section class="page-main__address">
+    <section class="page-main-index__contacts">
 
       <h3 class="visually-hidden">Контактная информация</h3>
 
-      <div class="page-main__address address">
+      <div class="page-main-index__contacts-address address">
         <div class="address__info">
           <p class="address__info-message">
             приглашаем <br>к сотрудничеству <br>дилеров!
@@ -243,7 +245,7 @@
   </main>
 
   <!-- footer ** -->
-  <footer class="page-footer">
+  <footer class="page__body-footer page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo-link" title="CAT ENERGY"></a>
 

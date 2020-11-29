@@ -6,6 +6,10 @@
   min-height: 114px;
   padding: 0 $gl--padding-side--mobile;
   background-color: $sg--white;
+
+  &--dark-theme {
+    background-color: $sg--basic_grey;
+  }
 }
 
 .address__info-location {
@@ -34,7 +38,7 @@
 
 .address__map {
   position: relative;
-  background-image: url("../../img/pict/location_mobile.png");
+  background-image: url("../../img/picture/location_mobile.png");
   background-size: 320px 362px;
   background-position: center center;
   background-repeat: no-repeat;

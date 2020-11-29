@@ -1,0 +1,95 @@
+$stylized-input-radio--height: 30px;
+$stylized-input-radio--inner-interval: 15px;
+$stylized-input-radio--border-width: 1px;
+
+.stylized-input-radio {
+  display: flex;
+  align-items: center;
+  height: $stylized-input-radio--height;
+}
+
+.stylized-input-radio__label {
+  margin-left: $stylized-input-radio--height + $stylized-input-radio--inner-interval;
+  padding: 0;
+
+  @include set-font("Oswald", 16px, 18px, uppercase);
+  font-weight: 400;
+  color: $sg--special_dark_grey_2;
+}
+
+.stylized-input-radio__input {
+  position: relative;
+  align-self: start;
+  //-webkit-appearance: none;/* Chrome */
+  //-moz-appearance: none;/* Firefox */
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled + .stylized-input-radio__label {
+    cursor: default;
+    color: $sg--gray_na4;
+  }
+
+  // стилизованная граница radio input
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: $stylized-input-radio--height - 2 * $stylized-input-radio--border-width;
+    height: $stylized-input-radio--height - 2 * $stylized-input-radio--border-width;
+    border: $stylized-input-radio--border-width solid $sg--special_grey;
+    background-color: $sg--white;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    //transition: border .1s linear;
+  }
+
+  &:hover::before {
+    border-color: $sg--gray_na4;
+  }
+
+  &:checked::before {
+    // empty
+  }
+
+  &:disabled::before {
+    border-color: $sg--gray_na4;
+  }
+
+  // стилизованный кружок для отметки выбранного radio input
+
+  &::after {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 13.6px;
+    height: 13.6px;
+    background-color: $sg--basic_green;
+    border-radius: 50%;
+    opacity: 0;
+    top: 8.2px;
+    left: 8.2px;
+    //transition: opacity .1s linear;
+  }
+
+  &:hover::after {
+    // empty
+  }
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &:disabled:checked::after {
+    opacity: 0.3;
+  }
+}

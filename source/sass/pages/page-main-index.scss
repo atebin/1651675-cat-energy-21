@@ -1,8 +1,8 @@
-.page-main__programs-list {
+.page-main-index__programs-list {
   margin: 0 0 27px;
 }
 
-.page-main__steps-title {
+.page-main-index__steps-title {
   @include set-font("Oswald", 36px, 40px);
   font-weight: 400;
   color: $sg--black;
@@ -10,31 +10,31 @@
   margin: 0 0 38px;
 }
 
-.page-main__steps {
+.page-main-index__steps {
   margin: 0 0 42px;
 }
 
-.page-main__example {
+.page-main-index__example {
   padding: 27px $gl--padding-side--mobile 25px;
   background-color: $sg--gray_na3;
 }
 
-.page-main__example-wrapper {
+.page-main-index__example-wrapper {
   display: block;
 }
 
-.page-main__example-info {
+.page-main-index__example-info {
   margin: 0 0 42px;
 }
 
-.page-main__example-title {
+.page-main-index__example-title {
   @include set-font("Oswald", 36px, 40px);
   font-weight: 400;
   color: $sg--black;
   margin: 0 0 33px;
 }
 
-.page-main__example-result {
+.page-main-index__example-result {
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;

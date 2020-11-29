@@ -3,215 +3,215 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Подбор программы</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="page-body">
-  <header class="page-header">
+<body class="page__body">
+  <header class="page__body-header page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo">
+        <a class="page-header__logo-link">
+          <img class="page-header__logo-icon" src="./img/svg/logo_mobile.svg" width="34" height="38"
+            title="Лого с иконкой CAT ENERGY">
+        </a>
+        <a class="page-header__logo-link">
+          <img class="page-header__logo-text" src="./img/svg/logo_text.svg" width="101" height="18"
+            title="Лого с текстом CAT ENERGY">
+        </a>
+        <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
+          <!-- временно здесь img - далее заменю на кнопку, созданную в CSS -->
+          <img src="./img/button/button_menu_is_open.png" width="18" height="18" alt="Кнопка закрыть/открыть меню">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
 
-    <div class="logo-group">
-      <a class="logo-group__icon logo-icon">
-        <img src="https://via.placeholder.com/150x150" width="33" height="37" alt="Лого с иконкой CAT ENERGY">
-      </a>
+      <ul class="page-header__main-nav-list main-nav-list">
+        <li class="main-nav-list__item main-nav-list__item--active">
+          <a class="main-nav-list__link" href="/index.html">главная</a>
+        </li>
 
-      <a class="logo-group__text logo-text">
-        <img src="https://via.placeholder.com/150x150" width="101" height="18" alt="Лого с текстом CAT ENERGY">
-      </a>
+        <li class="main-nav-list__item">
+          <a class="main-nav-list__link" href="/catalog.html">каталог продукции</a>
+        </li>
 
-      <button class="main-nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <li class="main-nav-list__item">
+          <a class="main-nav-list__link">подбор программы</a>
+        </li>
+      </ul>
     </div>
-
-    <ul class="main-nav-list main-nav-list--theme-light">
-      <li class="main-nav-list__item">
-        <a href="/index.html">главная</a>
-      </li>
-
-      <li class="main-nav-list__item">
-        <a href="/catalog.html">каталог продукции</a>
-      </li>
-
-      <li class="main-nav-list__item main-nav-list__item--active">
-        <a>подбор программы</a>
-      </li>
-    </ul>
   </header>
 
-  <main class="page-main">
+  <main class="page__body-main page-main-form">
 
     <!-- section form * -->
-    <form class="program-selection-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="program-selection-form__header">
-        <h1 class="program-selection-form__title-h1">подбор программы</h1>
-        <p class="program-selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота
+    <form class="page-main-form__form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="page-main-form__form-header">
+        <h1 class="page-main-form__form-title">Подбор программы</h1>
+        <p class="page-main-form__form-description">
+          Заполните анкету, и мы подберем <br>программу питания для вашего кота
         </p>
       </div>
 
-      <div class="program-selection-form__wrapper">
-        <div class="program-selection-form__cat-data cat-data">
-          <h2 class="cat-data__title program-selection-form__title-h2 program-selection-form__title-h2--hidden">Имя и данные кота</h2>
+      <div class="page-main-form__form-wrapper">
 
-          <div class="cat-data__block-wrapper">
-            <label class="cat-data__label program-selection-form__label" for="field-cat-name">ИМЯ:*</label>
-            <input class="cat-data__input program-selection-form__input-text" type="text" name="cat-name" id="field-cat-name" value="барсик">
+        <article class="page-main-form__form-cat-data form-element-list">
+          <h2 class="visually-hidden">Кличка и данные кота</h2>
+
+          <div class="form-element-list__item stylized-input-text">
+            <label class="stylized-input-text__label" for="field-cat-name">ИМЯ:*</label>
+            <input class="stylized-input-text__input" type="text" name="cat-name" id="field-cat-name" value="барсик"
+              placeholder="барсик">
           </div>
 
-          <div class="cat-data__block-wrapper">
-            <label class="cat-data__label program-selection-form__label" for="field-cat-weight">Вес (кг):*</label>
-            <input class="cat-data__input program-selection-form__input-text" type="text" name="cat-name" id="field-cat-weight" value="7">
+          <div class="form-element-list__item stylized-input-text">
+            <label class="stylized-input-text__label" for="field-cat-weight">Вес (кг):*</label>
+            <input class="stylized-input-text__input" type="text" name="cat-name" id="field-cat-weight" value="7"
+              placeholder="7">
           </div>
 
-          <div class="cat-data__block-wrapper">
-            <label class="cat-data__label program-selection-form__label" for="field-cat-age">Возраст (лет):</label>
-            <input class="cat-data__input program-selection-form__input-text" type="text" name="cat-name" id="field-cat-age" value="7">
+          <div class="form-element-list__item stylized-input-text">
+            <label class="stylized-input-text__label" for="field-cat-age">Возраст (лет):</label>
+            <input class="stylized-input-text__input" type="text" name="cat-name" id="field-cat-age" value="7"
+              placeholder="7">
           </div>
-        </div>
+        </article>
 
-        <div class="program-selection-form__target-program target-program">
-          <h2 class="target-program__title program-selection-form__title-h2 program-selection-form__title-h2--hidden">Цель программы</h2>
-          <div class="target-program__block-wrapper">
-            <input class="target-program__input program-selection-form__input-radio program-selection-form__input-radio--checked" type="radio" name="target-program" value="slim" id="field-target-slim"
-              checked>
-            <label class="target-program__label program-selection-form__label" for="field-target-slim">Похудение</label>
-          </div>
+        <article class="page-main-form__form-target-program form-element-list">
+          <h2 class="visually-hidden">Цель программы</h2>
 
-          <div class="target-program__block-wrapper">
-            <input class="target-program__input program-selection-form__input-radio" type="radio" name="target-program" value="pro" id="field-target-pro">
-            <label class="target-program__label program-selection-form__label" for="field-target-pro">Набор массы</label>
+          <div class="form-element-list__item stylized-input-radio">
+            <input class="stylized-input-radio__input" type="radio" name="target-program" value="slim"
+              id="field-target-slim" checked>
+            <label class="stylized-input-radio__label" for="field-target-slim">Похудение</label>
           </div>
 
-          <div class="target-program__block-wrapper">
-            <input class="target-program__input program-selection-form__input-radio" type="radio" name="target-program" value="recommendation"
+          <div class="form-element-list__item stylized-input-radio">
+            <input class="stylized-input-radio__input" type="radio" name="target-program" value="pro"
+              id="field-target-pro">
+            <label class="stylized-input-radio__label" for="field-target-pro">Набор массы</label>
+          </div>
+
+          <div class="form-element-list__item stylized-input-radio">
+            <input class="stylized-input-radio__input" type="radio" name="target-program" value="recommendation"
               id="field-target-recommendation">
-            <label class="target-program__label program-selection-form__label" for="field-target-recommendation">Не знаю (Нужен ваш совет)</label>
+            <label class="stylized-input-radio__label" for="field-target-recommendation">Не знаю (Нужен ваш
+              совет)</label>
           </div>
-        </div>
+        </article>
       </div>
 
-      <div class="program-selection-form__cat-owner-data cat-owner-data">
-        <h2 class="cat-owner-data__title program-selection-form__title-h2">Контактные данные (владельца кота)</h2>
+      <article class="page-main-form__form-cat-owner-data form-element-list">
+        <hr class="form-element-list__hr">
+        <h2 class="form-element-list__title form-element-list__title--hr">Контактные данные <br>(владельца кота)</h2>
 
-        <div class="cat-owner-data__block-wrapper">
-          <label class="cat-owner-data__label program-selection-form__label" for="field-cat-owner-email">Email:*</label>
-          <input class="cat-owner-data__input program-selection-form__input-text" type="text" name="cat-owner-email" id="field-cat-owner-email"
-            value="kuklachev@gmail.com">
+        <div class="form-element-list__item stylized-input-text">
+          <label class="stylized-input-text__label" for="field-cat-owner-email">Email:*</label>
+          <input class="stylized-input-text__input stylized-input-text__input--email" type="email"
+            name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
         </div>
 
-        <div class="cat-owner-data__block-wrapper">
-          <label class="cat-owner-data__label program-selection-form__label" for="field-cat-owner-phone">Телефон:*</label>
-          <input class="cat-owner-data__input program-selection-form__input-text" type="text" name="cat-owner-phone" id="field-cat-owner-phone"
-            value="8 (960) 900-60-90">
+        <div class="form-element-list__item stylized-input-text">
+          <label class="stylized-input-text__label" for="field-cat-owner-phone">Телефон:*</label>
+          <input class="stylized-input-text__input" type="tel" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+            name="cat-owner-phone" id="field-cat-owner-phone" value="8 (960) 900-60-90">
         </div>
-      </div>
+      </article>
 
-      <div class="program-selection-form__comment">
-        <h2 class="program-selection-form__title-h2">Комментарий</h2>
-        <textarea class="program-selection-form__textarea" name="cat-comment"
+      <article class="page-main-form__form-comment form-element-list">
+        <hr class="form-element-list__hr">
+        <h2 class="form-element-list__title form-element-list__title--hr">Комментарий</h2>
+
+        <textarea class="stylized-textarea" name="cat-comment" rows="5"
           id="field-cat-comment">Расскажите обо всех повадках кота</textarea>
-      </div>
+      </article>
 
-      <div class="program-selection-form__additionally">
-        <h2 class="program-selection-form__title-h2">Дополнительно</h2>
+      <article class="page-main-form__form-additionally form-element-list">
+        <hr class="form-element-list__hr">
+        <h2 class="form-element-list__title form-element-list__title--hr">Дополнительно</h2>
 
-        <div class="program-selection-form__additionally-block-wrapper">
-          <input class="program-selection-form__input-checkbox program-selection-form__input-checkbox--checked" type="checkbox" name="target-sugar"
-            id="field-target-sugar" checked>
-          <label class="program-selection-form__label program-selection-form__label" for="field-target-sugar">сахарозаменитель</label>
+        <div class="form-element-list__item stylized-input-checkbox">
+          <input class="stylized-input-checkbox__input" type="checkbox" name="target-sugar" id="field-target-sugar"
+            checked>
+          <label class="stylized-input-checkbox__label" for="field-target-sugar">сахарозаменитель</label>
         </div>
 
-        <div class="program-selection-form__additionally-block-wrapper">
-          <input class="program-selection-form__input-checkbox" type="checkbox" name="target-water"
-            id="field-target-water">
-          <label class="program-selection-form__label program-selection-form__label" for="field-target-water">питьевая вода</label>
+        <div class="form-element-list__item stylized-input-checkbox">
+          <input class="stylized-input-checkbox__input" type="checkbox" name="target-water" id="field-target-water">
+          <label class="stylized-input-checkbox__label" for="field-target-water">питьевая вода</label>
         </div>
 
-        <div class="program-selection-form__additionally-block-wrapper">
-          <input class="program-selection-form__input-checkbox" type="checkbox" name="target-milk"
-            id="field-target-milk">
-          <label class="program-selection-form__label program-selection-form__label" for="field-target-milk">молоко</label>
+        <div class="form-element-list__item stylized-input-checkbox">
+          <input class="stylized-input-checkbox__input" type="checkbox" name="target-milk" id="field-target-milk">
+          <label class="stylized-input-checkbox__label" for="field-target-milk">молоко</label>
         </div>
 
-        <div class="program-selection-form__additionally-block-wrapper">
-          <input class="program-selection-form__input-checkbox" type="checkbox" name="target-vitamins"
+        <div class="form-element-list__item stylized-input-checkbox">
+          <input class="stylized-input-checkbox__input" type="checkbox" name="target-vitamins"
             id="field-target-vitamins">
-          <label class="program-selection-form__label program-selection-form__label" for="field-target-vitamins">витамины</label>
+          <label class="stylized-input-checkbox__label" for="field-target-vitamins">витамины</label>
         </div>
-      </div>
+      </article>
 
-      <div class="program-selection-form__footer">
-        <input class="program-selection-form__submit" type="submit" name="send-request" value="отправить заявку">
-        <p class="program-selection-form__legend">* — Обязательные поля</p>
+      <div class="page-main-form__form-footer form-element-list">
+        <input class="page-main-form__form-footer-submit stylized-button stylized-button--green" type="submit"
+          name="send-request" value="отправить заявку">
+        <p class="page-main-form__form-footer-legend">* — Обязательные поля</p>
       </div>
     </form>
 
-    <!-- section address * -->
-    <section class="address">
+    <!-- section address ** -->
+    <section class="page-main-form__contacts">
 
-      <h3 class="visually-hidden">Наш адрес и телефон</h3>
+      <h3 class="visually-hidden">Контактная информация</h3>
 
-      <ul class="address__text address__text--theme-dark">
-        <li class="address__dealers">
-          приглашаем к сотрудничеству дилеров!
-        </li>
-        <li class="address__location-text">
-          <div>
-            ул. Большая Конюшенная, д. 19/8
+      <div class="page-main-form__contacts-address address">
+        <div class="address__info address__info--dark-theme">
+          <p class="address__info-message">
+            приглашаем <br>к сотрудничеству <br>дилеров!
+          </p>
+
+          <div class="address__info-location">
+            <p>
+              ул. Большая Конюшенная, д. 19/8
+            </p>
+            <p>
+              Санкт-Петербург
+            </p>
           </div>
-          <div>
-            Санкт-Петербург
-          </div>
-        </li>
-      </ul>
-      <div class="address__map">
-        <img src="https://via.placeholder.com/150x150" alt="Карта города">
-        <div class="address__pointer">
-          <img src="https://via.placeholder.com/150x150" width="57" height="53" alt="Указатель на карте">
+        </div>
+
+        <div class="address__map">
+          <p class="visually-hidden">Наше расположение на карте города</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__logo">
-      <a class="page-footer__logo-text logo-text">
-        <img class="logo-text__image" src="https://via.placeholder.com/150x150" width="101" height="18"
-          alt="Лого с текстом CAT ENERGY">
-      </a>
-    </div>
+  <!-- footer ** -->
+  <footer class="page__body-footer page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo-link" title="CAT ENERGY"></a>
 
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <img src="https://via.placeholder.com/150x150" width="23" height="16" alt="Иконка Вконтаке">
-          </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy"
+            title="CAT ENERGY в Вконтаке"></a>
         </li>
-
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-            <img src="https://via.placeholder.com/150x150" width="16" height="16" alt="Иконка Фэйсбук">
-          </a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--instagram"
+            href="https://www.instagram.com/htmlacademy" title="CAT ENERGY в Инстаграм"></a>
         </li>
-
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-            <img src="https://via.placeholder.com/150x150" width="22" height="22" alt="Иконка Инстаграм">
-          </a>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--facebook"
+            href="https://www.facebook.com/htmlacademy" title="CAT ENERGY в Фэйсбук"></a>
         </li>
       </ul>
-    </div>
 
-    <div class="page-footer__copyright copyright">
-      <ul class="copyright__list">
-        <li class="copyright__item">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </li>
-
-        <li class="copyright__item">
-          <a class="copyright__logo" href="https://www.facebook.com/htmlacademy">
-            <img src="https://via.placeholder.com/150x150" width="27" height="34" alt="Логотип HTML Academy">
-          </a>
-        </li>
-      </ul>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
 
