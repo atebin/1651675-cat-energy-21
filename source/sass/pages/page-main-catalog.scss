@@ -1,0 +1,48 @@
+.page-main-catalog {
+  // empty
+}
+
+.page-main-catalog__catalog {
+  margin: 27px 0 27px;
+}
+
+.page-main-catalog__title {
+  margin: 0 0 41px;
+  box-sizing: border-box;
+  padding: 0 $gl--padding-side--mobile;
+
+  @include set-font("Oswald", 36px, 36px);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.page-main-catalog__list {
+  padding: 0;
+}
+
+.page-main-catalog__item {
+  list-style: none;
+  margin: 0;
+}
+
+.page-main-catalog__additionally {
+  margin: 0 0 35px;
+}
+
+.form-element-list__title {
+  margin: 0 0 35px;
+
+  @include set-font("Oswald", 24px, 24px);
+  font-weight: 400;
+  color: $sg--black;
+}
+
+.form-element-list__item {
+  box-sizing: border-box;
+  padding: 0 0 19px;
+  border-bottom: 1px solid $sg--special_grey;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+}
