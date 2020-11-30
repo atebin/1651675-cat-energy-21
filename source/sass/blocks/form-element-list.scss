@@ -3,6 +3,11 @@
   padding: 0 $gl--padding-side--mobile;
 }
 
+.form-element-list__list {
+  margin: 0;
+  padding: 0;
+}
+
 .form-element-list__item {
   min-height: 50px; // - переопределяемая величина!
 

@@ -14,17 +14,21 @@
 @import "blocks/form-element-list.scss";
 @import "blocks/stylized-button.scss";
 
-// --- for index.html
+// --- for: index.html
 @import "blocks/programs-list.scss";
 @import "blocks/how-it-works.scss";
 @import "blocks/precedent.scss";
 @import "blocks/before-after.scss";
 
-// --- for form.html
+// --- for: form.html
 @import "blocks/stylized-input-radio.scss";
 @import "blocks/stylized-input-text.scss";
 @import "blocks/stylized-textarea.scss";
 @import "blocks/stylized-input-checkbox.scss";
+
+// --- for: cataclog.html
+@import "blocks/card-product.scss";
+@import "blocks/additional-goods.scss";
 
 // PAGES
 
@@ -32,4 +36,5 @@
 @import "pages/page-header.scss";
 @import "pages/page-main-index.scss";
 @import "pages/page-main-form.scss";
+@import "pages/page-main-catalog.scss";
 @import "pages/page-footer.scss";

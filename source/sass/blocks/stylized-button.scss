@@ -10,18 +10,32 @@
 
   @include set-font("Oswald", 16px, 20px, uppercase);
   font-weight: 400;
-  color: $sg--white;
 
-  &--green {
+  &--primary {
+    color: $sg--white;
     background-color: $sg--basic_green;
   }
 
-  &--green:hover {
+  &--primary:hover {
     background-color: $sg--basic_green_2;
   }
 
-  &--green:active {
+  &--primary:active {
     color: rgba($sg--white, 0.3);
     background-color: $sg--basic_green_2;
+  }
+
+  &--secondary {
+    color: $sg--special_dark_grey;
+    background-color: $sg--basic_grey;
+  }
+
+  &--secondary:hover {
+    background-color: $sg--gray_na6;
+  }
+
+  &--secondary:active {
+    color: rgba($sg--special_dark_grey, 0.3);
+    background-color: $sg--gray_na6;
   }
 }
