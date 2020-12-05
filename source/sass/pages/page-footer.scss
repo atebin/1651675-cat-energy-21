@@ -1,9 +1,26 @@
 .page-footer {
   background-color: $sg--basic_grey;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 0 $gl--padding-side--tablet;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 0 $gl--padding-side--desctop;
+  }
 }
 
 .page-footer__wrapper {
-  // empty
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .page-footer__logo-link {
@@ -12,6 +29,16 @@
   align-items: center;
   height: 94px;
   border-bottom: 1px solid $sg--gray_na1;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 128px;
+    height: 24px;
+    border: none;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 
   &::after {
     background-image: url("../../img/svg/logo_text.svg");
@@ -32,6 +59,16 @@
   height: 63px;
   padding: 0;
   margin: 0 auto;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: 33px;
+    margin: 0;
+    //width: 170px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .page-footer__social-item {
@@ -82,6 +119,20 @@
   color: $sg--special_dark_grey;
   text-decoration: none;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 170px;
+    height: 34px;
+    justify-content: flex-end;
+    padding: 0;
+    margin-right: calc(22px + 27px);
+    border: none;
+    overflow: visible;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+
   &::after {
     position: absolute;
     background-image: url("../../img/svg/logo_htmlacademy.svg");
@@ -89,7 +140,20 @@
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+    box-sizing: border-box;
     background-position: calc(100% - 27px - 20px) center;
     content: "";
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-position: right center;
+      border: none;
+      overflow: visible;
+      width: 100%;
+      left: calc(22px + 27px);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 }

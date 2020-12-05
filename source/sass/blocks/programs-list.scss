@@ -1,6 +1,18 @@
 .programs-list {
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 0 $gl--padding-side--tablet;
+
+    @include set-grid-tablet();
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 0 $gl--padding-side--desctop;
+
+    @include set-grid-desctop();
+  }
 }
 
 .programs-list__item {
@@ -14,12 +26,41 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 0;
+    display: grid;
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      grid-column: 1 / 3;
+    }
+
+    &:nth-child(even) {
+      grid-column: 3 / 5;
+    }
+  }
 }
 
 .programs-list__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 77px 0 53px 53px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 41px 53px 55px;
+  }
 }
 
 .programs-list__title {
@@ -33,12 +74,36 @@
   font-weight: 400;
   color: $sg--special_dark_grey;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 24px;
+
+    @include set-font("Oswald", 36px, 36px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-left: 162px;
+    margin-bottom: 39px;
+    height: 106px;
+  }
+
   &--slim::after,
   &--pro::after {
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
     content: "";
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      position: relative;
+      display: none;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      position: absolute;
+      display: flex;
+    }
   }
 
   &--slim::after {
@@ -48,6 +113,14 @@
     left: -71px;
     width: 50px;
     height: 53px;
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-size: 100px 106px;
+      top: 0;
+      left: -162px;
+      width: 100px;
+      height: 106px;
+    }
   }
 
   &--pro::after {
@@ -57,12 +130,19 @@
     left: calc(-71px - 8px);
     width: 67px;
     height: 50px;
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-size: 134px 100px;
+      top: 0;
+      left: calc(-162px - 8px * 2);
+      width: 134px;
+      height: 100px;
+    }
   }
 }
 
 .programs-list__big-picture {
   display: none;
-  background-position: center center;
   background-repeat: no-repeat;
   content: "";
   left: 0;
@@ -72,16 +152,28 @@
 
   &--slim {
     background-image: url("../../img/svg/cat_in_circle_slim.svg");
+    background-position: left center;
     background-size: 200px 211px;
-    width: 200px;
+    width: calc(200px / 2 + 62px + 200px / 2);
     height: 211px;
   }
 
   &--pro {
     background-image: url("../../img/svg/cat_in_circle_pro.svg");
+    background-position: left center;
     background-size: 268px 200px;
-    width: 268px;
+    width: calc(268px / 2 + 28px + 268px / 2);
     height: 200px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: block;
+    grid-column: 3 / 5;
+    align-self: center;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    display: none;
   }
 }
 
@@ -89,6 +181,18 @@
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
+  margin-top: 0;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Arial", 16px, 24px);
+    margin-bottom: 48px;
+    margin-right: 17px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-bottom: 23px;
+    margin-right: 0;
+  }
 }
 
 .programs-list__footer {
@@ -99,6 +203,15 @@
   padding-top: 15px;
 
   border-top: 1px solid $sg--gray_na1;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .programs-list__goto_catalog {
@@ -109,4 +222,8 @@
   @include set-font("Oswald", 16px, 16px, uppercase);
   font-weight: 400;
   color: $sg--black;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 20px, uppercase);
+  }
 }
