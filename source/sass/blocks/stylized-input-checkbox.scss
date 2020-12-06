@@ -9,12 +9,20 @@ $stylized-input-checkbox--border-width: 1px;
 }
 
 .stylized-input-checkbox__label {
-  margin-left: $stylized-input-radio--height + $stylized-input-radio--inner-interval;
+  margin-left: $stylized-input-checkbox--height + $stylized-input-checkbox--inner-interval;
   padding: 0;
 
   @include set-font("Oswald", 16px, 18px, uppercase);
   font-weight: 400;
   color: $sg--special_dark_grey_2; // в макете просто черный... Что ставим???
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 24px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-checkbox__input {
@@ -48,7 +56,6 @@ $stylized-input-checkbox--border-width: 1px;
     background-color: $sg--white;
     top: 0;
     left: 0;
-    //transition: border .1s linear;
   }
 
   &:hover::before {
@@ -77,11 +84,9 @@ $stylized-input-checkbox--border-width: 1px;
     width: 20px;
     height: 16px;
     color: $sg--basic_green;
-    //background-color: $sg--basic_green;
     opacity: 0;
     top: 7px;
     left: 5px;
-    //transition: opacity .1s linear;
   }
 
   &:hover::after {

@@ -1,4 +1,5 @@
-$stylized-input-text--height: 46px;
+$stylized-input-text--height-mobile: 46px;
+$stylized-input-text--height-tablet: 52px;
 $stylized-input-text--inner-interval: 14px;
 $stylized-input-text--border-width: 1px;
 
@@ -9,7 +10,15 @@ $stylized-input-text--border-width: 1px;
 
   margin: 0;
   padding: 0;
-  height: $stylized-input-text--height;
+  height: $stylized-input-text--height-mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: $stylized-input-text--height-tablet;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-text__label {
@@ -22,13 +31,21 @@ $stylized-input-text--border-width: 1px;
   @include set-font("Oswald", 16px, 18px, uppercase);
   font-weight: 400;
   color: $sg--special_dark_grey;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 24px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-text__input {
   display: block;
   flex-grow: 50;
   margin: 0;
-  min-height: $stylized-input-text--height - 2 * $stylized-input-text--border-width;
+  min-height: $stylized-input-text--height-mobile - 2 * $stylized-input-text--border-width;
   border: $stylized-input-text--border-width solid $sg--gray_na5;
   box-sizing: border-box;
   padding: 0 16px;
@@ -37,6 +54,15 @@ $stylized-input-text--border-width: 1px;
   font-weight: 400;
   color: $sg--special_dark_grey;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 24px, uppercase);
+    min-height: $stylized-input-text--height-tablet - 2 * $stylized-input-text--border-width;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+
   &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-moz-placeholder,
@@ -44,6 +70,14 @@ $stylized-input-text--border-width: 1px;
     @include set-placeholder($sg--special_dark_grey, left, center);
     @include set-font("Oswald", 16px, 18px, uppercase);
     font-weight: 400;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      @include set-font("Oswald", 20px, 24px, uppercase);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 
   &:hover {
