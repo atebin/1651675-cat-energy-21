@@ -12,3 +12,15 @@
   text-align: $arg-text-align;
   vertical-align: $arg-vert-align;
 }
+
+@mixin set-grid-tablet() {
+  display: grid;
+  grid-template-columns: 132px 132px 132px 132px;
+  column-gap: 60px;
+}
+
+@mixin set-grid-desctop() {
+  display: grid;
+  grid-template-columns: 245px 245px 245px 245px;
+  column-gap: 80px;
+}

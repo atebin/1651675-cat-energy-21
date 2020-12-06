@@ -1,6 +1,6 @@
 .top-banner__wrapper {
   position: relative;
-  background-image: url("../../img/background/background-banner-s.png");
+  background-image: url("../../img/background/background-banner-mobile.png");
   background-size: 320px 302px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -15,6 +15,22 @@
   margin: 0 auto 22px;
   height: 480px;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: $gl--breakpoint--tablet;
+    padding: 0 $gl--padding-side--tablet;
+    height: 810px;
+    background-image: none;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    width: $gl--breakpoint--desctop;
+    padding: 0 $gl--padding-side--desctop;
+    height: 470px;
+    margin-bottom: 82px;
+  }
+
   &::before {
     position: absolute;
     background-color: $sg--basic_green;
@@ -23,6 +39,37 @@
     width: $gl--breakpoint--mobile;
     height: 302px;
     z-index: -1;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: block;
+      width: 720px;
+      height: 694px;
+      left: 720px;
+      top: calc((53px + 59px + 111px) * (-1));
+    }
+  }
+
+  &::after {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      position: absolute;
+      content: "";
+      background-image: url("../../img/background/background-banner-desctop.png");
+      background-size: 720px 694px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: visible;
+      z-index: -2;
+
+      padding: 0;
+      top: calc((53px + 59px + 111px) * (-1));//
+      right: 0;
+      width: 720px;
+      height: 694px;
+    }
   }
 }
 
@@ -33,36 +80,75 @@
   font-weight: 400;
   text-align: center;
   color: $sg--white;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 60px, 60px);
+    text-align: left;
+    color: $sg--black;
+    margin: 0 0 40px 87px;
+    width: 430px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 40px 80px;
+  }
 }
 
 .top-banner__action {
-  // empty
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    z-index: 2;
+    padding: 0;
+    margin-left: 87px;
+  }
 
-  /*
-  margin: 0 $gl--padding-side--mobile;
-  width: calc(100% - 2 * $gl--padding-side--mobile);
-  min-height: 40px;
-
-  @include set-font("Oswald", 14px, 18px, uppercase);
-  background-color: $sg--basic_green;
-  color: $sg--white;
-  border: none;
-  */
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-left: 80px;
+  }
 }
 
 .top-banner__slogan {
   @include set-font("Oswald", 14px, 14px, uppercase);
   text-align: center;
   color: $sg--white;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 20px, uppercase);
+    text-align: left;
+    color: $sg--black;
+    margin: 0 0 49px 87px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 52px 80px;
+  }
 }
 
 .top-banner__active-element {
   position: absolute;
-  background-image: url("../../img/picture/active-element-s.png");
+  background-image: url("../../img/picture/active_element_mobile.png");
   background-size: 280px 270px;
   background-position: 20px 167px;
   background-repeat: no-repeat;
   content: "";
   width: $gl--breakpoint--mobile;
   height: calc(167px + 270px);
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    background-image: url("../../img/picture/active_element_tablet.jpg");
+    background-size: 708px 609px;
+    background-position: center center;
+    width: 708px;
+    height: 609px;
+    top: 200px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    background-image: url("../../img/picture/active_element_desctop.png");
+    background-size: 552px 499px;
+    background-position: center center;
+    width: 552px;
+    height: 499px;
+    top: -82px;
+    left: 558px;
+  }
 }

@@ -3,31 +3,80 @@
   width: 100%;
   height: calc(240px + 2px);
   margin: 0 0 13px;
+  //overflow: visible;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 708px;
+    height: calc(620px - 191px);
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    width: 570px;
+    height: calc(536px - 191px);
+    margin-bottom: 25px;
+  }
 
   &::before {
     //display: none;
     position: absolute;
     z-index: 2;
-    background-image: url("../../img/picture/example_before_s.png");
+    background-image: url("../../img/picture/example_before_mobile.png");
     background-repeat: no-repeat;
     background-size: 311px 232px;
     background-position: center 2px;
     width: 100%;
     height: calc(100% - 2px);
     content: "";
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-image: url("../../img/picture/example_before_tablet.png");
+      background-size: 354px 620px;
+      background-position: left top;
+      top: -191px;
+      height: 620px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-image: url("../../img/picture/example_before_desctop.png");
+      background-size: 405px 536px;
+      background-position: left top;
+      left: -60px;
+      top: -191px;
+      overflow: visible;
+      height: 536px;
+      width: 100%;
+    }
   }
 
   &::after {
     //display: none;
     position: absolute;
     z-index: 1;
-    background-image: url("../../img/picture/example_after_s.png");
+    background-image: url("../../img/picture/example_after_mobile.png");
     background-repeat: no-repeat;
     background-size: 251px 240px;
     background-position: center top;
     width: 100%;
     height: 100%;
     content: "";
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-image: url("../../img/picture/example_after_tablet.png");
+      background-size: 354px 607px;
+      background-position: right top;
+      top: calc(-191px + 8px);
+      height: 620px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-image: url("../../img/picture/example_after_desctop.png");
+      background-size: 325px 654px;
+      background-position: left top;
+      left: calc(405px - 100px);
+      width: 325px;
+      height: 536px;
+    }
   }
 }
 
@@ -41,6 +90,17 @@
   height: 40px;
   padding: 0;
   margin: 0 auto;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 590px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    width: 100%;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .before-after__state {
@@ -55,6 +115,41 @@
   @include set-font("Oswald", 16px, 20px, uppercase);
   font-weight: 400;
   color: $sg--black;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 20px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    width: auto;
+    display: block;
+    box-sizing: border-box;
+    height: 27px;
+  }
+
+  &--before {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      // empty
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      text-align: left;
+      padding-bottom: 6px;
+      border-bottom: 1px dotted gray;
+    }
+  }
+
+  &--after {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      // empty
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      text-align: right;
+      padding-bottom: 6px;
+      border-bottom: 1px dotted gray;
+    }
+  }
 }
 
 .before-after__dial-check {

@@ -1,14 +1,33 @@
+.address {
+  position: relative;
+}
+
 .address__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   min-height: 114px;
+  box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
   background-color: $sg--white;
 
   &--dark-theme {
     background-color: $sg--basic_grey;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 62px 72px 59px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding: 62px 89px 52px 76px;
   }
 }
 
@@ -25,6 +44,15 @@
   p {
     margin: 0;
   }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 170px;
+    text-align: right;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    min-height: 80px;
+  }
 }
 
 .address__info-message {
@@ -38,7 +66,7 @@
 
 .address__map {
   position: relative;
-  background-image: url("../../img/picture/location_mobile.png");
+  background-image: url("../../img/picture/location_mobile.jpg");
   background-size: 320px 362px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -46,15 +74,37 @@
   width: $gl--breakpoint--mobile;
   height: 362px;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    background-image: url("../../img/picture/location_tablet.jpg");
+    background-size: 768px 400px;
+    width: $gl--breakpoint--tablet;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    background-image: url("../../img/picture/location_desctop.jpg");
+    background-size: 1440px 400px;
+    width: $gl--breakpoint--desctop;
+    height: 400px;
+  }
+
   &::before {
     position: absolute;
     background-image: url("../../img/svg/map_pin.svg");
     background-size: 57px 53px;
-    background-position: center center;
+    background-position: center calc(50% - 20px);
     background-repeat: no-repeat;
     content: "";
     width: 100%;
     height: 100%;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-position: calc(50% + 0px) calc(50% - 20px);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-position: calc(50% + 250px) calc(50% + 10px);
+    }
   }
 }
 

@@ -1,6 +1,20 @@
 .main-nav-list {
   margin: 0;
   padding: 0;
+  display: none;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 180px);
+    height: 52px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    width: calc(100% - 210px);
+    height: 59px;
+  }
 }
 
 .main-nav-list__item {
@@ -10,19 +24,74 @@
   align-items: center;
   justify-content: center;
 
-  height: 66px;
+  height: 65px;
   width: 100%;
 
   border-bottom: 1px solid $line-border-light;
   list-style: none;
   text-transform: uppercase;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: auto;
+    border: none;
+
+    &:not(:first-child) {
+      margin-left: 35px;
+    }
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .main-nav-list__link {
   text-decoration: none;
   display: inline-block;
+  box-sizing: border-box;
+  padding: 8px;
+  border-bottom: 2 solid transparent;
 
   @include set-font("Oswald", 20px, 20px, uppercase);
-  font-weight: 500;
   color: $sg--black;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 18px, 24px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    @include set-font("Oswald", 20px, 24px, uppercase);
+    color: $sg--white;
+  }
+
+  &:hover {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      color: rgba($sg--black, 0.6);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      color: rgba($sg--white, 0.6);
+    }
+  }
+
+  &:active {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      color: rgba($sg--black, 0.3);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      color: rgba($sg--white, 0.3);
+    }
+  }
+
+  &--active {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      padding-bottom: 6px;
+      border-bottom: 2px solid $sg--basic_green;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      border-bottom: 2px solid $sg--white;
+    }
+  }
 }

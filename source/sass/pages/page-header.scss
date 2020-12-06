@@ -1,5 +1,20 @@
 .page-header__wrapper {
   margin: 0;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: 52px;
+    padding: 0 $gl--padding-side--tablet;
+    margin: 25px 0 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    height: 59px;
+    padding: 0 $gl--padding-side--desctop;
+    margin: 53px 0 111px;
+  }
 }
 
 .page-header__logo {
@@ -7,6 +22,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 
   margin: 0;
   box-sizing: border-box;
@@ -14,4 +30,91 @@
   height: 66px;
 
   border-bottom: 1px solid $line-border-light;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: 52px;
+    border: none;
+    padding: 0;
+    justify-content: flex-start;
+    width: 180px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    height: 59px;
+    width: 210px;
+  }
+}
+
+.page-header__logo-icon {
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    background-image: url("../../img/svg/logo_tablet.svg");
+    background-size: 61px 50px;
+    width: 61px;
+    height: 50px;
+    margin-right: 13px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    background-image: url("../../img/svg/logo_desctop.svg");
+    background-size: 71px 60px;
+    width: 71px;
+    height: 60px;
+    margin-right: 14px;
+  }
+}
+
+.page-header__logo-text {
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    background-image: url("../../img/svg/logo_text.svg");
+    background-size: 102px 19px;
+    width: 102px;
+    height: 19px;
+    margin-right: 13px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    background-image: url("../../img/svg/logo_text.svg");
+    background-size: 118px 22px;
+    width: 118px;
+    height: 22px;
+    margin-right: 14px;
+  }
+}
+
+.page-header__main-nav-toggle {
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.page-header__main-nav-list {
+  z-index: 10;
+}
+
+.page-header__top-banner {
+  .top-banner__action {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      padding: 0;
+      width: 244px;
+      height: 54px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      //empty
+    }
+  }
+
+  .stylized-button {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      height: 54px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      //empty
+    }
+  }
 }
