@@ -27,22 +27,22 @@
 
 .page-main-catalog__additionally {
   margin: 0 0 35px;
-}
 
-.form-element-list__title {
-  margin: 0 0 35px;
+  .form-element-list__title {
+    margin: 0 0 35px;
 
-  @include set-font("Oswald", 24px, 24px);
-  font-weight: 400;
-  color: $sg--black;
-}
+    @include set-font("Oswald", 24px, 24px);
+    font-weight: 400;
+    color: $sg--black;
+  }
 
-.form-element-list__item {
-  box-sizing: border-box;
-  padding: 0 0 19px;
-  border-bottom: 1px solid $sg--special_grey;
+  .form-element-list__item {
+    box-sizing: border-box;
+    padding: 0 0 19px;
+    border-bottom: 1px solid $sg--special_grey;
 
-  &:first-child {
-    border-top: 1px solid #cdcdcd;
+    &:first-child {
+      border-top: 1px solid #cdcdcd;
+    }
   }
 }

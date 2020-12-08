@@ -1,3 +1,5 @@
+$md--padding-before-hr: 25px;
+
 .form-element-list {
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
@@ -24,6 +26,16 @@
 
   margin: calc(27px + 18px) 0 -18px;
   margin-right: (-1) * $gl--padding-side--mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin-left: (-1) * ($gl--padding-side--tablet + 40px);
+    margin-right: (-1) * ($gl--padding-side--tablet + 40px);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-left: (-1) * ($gl--padding-side--desctop);
+    margin-right: (-1) * ($gl--padding-side--desctop);
+  }
 }
 
 .form-element-list__title {
@@ -33,9 +45,29 @@
   font-weight: 400;
   color: $sg--black;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 76px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+
   &--hr {
     display: inline-block;
     background-color: $sg--white;
     padding-right: $gl--padding-side--mobile;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      padding-right: 40px;
+      margin-left: -40px;
+      padding-left: 40px;
+
+      @include set-font("Oswald", 36px, 36px);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 }

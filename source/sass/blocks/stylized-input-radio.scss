@@ -1,20 +1,38 @@
-$stylized-input-radio--height: 30px;
+$stylized-input-radio--height-mobile: 30px;
+$stylized-input-radio--height-tablet: 40px;
 $stylized-input-radio--inner-interval: 15px;
 $stylized-input-radio--border-width: 1px;
 
 .stylized-input-radio {
   display: flex;
   align-items: center;
-  height: $stylized-input-radio--height;
+  height: $stylized-input-radio--height-mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: $stylized-input-radio--height-tablet;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-radio__label {
-  margin-left: $stylized-input-radio--height + $stylized-input-radio--inner-interval;
+  margin-left: $stylized-input-radio--height-mobile + $stylized-input-radio--inner-interval;
   padding: 0;
 
   @include set-font("Oswald", 16px, 18px, uppercase);
   font-weight: 400;
   color: $sg--special_dark_grey_2;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, 24px, uppercase);
+    margin-left: $stylized-input-radio--height-tablet + $stylized-input-radio--inner-interval;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-radio__input {
@@ -42,14 +60,22 @@ $stylized-input-radio--border-width: 1px;
     position: absolute;
     z-index: 1;
     content: "";
-    width: $stylized-input-radio--height - 2 * $stylized-input-radio--border-width;
-    height: $stylized-input-radio--height - 2 * $stylized-input-radio--border-width;
+    width: $stylized-input-radio--height-mobile - 2 * $stylized-input-radio--border-width;
+    height: $stylized-input-radio--height-mobile - 2 * $stylized-input-radio--border-width;
     border: $stylized-input-radio--border-width solid $sg--special_grey;
     background-color: $sg--white;
     border-radius: 50%;
     top: 0;
     left: 0;
-    //transition: border .1s linear;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: $stylized-input-radio--height-tablet - 2 * $stylized-input-radio--border-width;
+      height: $stylized-input-radio--height-tablet - 2 * $stylized-input-radio--border-width;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 
   &:hover::before {
@@ -78,7 +104,17 @@ $stylized-input-radio--border-width: 1px;
     opacity: 0;
     top: 8.2px;
     left: 8.2px;
-    //transition: opacity .1s linear;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 11px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 
   &:hover::after {
