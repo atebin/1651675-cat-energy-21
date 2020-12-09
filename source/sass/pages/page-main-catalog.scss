@@ -18,11 +18,39 @@
 
 .page-main-catalog__list {
   padding: 0;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-grid-tablet();
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    @include set-grid-desctop();
+  }
 }
 
 .page-main-catalog__item {
   list-style: none;
   margin: 0;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    &:nth-child(odd) {
+      grid-column: 1 / 3;
+    }
+
+    &:nth-child(even) {
+      grid-column: 3 / 5;
+    }
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    &:nth-child(odd) {
+      grid-column: auto;
+    }
+
+    &:nth-child(even) {
+      grid-column: auto;
+    }
+  }
 }
 
 .page-main-catalog__additionally {
