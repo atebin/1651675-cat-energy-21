@@ -29,8 +29,8 @@
         </button>
       </div>
 
-      <ul class="page-header__main-nav-list main-nav-list">
-        <li class="main-nav-list__item main-nav-list__item--active">
+      <ul class="page-header__main-nav-list main-nav-list main-nav-list--light-theme">
+        <li class="main-nav-list__item">
           <a class="main-nav-list__link" href="/index.html">главная</a>
         </li>
 
@@ -39,7 +39,7 @@
         </li>
 
         <li class="main-nav-list__item">
-          <a class="main-nav-list__link">подбор программы</a>
+          <a class="main-nav-list__link main-nav-list__link--active">подбор программы</a>
         </li>
       </ul>
     </div>
@@ -80,7 +80,7 @@
           </div>
         </article>
 
-        <article class="page-main-form__form-target-program form-element-list">
+        <article class="page-main-form__form-target-program form-element-list form-element-list--special">
           <h2 class="visually-hidden">Цель программы</h2>
 
           <div class="form-element-list__item stylized-input-radio">
@@ -108,16 +108,18 @@
         <hr class="form-element-list__hr">
         <h2 class="form-element-list__title form-element-list__title--hr">Контактные данные <br>(владельца кота)</h2>
 
-        <div class="form-element-list__item stylized-input-text">
-          <label class="stylized-input-text__label" for="field-cat-owner-email">Email:*</label>
-          <input class="stylized-input-text__input stylized-input-text__input--email" type="email"
-            name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
-        </div>
+        <div class="form-element-list__wrapper">
+          <div class="form-element-list__item stylized-input-text">
+            <label class="stylized-input-text__label" for="field-cat-owner-email">Email:*</label>
+            <input class="stylized-input-text__input stylized-input-text__input--email" type="email"
+              name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
+          </div>
 
-        <div class="form-element-list__item stylized-input-text">
-          <label class="stylized-input-text__label" for="field-cat-owner-phone">Телефон:*</label>
-          <input class="stylized-input-text__input" type="tel" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-            name="cat-owner-phone" id="field-cat-owner-phone" value="8 (960) 900-60-90">
+          <div class="form-element-list__item stylized-input-text">
+            <label class="stylized-input-text__label" for="field-cat-owner-phone">Телефон:*</label>
+            <input class="stylized-input-text__input" type="tel" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+              name="cat-owner-phone" id="field-cat-owner-phone" value="8 (960) 900-60-90">
+          </div>
         </div>
       </article>
 
@@ -133,26 +135,28 @@
         <hr class="form-element-list__hr">
         <h2 class="form-element-list__title form-element-list__title--hr">Дополнительно</h2>
 
-        <div class="form-element-list__item stylized-input-checkbox">
-          <input class="stylized-input-checkbox__input" type="checkbox" name="target-sugar" id="field-target-sugar"
-            checked>
-          <label class="stylized-input-checkbox__label" for="field-target-sugar">сахарозаменитель</label>
-        </div>
+        <div class="form-element-list__wrapper">
+          <div class="form-element-list__item stylized-input-checkbox">
+            <input class="stylized-input-checkbox__input" type="checkbox" name="target-sugar" id="field-target-sugar"
+              checked>
+            <label class="stylized-input-checkbox__label" for="field-target-sugar">сахарозаменитель</label>
+          </div>
 
-        <div class="form-element-list__item stylized-input-checkbox">
-          <input class="stylized-input-checkbox__input" type="checkbox" name="target-water" id="field-target-water">
-          <label class="stylized-input-checkbox__label" for="field-target-water">питьевая вода</label>
-        </div>
+          <div class="form-element-list__item stylized-input-checkbox">
+            <input class="stylized-input-checkbox__input" type="checkbox" name="target-water" id="field-target-water">
+            <label class="stylized-input-checkbox__label" for="field-target-water">питьевая вода</label>
+          </div>
 
-        <div class="form-element-list__item stylized-input-checkbox">
-          <input class="stylized-input-checkbox__input" type="checkbox" name="target-milk" id="field-target-milk">
-          <label class="stylized-input-checkbox__label" for="field-target-milk">молоко</label>
-        </div>
+          <div class="form-element-list__item stylized-input-checkbox">
+            <input class="stylized-input-checkbox__input" type="checkbox" name="target-milk" id="field-target-milk">
+            <label class="stylized-input-checkbox__label" for="field-target-milk">молоко</label>
+          </div>
 
-        <div class="form-element-list__item stylized-input-checkbox">
-          <input class="stylized-input-checkbox__input" type="checkbox" name="target-vitamins"
-            id="field-target-vitamins">
-          <label class="stylized-input-checkbox__label" for="field-target-vitamins">витамины</label>
+          <div class="form-element-list__item stylized-input-checkbox">
+            <input class="stylized-input-checkbox__input" type="checkbox" name="target-vitamins"
+              id="field-target-vitamins">
+            <label class="stylized-input-checkbox__label" for="field-target-vitamins">витамины</label>
+          </div>
         </div>
       </article>
 
@@ -163,12 +167,12 @@
       </div>
     </form>
 
-    <!-- section address ** -->
-    <section class="page-main-form__contacts">
+    <!-- section address **** -->
+    <section class="page-main-index__contacts">
 
       <h3 class="visually-hidden">Контактная информация</h3>
 
-      <div class="page-main-form__contacts-address address">
+      <div class="page-main-index__contacts-address address">
         <div class="address__info address__info--dark-theme">
           <p class="address__info-message">
             приглашаем <br>к сотрудничеству <br>дилеров!
@@ -191,10 +195,10 @@
     </section>
   </main>
 
-  <!-- footer ** -->
+  <!-- footer **** -->
   <footer class="page__body-footer page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo-link" title="CAT ENERGY"></a>
+      <a class="page-footer__logo-link" href="/index.html" title="CAT ENERGY"></a>
 
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">

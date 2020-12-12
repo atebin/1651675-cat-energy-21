@@ -1,7 +1,35 @@
+.page-main-form__form {
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    box-sizing: border-box;
+    padding: 0 $gl--padding-side--tablet;
+
+    .form-element-list {
+      padding: 0 40px;
+    }
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 0 $gl--padding-side--desctop;
+
+    .form-element-list {
+      padding: 0;
+    }
+  }
+}
+
 .page-main-form__form-header {
   margin: 27px 0 27px;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    padding: 0 40px;
+    margin: 0 0 66px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 0;
+  }
 }
 
 .page-main-form__form-title {
@@ -10,6 +38,16 @@
   @include set-font("Oswald", 36px, 36px);
   font-weight: 400;
   color: $sg--black;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 54px;
+
+    @include set-font("Oswald", 60px, 60px);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 56px;
+  }
 }
 
 .page-main-form__form-description {
@@ -18,11 +56,39 @@
   @include set-font("Oswald", 14px, 18px, uppercase);
   font-weight: 400;
   color: $sg--black;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    // empty
+
+    @include set-font("Oswald", 20px, 30px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .page-main-form__form-wrapper {
   display: block;
   margin: 0 0 27px;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 (70px + $md--padding-before-hr);
+
+    .form-element-list--special {
+      padding: 28px 25px;
+    }
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 (65px + $md--padding-before-hr);
+
+    @include set-grid-desctop();
+
+    .form-element-list--special {
+      padding: 25px 28px;
+    }
+  }
 }
 
 ////////////////////////////////////////////////////////////////
@@ -30,8 +96,26 @@
 .page-main-form__form-cat-data {
   margin: 0 0 23px;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 72px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0;
+    grid-column: 1 / 3;
+  }
+
   .form-element-list__item {
     min-height: 46px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      min-height: 52px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -50,8 +134,22 @@
   border-bottom: 1px solid $sg--gray_na1;
   // ++++++++++++++++++++++++++++++++++++++++++++++
 
-  .form-element-list__item {
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 40px;
+    border: 1px solid $sg--gray_na5;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0;
+    grid-column: 3 / 5;
+  }
+
+  & .form-element-list__item {
     min-height: 30px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      min-height: 40px;
+    }
   }
 }
 
@@ -64,15 +162,60 @@
 .page-main-form__form-cat-owner-data {
   margin: 0 0 27px;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 (65px + $md--padding-before-hr);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 (70px + $md--padding-before-hr);
+  }
+
+  .form-element-list__wrapper {
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      @include set-grid-desctop();
+      grid-template-rows: auto;
+    }
+  }
+
   .form-element-list__item {
     min-height: 46px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      min-height: 52px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
+
+    &:nth-child(odd) {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        grid-column: 1 / 3;
+      }
+    }
+
+    &:nth-child(even) {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        grid-column: 3 / 5;
+      }
+    }
   }
 }
 
 ////////////////////////////////////////////////////////////////
 // --- comment
 .page-main-form__form-comment {
-  // empty
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 (65px + $md--padding-before-hr);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 (67px + $md--padding-before-hr);
+  }
 }
 
 ////////////////////////////////////////////////////////////////
@@ -81,19 +224,94 @@
 .page-main-form__form-additionally {
   margin: 0 0 34px;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 55px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 60px;
+  }
+
+  .form-element-list__wrapper {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      @include set-grid-tablet();
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      @include set-grid-desctop();
+    }
+  }
+
   .form-element-list__item {
     min-height: 30px;
+
+    &:nth-child(odd) {
+      @media screen and (min-width: $gl--breakpoint--tablet) {
+        grid-column: 1 / 3;
+        margin-bottom: 32px;
+      }
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        grid-column: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      @media screen and (min-width: $gl--breakpoint--tablet) {
+        grid-column: 3 / 5;
+      }
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        grid-column: auto;
+      }
+    }
   }
 }
 
 ////////////////////////////////////////////////////////////////
 // --- footer
 .page-main-form__form-footer {
-  // empty
+  margin: 0 0 32px;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin: 0 0 72px;
+
+    @include set-grid-tablet();
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin: 0 0 82px;
+
+    @include set-grid-desctop();
+  }
+
+  .stylized-button--primary {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      @include set-font("Oswald", 20px, 20px, uppercase);
+    }
+  }
+
+  .page-main-form__form-footer-legend {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      @include set-font("Arial", 16px, 16px);
+    }
+  }
 }
 
 .page-main-form__form-footer-submit {
   margin: 0 0 21px;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    grid-column: 1 / 3;
+    align-self: center;
+    height: 52px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .page-main-form__form-footer-legend {
@@ -103,4 +321,15 @@
   font-weight: 400;
   color: $sg--black;
   text-align: center;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    grid-column: 3 / 5;
+    align-self: center;
+    text-align: left;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
