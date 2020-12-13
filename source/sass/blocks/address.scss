@@ -12,10 +12,6 @@
   padding: 0 $gl--padding-side--mobile;
   background-color: $sg--white;
 
-  &--dark-theme {
-    background-color: $sg--basic_grey;
-  }
-
   @media screen and (min-width: $gl--breakpoint--tablet) {
     padding: 62px 72px 59px;
   }
@@ -28,6 +24,14 @@
     width: 570px;
     height: 201px;
     padding: 62px 89px 52px 76px;
+  }
+
+  &--dark-theme {
+    background-color: $sg--basic_grey;
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      background-color: $sg--white;
+    }
   }
 }
 
