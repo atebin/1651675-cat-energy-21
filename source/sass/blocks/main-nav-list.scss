@@ -30,6 +30,7 @@
   border-bottom: 1px solid $line-border-light;
   list-style: none;
   text-transform: uppercase;
+  margin: 0;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: auto;
@@ -49,8 +50,9 @@
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
-  padding: 8px;
-  border-bottom: 2 solid transparent;
+  position: relative;
+  //padding: 8px;
+  //border-bottom: 2 solid transparent;
 
   @include set-font("Oswald", 20px, 20px, uppercase);
   color: $sg--black;
@@ -84,14 +86,30 @@
     }
   }
 
+  &::before {
+    position: absolute;
+    width: 100%;
+    bottom: -8px;
+    height: 2px;
+    background-color: transparent;
+  }
+
   &--active {
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      padding-bottom: 6px;
-      border-bottom: 2px solid $sg--basic_green;
+      //padding-bottom: 6px;
+      //border-bottom: 2px solid $sg--basic_green;
+
+      &::before {
+        background-color: $sg--basic_green;
+      }
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      border-bottom: 2px solid $sg--white;
+      //border-bottom: 2px solid $sg--white;
+
+      &::before {
+        background-color: $sg--white;
+      }
     }
   }
 }
@@ -134,7 +152,11 @@
       }
 
       @media screen and (min-width: $gl--breakpoint--desctop) {
-        border-bottom: 2px solid $sg--basic_green;
+        //border-bottom: 2px solid $sg--basic_green;
+
+        &::before {
+          background-color: $sg--basic_green;
+        }
       }
     }
   }

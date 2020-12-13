@@ -13,7 +13,7 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     height: 59px;
     padding: 0 $gl--padding-side--desctop;
-    margin: 53px 0 75px;
+    margin: 57px 0 (75px + 35px - 2px);
   }
 }
 
@@ -96,7 +96,7 @@
 }
 
 .page-header__top-banner {
-  .top-banner__action {
+  & .top-banner__action {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       padding: 0;
       width: 244px;
@@ -108,9 +108,11 @@
     }
   }
 
-  .stylized-button {
+  & .stylized-button {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       height: 54px;
+
+      @include set-font("Oswald", 20px, 20px, uppercase);
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {

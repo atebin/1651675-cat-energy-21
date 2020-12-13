@@ -41,8 +41,8 @@
       background-image: url("../../img/picture/example_before_desctop.png");
       background-size: 405px 536px;
       background-position: left top;
-      left: -60px;
-      top: -191px;
+      left: -60px - 20px;
+      top: -191px - 3px;
       overflow: visible;
       height: 536px;
       width: 100%;
@@ -65,7 +65,7 @@
       background-image: url("../../img/picture/example_after_tablet.png");
       background-size: 354px 607px;
       background-position: right top;
-      top: calc(-191px + 8px);
+      top: (-191px + 8px);
       height: 620px;
     }
 
@@ -73,7 +73,8 @@
       background-image: url("../../img/picture/example_after_desctop.png");
       background-size: 325px 654px;
       background-position: left top;
-      left: calc(405px - 100px);
+      left: (405px - 100px - 20px);
+      top: (-191px + 8px - 10px);
       width: 325px;
       height: 536px;
     }
@@ -118,6 +119,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
+    cursor: pointer;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -125,6 +127,17 @@
     display: block;
     box-sizing: border-box;
     height: 27px;
+
+    padding-bottom: 6px;
+    border-bottom: 1px dotted lighten($sg--black, 60%);
+
+    &:hover {
+      border-bottom: 1px solid lighten($sg--black, 50%);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
   }
 
   &--before {
@@ -134,8 +147,6 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: left;
-      padding-bottom: 6px;
-      border-bottom: 1px dotted gray;
     }
   }
 
@@ -146,8 +157,6 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: right;
-      padding-bottom: 6px;
-      border-bottom: 1px dotted gray;
     }
   }
 }
@@ -158,8 +167,75 @@
 
 .before-after__control-check {
   display: block;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .before-after__control-slide {
   display: none;
+  position: relative;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: block;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.before-after__dial-slider {
+  background-color: $sg--special_grey;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 428px;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.before-after__indicator-slider {
+  position: absolute;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background-color: $sg--white;
+  background-image: url("../../img/svg/slider-control-center.svg");
+  background-size: 8px 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  border: 1px solid $sg--special_grey;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include set-shadow-normal();
+
+  &:hover {
+    @include set-shadow-hover();
+  }
+
+  &:active {
+    @include set-shadow-active();
+    border-color: $sg--basic_green;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    top: calc(50% - 17px);
+    left: calc(50% - 17px);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }

@@ -47,6 +47,8 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    row-gap: 32px;
+
     &:nth-child(odd) {
       grid-column: auto;
     }

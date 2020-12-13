@@ -59,7 +59,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    padding: 41px 53px 55px;
+    padding: 41px 51px 48px;
   }
 }
 
@@ -84,7 +84,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     margin-left: 162px;
-    margin-bottom: 39px;
+    margin-bottom:41px;
     height: 106px;
   }
 
@@ -133,8 +133,8 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       background-size: 134px 100px;
-      top: 0;
-      left: calc(-162px - 8px * 2);
+      top: 4px;
+      left: calc(-162px - 8px * 2 - 3px);
       width: 134px;
       height: 100px;
     }
@@ -190,7 +190,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin-bottom: 23px;
+    margin-bottom: 30px;
     margin-right: 0;
   }
 }

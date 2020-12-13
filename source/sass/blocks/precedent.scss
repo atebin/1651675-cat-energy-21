@@ -14,7 +14,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     width: 366px;
-    margin: 0 0 60px;
+    margin: 0 0 55px;//60
   }
 }
 
@@ -38,7 +38,7 @@
   color: $sg--black;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    @include set-font("Oswald", 20px, 20px, uppercase);
+    @include set-font("Oswald", 30px, 37px, uppercase);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -73,10 +73,11 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
+      flex-direction: column-reverse;
+      justify-content: flex-end;
     }
 
-    .precedent__label {
+    & .precedent__label {
       position: absolute;
       display: inline-block;
       text-align: center;
@@ -100,6 +101,16 @@
 
       @media screen and (min-width: $gl--breakpoint--desctop) {
         background-color: $sg--gray_na3;
+
+        width: auto;
+        position: static;
+        padding: 0 8px;
+      }
+    }
+
+    & .precedent__value {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        padding: 14px 0 11px;
       }
     }
   }
@@ -124,15 +135,16 @@
       box-sizing: border-box;
       height: 27px;
 
-      .precedent__label {
+      & .precedent__label {
         display: inline-block;
-        width: calc(100% - 162px);
+        width: calc(100% - 166px);
         text-align: left;
       }
 
-      .precedent__value {
+      & .precedent__value {
+        @include set-font("Oswald", 20px, 20px);
         display: inline-block;
-        width: 162px;
+        width: 166px;
         text-align: center;
       }
     }
