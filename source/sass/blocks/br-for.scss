@@ -1,0 +1,37 @@
+.br-for {
+  &--mobile {
+    display: unset;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      display: unset;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: none;
+    }
+  }
+
+  &--desctop {
+    display: none;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      // empty
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      display: unset;
+    }
+  }
+}

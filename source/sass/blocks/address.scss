@@ -9,11 +9,12 @@
 
   min-height: 114px;
   box-sizing: border-box;
-  padding: 0 $gl--padding-side--mobile;
+  padding: 2px $gl--padding-side--mobile 0;
   background-color: $sg--white;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     padding: 62px 72px 59px;
+    min-height: 201px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -58,10 +59,10 @@
     @include set-font("Arial", 16px, 20px);
     width: 170px;
     text-align: right;
+    min-height: 80px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    min-height: 80px;
     text-align: left;
 
     br {
@@ -74,7 +75,7 @@
   width: 50%;
   margin: 0;
 
-  @include set-font("Oswald", 16px, 18px, uppercase);
+  @include set-font("Oswald", 16px, 19px, uppercase);
   font-weight: 400;
   color: $sg--gray_na2;
 

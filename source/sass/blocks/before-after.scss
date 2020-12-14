@@ -7,7 +7,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 708px;
-    height: calc(620px - 191px);
+    height: calc(620px - 191px - 72px);
     margin: 0 auto;
   }
 
@@ -23,8 +23,9 @@
     z-index: 2;
     background-image: url("../../img/picture/example_before_mobile.png");
     background-repeat: no-repeat;
-    background-size: 311px 232px;
-    background-position: center 2px;
+    background-size: 311px 232px;//311 232
+    background-position: calc(50% - 0px) 2px;
+    left: -5px;
     width: 100%;
     height: calc(100% - 2px);
     content: "";
@@ -32,7 +33,7 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_before_tablet.png");
       background-size: 354px 620px;
-      background-position: left top;
+      background-position: calc(0% + 5px) top;
       top: -191px;
       height: 620px;
     }
@@ -64,7 +65,7 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_after_tablet.png");
       background-size: 354px 607px;
-      background-position: right top;
+      background-position: calc(100% - 1px) top;
       top: (-191px + 8px);
       height: 620px;
     }
@@ -93,7 +94,7 @@
   margin: 0 auto;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 590px;
+    width: 614px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {

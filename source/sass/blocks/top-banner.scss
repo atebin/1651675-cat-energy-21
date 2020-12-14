@@ -74,7 +74,7 @@
 }
 
 .top-banner__title {
-  margin: 27px 0 25px;
+  margin: 26px 0 26px;
 
   @include set-font("Oswald", 36px, 36px);
   font-weight: 400;
@@ -127,7 +127,7 @@
   position: absolute;
   background-image: url("../../img/picture/active_element_mobile.png");
   background-size: 280px 270px;
-  background-position: 20px 167px;
+  background-position: 20px 166px; // 20 167
   background-repeat: no-repeat;
   content: "";
   width: $gl--breakpoint--mobile;

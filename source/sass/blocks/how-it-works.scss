@@ -6,7 +6,7 @@
     padding: 0 $gl--padding-side--tablet;
 
     @include set-grid-tablet();
-    row-gap: 90px;
+    row-gap: 75px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -29,7 +29,7 @@
     display: grid;
     grid-template-rows: 80px auto;
     grid-template-columns: 111px auto;
-    row-gap: 30px;
+    row-gap: 32px;
     align-items: flex-start;
 
 
@@ -47,7 +47,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    row-gap: 32px;
+    row-gap: 33px;
 
     &:nth-child(odd) {
       grid-column: auto;
@@ -116,12 +116,20 @@
   font-weight: 400;
   color: $sg--special_dark_grey;
 
+  & br {
+    display: none;
+  }
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 100%;
     grid-row: 2 / 3;
     grid-column: 1 / -1;
 
     @include set-font("Arial", 16px, 24px);
+
+    & br {
+      display: unset;
+    }
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {

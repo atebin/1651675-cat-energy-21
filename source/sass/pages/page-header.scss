@@ -4,7 +4,7 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: 52px;
     padding: 0 $gl--padding-side--tablet;
-    margin: 25px 0 65px;
+    margin: 25px 0 60px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -27,7 +27,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
-  height: 66px;
+  height: 67px;//
 
   border-bottom: 1px solid $line-border-light;
 
@@ -109,6 +109,8 @@
   }
 
   & .stylized-button {
+    @include set-font("Oswald", 14px, 18px, uppercase);
+
     @media screen and (min-width: $gl--breakpoint--tablet) {
       height: 54px;
 

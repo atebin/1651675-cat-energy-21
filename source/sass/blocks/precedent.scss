@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
 
-  margin: 0 0 34px;
+  margin: 0 0 35px;
   padding: 0;
   width: 100%;
 
@@ -38,7 +38,7 @@
   color: $sg--black;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    @include set-font("Oswald", 30px, 37px, uppercase);
+    @include set-font("Oswald", 20px, 36px, uppercase);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -70,11 +70,11 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       width: calc((100% - 42px) / 2);
       height: 72px;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
     }
 
     & .precedent__label {
@@ -83,8 +83,8 @@
       text-align: center;
       padding: 0;
       margin: 0;
-      top: 48px;
-      left: calc(50% - 38px);
+      top: 47px;
+      left: calc(50% - 40px);
       width: 77px;
       background-color: $sg--gray_na3;
 
@@ -97,20 +97,27 @@
         @include set-font("Arial", 14px, 14px);
         background-color: $sg--white;
         top: 63px;
-      }
-
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        background-color: $sg--gray_na3;
 
         width: auto;
         position: static;
         padding: 0 8px;
+
+      }
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        background-color: $sg--gray_na3;
       }
     }
 
     & .precedent__value {
+      @include set-font("Oswald", 24px, 24px, uppercase);
+
+      @media screen and (min-width: $gl--breakpoint--tablet) {
+        @include set-font("Oswald", 30px, 37px, uppercase);
+        padding: 15px 0 11px;
+      }
+
       @media screen and (min-width: $gl--breakpoint--desctop) {
-        padding: 14px 0 11px;
       }
     }
   }
