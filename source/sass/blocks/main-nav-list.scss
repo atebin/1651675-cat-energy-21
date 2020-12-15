@@ -1,7 +1,21 @@
+@media screen and (max-width: $gl--breakpoint--tablet - 1) {
+  .main-nav--closed .main-nav-list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav-list {
+    display: unset;
+  }
+
+  .main-nav--nojs .main-nav-list {
+    display: unset;
+  }
+}
+
 .main-nav-list {
   margin: 0;
   padding: 0;
-  display: none;
+  //display: none;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: flex;
@@ -16,6 +30,7 @@
     height: 59px;
   }
 }
+
 
 .main-nav-list__item {
 
@@ -51,14 +66,16 @@
   display: inline-block;
   box-sizing: border-box;
   position: relative;
-  //padding: 8px;
-  //border-bottom: 2 solid transparent;
 
   @include set-font("Oswald", 20px, 20px, uppercase);
   color: $sg--black;
+  font-weight: 600;
+  padding-bottom: 2px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 18px, 24px, uppercase);
+    font-weight: 400;
+    padding-bottom: 0;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -67,47 +84,28 @@
   }
 
   &:hover {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      color: rgba($sg--black, 0.6);
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      color: rgba($sg--white, 0.6);
-    }
+    color: rgba($sg--black, 0.6);
   }
 
   &:active {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      color: rgba($sg--black, 0.3);
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      color: rgba($sg--white, 0.3);
-    }
-  }
-
-  &::before {
-    position: absolute;
-    width: 100%;
-    bottom: -8px;
-    height: 2px;
-    background-color: transparent;
+    color: rgba($sg--black, 0.3);
   }
 
   &--active {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      //padding-bottom: 6px;
-      //border-bottom: 2px solid $sg--basic_green;
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 11;
+      width: 100%;
+      bottom: -8px;
+      height: 2px;
+      background-color: $sg--basic_green;
 
-      &::before {
+      @media screen and (min-width: $gl--breakpoint--tablet) {
         background-color: $sg--basic_green;
       }
-    }
 
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      //border-bottom: 2px solid $sg--white;
-
-      &::before {
+      @media screen and (min-width: $gl--breakpoint--desctop) {
         background-color: $sg--white;
       }
     }
@@ -115,7 +113,7 @@
 }
 
 .main-nav-list--light-theme {
-  .main-nav-list__link {
+  & .main-nav-list__link {
     // empty
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
