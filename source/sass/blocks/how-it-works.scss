@@ -6,7 +6,7 @@
     padding: 0 $gl--padding-side--tablet;
 
     @include set-grid-tablet();
-    row-gap: 75px;
+    row-gap: 77px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
