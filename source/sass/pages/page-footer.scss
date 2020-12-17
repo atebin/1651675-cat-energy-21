@@ -12,14 +12,16 @@
 
 .page-footer__wrapper {
   @media screen and (min-width: $gl--breakpoint--tablet) {
+    box-sizing: border-box;
     height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0 30px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
+    padding: 0;
   }
 }
 
@@ -29,9 +31,12 @@
   align-items: center;
   height: 94px;
   border-bottom: 1px solid $sg--gray_na1;
+  padding-top: 2px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 128px;
+    padding-top: 0;
+    justify-content: flex-start;
+    width: 236px;
     height: 24px;
     border: none;
   }
@@ -44,10 +49,10 @@
     background-image: url("../../img/svg/logo_text.svg");
     background-size: 128px 24px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left calc(50% + 2px);
     content: "";
     width: 128px;
-    height: 24px;
+    height: 32px;
   }
 }
 
@@ -63,7 +68,7 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: 33px;
     margin: 0;
-    //width: 170px;
+    width: 130px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -78,28 +83,28 @@
 .page-footer__social-link {
   display: inline-block;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center calc(50% + 2px);
   content: "";
 
   &--vk {
     background-image: url("../../img/svg/icon_vkontakte.svg");
     background-size: 23px 16px;
     width: 23px;
-    height: 16px;
+    height: 19px;
   }
 
   &--instagram {
     background-image: url("../../img/svg/icon_instagram.svg");
     background-size: 16px 16px;
     width: 16px;
-    height: 16px;
+    height: 21px;
   }
 
   &--facebook {
     background-image: url("../../img/svg/icon_facebook.svg");
     background-size: 22px 22px;
     width: 22px;
-    height: 22px;
+    height: 25px;
   }
 }
 
@@ -120,7 +125,7 @@
   text-decoration: none;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 170px;
+    width: 236px;
     height: 34px;
     justify-content: flex-end;
     padding: 0;
@@ -130,6 +135,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    //width: 170px;
     // empty
   }
 
@@ -141,7 +147,7 @@
     height: 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    background-position: calc(100% - 27px - 20px) center;
+    background-position: calc(100% - 27px - 12px) center;
     content: "";
 
     @media screen and (min-width: $gl--breakpoint--tablet) {

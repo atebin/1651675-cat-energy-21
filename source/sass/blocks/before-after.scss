@@ -7,7 +7,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 708px;
-    height: calc(620px - 191px);
+    height: calc(620px - 191px - 72px);
     margin: 0 auto;
   }
 
@@ -23,8 +23,9 @@
     z-index: 2;
     background-image: url("../../img/picture/example_before_mobile.png");
     background-repeat: no-repeat;
-    background-size: 311px 232px;
-    background-position: center 2px;
+    background-size: 311px 232px;//311 232
+    background-position: calc(50% - 0px) 2px;
+    left: -5px;
     width: 100%;
     height: calc(100% - 2px);
     content: "";
@@ -32,7 +33,7 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_before_tablet.png");
       background-size: 354px 620px;
-      background-position: left top;
+      background-position: calc(0% + 5px) top;
       top: -191px;
       height: 620px;
     }
@@ -41,8 +42,8 @@
       background-image: url("../../img/picture/example_before_desctop.png");
       background-size: 405px 536px;
       background-position: left top;
-      left: -60px;
-      top: -191px;
+      left: -60px - 20px;
+      top: -191px - 3px;
       overflow: visible;
       height: 536px;
       width: 100%;
@@ -64,8 +65,8 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_after_tablet.png");
       background-size: 354px 607px;
-      background-position: right top;
-      top: calc(-191px + 8px);
+      background-position: calc(100% - 1px) top;
+      top: (-191px + 8px);
       height: 620px;
     }
 
@@ -73,7 +74,8 @@
       background-image: url("../../img/picture/example_after_desctop.png");
       background-size: 325px 654px;
       background-position: left top;
-      left: calc(405px - 100px);
+      left: (405px - 100px - 20px);
+      top: (-191px + 8px - 10px);
       width: 325px;
       height: 536px;
     }
@@ -92,14 +94,16 @@
   margin: 0 auto;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 590px;
+    margin-top: 3px;
+    width: 570px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-top: 1px;
     width: 100%;
     height: 20px;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
@@ -118,13 +122,26 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
+    cursor: pointer;
     width: auto;
     display: block;
     box-sizing: border-box;
+
+    padding-bottom: 6px;
+    border-bottom: 1px dotted lighten($sg--black, 60%);
     height: 27px;
+
+    &:hover {
+      border-bottom: 1px solid lighten($sg--black, 50%);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
   }
 
   &--before {
@@ -134,8 +151,6 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: left;
-      padding-bottom: 6px;
-      border-bottom: 1px dotted gray;
     }
   }
 
@@ -146,20 +161,119 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: right;
-      padding-bottom: 6px;
-      border-bottom: 1px dotted gray;
     }
   }
 }
 
-.before-after__dial-check {
-  font-size: 10px; // временно !!!
-}
-
 .before-after__control-check {
   display: block;
+  position: relative;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+
+.before-after__dial-check {
+  background-color: $sg--white;
+  border: 1px solid $sg--special_grey;
+  box-sizing: border-box;
+  width: 86px;
+  height: 14px;
+  border-radius: 7px;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    // empty
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.before-after__indicator-check {
+  position: absolute;
+  box-sizing: border-box;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  top: 4px;
+  left: 8px;
+  background-color: $sg--basic_green;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    // empty
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .before-after__control-slide {
   display: none;
+  position: relative;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    display: block;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.before-after__dial-slider {
+  background-color: $sg--special_grey;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    width: 428px;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+}
+
+.before-after__indicator-slider {
+  position: absolute;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background-color: $sg--white;
+  background-image: url("../../img/svg/slider-control-center.svg");
+  background-size: 8px 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  border: 1px solid $sg--special_grey;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include set-shadow-normal();
+
+  &:hover {
+    @include set-shadow-hover();
+  }
+
+  &:active {
+    @include set-shadow-active();
+    border-color: $sg--basic_green;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    top: calc(50% - 17px);
+    left: calc(50% - 17px);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }

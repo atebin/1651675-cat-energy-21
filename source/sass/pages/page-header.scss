@@ -1,10 +1,11 @@
 .page-header__wrapper {
   margin: 0;
+  //padding: 0 $gl--padding-side--mobile;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: 52px;
-    padding: 0 $gl--padding-side--tablet;
-    margin: 25px 0 65px;
+    padding: 25px $gl--padding-side--tablet 0;
+    margin: 0 0 60px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -12,8 +13,8 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     height: 59px;
-    padding: 0 $gl--padding-side--desctop;
-    margin: 53px 0 75px;
+    padding: 57px $gl--padding-side--desctop 0;
+    margin: 0 0 (75px + 35px - 2px);
   }
 }
 
@@ -27,7 +28,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
-  height: 66px;
+  height: 67px;//
 
   border-bottom: 1px solid $line-border-light;
 
@@ -96,7 +97,7 @@
 }
 
 .page-header__top-banner {
-  .top-banner__action {
+  & .top-banner__action {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       padding: 0;
       width: 244px;
@@ -108,9 +109,13 @@
     }
   }
 
-  .stylized-button {
+  & .stylized-button {
+    @include set-font("Oswald", 14px, 18px, uppercase);
+
     @media screen and (min-width: $gl--breakpoint--tablet) {
       height: 54px;
+
+      @include set-font("Oswald", 20px, 20px, uppercase);
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {

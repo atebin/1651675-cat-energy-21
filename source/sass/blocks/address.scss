@@ -9,11 +9,12 @@
 
   min-height: 114px;
   box-sizing: border-box;
-  padding: 0 $gl--padding-side--mobile;
+  padding: 2px $gl--padding-side--mobile 0;
   background-color: $sg--white;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     padding: 62px 72px 59px;
+    min-height: 201px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -21,9 +22,10 @@
     z-index: 1;
     top: 95px;
     left: 110px;
-    width: 570px;
-    height: 201px;
-    padding: 62px 89px 52px 76px;
+    width: calc(100% * 570 / 1440);
+    min-height: 201px;
+    padding: 60px 76px 54px;//60px 89px 54px 76px;
+    justify-content: flex-start;
   }
 
   &--dark-theme {
@@ -50,12 +52,15 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 170px;
+    @include set-font("Arial", 16px, 20px);
+    width: 50%;
     text-align: right;
+    min-height: 80px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    min-height: 80px;
+    text-align: left;
+    padding-left: 82px;
   }
 }
 
@@ -63,9 +68,17 @@
   width: 50%;
   margin: 0;
 
-  @include set-font("Oswald", 16px, 18px, uppercase);
+  @include set-font("Oswald", 16px, 19px, uppercase);
   font-weight: 400;
   color: $sg--gray_na2;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 20px, (21px + 4px), uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding-left: 0;
+  }
 }
 
 .address__map {

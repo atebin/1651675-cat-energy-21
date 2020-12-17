@@ -3,18 +3,18 @@
   display: flex;
   justify-content: space-between;
 
-  margin: 0 0 34px;
+  margin: 0 0 35px;
   padding: 0;
   width: 100%;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: 366px;
+    width: calc(100% * 366 / 708);
     margin: 0;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    width: 366px;
-    margin: 0 0 60px;
+    width: calc(100% * 366 / 570);
+    margin: 0 0 55px;//60
   }
 }
 
@@ -38,7 +38,7 @@
   color: $sg--black;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    @include set-font("Oswald", 20px, 20px, uppercase);
+    @include set-font("Oswald", 20px, 36px, uppercase);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -51,13 +51,22 @@
   width: 100%;
   border: none;
 
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    text-align: right;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    text-align: left;
+  }
+
 
   &--special {
     width: calc((100% - 31px) / 2);
     box-sizing: border-box;
     height: 56px;
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     border: 1px solid $sg--special_grey;
@@ -76,16 +85,17 @@
       // empty
     }
 
-    .precedent__label {
+    & .precedent__label {
       position: absolute;
       display: inline-block;
       text-align: center;
-      padding: 0;
       margin: 0;
-      top: 48px;
-      left: calc(50% - 38px);
-      width: 77px;
+      top: 47px;
       background-color: $sg--gray_na3;
+      width: auto;
+      box-sizing: border-box;
+      max-width: calc(100% * 85 / 124);
+      padding: 0 8px;
 
       @include set-font("Arial", 12px, 12px);
       font-weight: 400;
@@ -96,10 +106,25 @@
         @include set-font("Arial", 14px, 14px);
         background-color: $sg--white;
         top: 63px;
+        max-width: 100%;
       }
 
       @media screen and (min-width: $gl--breakpoint--desctop) {
         background-color: $sg--gray_na3;
+      }
+    }
+
+    & .precedent__value {
+      @include set-font("Oswald", 24px, 24px, uppercase);
+      padding: 15px 0 11px;
+
+      @media screen and (min-width: $gl--breakpoint--tablet) {
+        @include set-font("Oswald", 30px, 37px, uppercase);
+        padding: 15px 0 11px;
+      }
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        // empty
       }
     }
   }
@@ -113,27 +138,29 @@
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: 12px;
-      width: calc(100% - 366px);
+      width: calc(100% - 100% * 366 / 708);//100% - 366px
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      width: 366px;
+      width: calc(100% * 366 / 570);//366px;
       box-sizing: border-box;
       height: 27px;
 
-      .precedent__label {
+      & .precedent__label {
         display: inline-block;
-        width: calc(100% - 162px);
+        width: calc(100% - (100% - 42px) / 2);//100% - 166px
         text-align: left;
       }
 
-      .precedent__value {
+      & .precedent__value {
+        @include set-font("Oswald", 20px, 20px);
         display: inline-block;
-        width: 162px;
+        width: calc((100% - 42px) / 2);//166px
         text-align: center;
+        padding-right: 4px;
       }
     }
   }

@@ -1,6 +1,55 @@
 .main-nav-toggle {
-
+  position: relative;
   background-color: $sg--white;
-  outline: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  outline: none;
+  width: 24px;
+  height: 16px;
   border: none;
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav-toggle::before {
+  position: absolute;
+  z-index: 11;
+  content: "";
+  height: 1.5px;
+  width: 24px;
+  top: 0;
+  left: 0;
+  background-color: $sg--black;
+  box-shadow: 0 8px 0 0 $sg--black, 0 16px 0 0 $sg--black;
+}
+
+.main-nav--closed .main-nav-toggle:active::before {
+  background-color: lighten($sg--black, 60%);
+  box-shadow: 0 8px 0 0 lighten($sg--black, 60%), 0 16px 0 0 lighten($sg--black, 60%);
+}
+
+.main-nav--opened .main-nav-toggle::before,
+.main-nav--opened .main-nav-toggle::after {
+  position: absolute;
+  z-index: 11;
+  content: "";
+  height: 1.5px;
+  width: 25px;
+  top: 8px;
+  left: 0;
+  background-color: $sg--black;
+}
+
+
+.main-nav--opened .main-nav-toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.main-nav--opened .main-nav-toggle::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav--opened .main-nav-toggle:active::before,
+.main-nav--opened .main-nav-toggle:active::after {
+  background-color: lighten($sg--black, 60%);
 }

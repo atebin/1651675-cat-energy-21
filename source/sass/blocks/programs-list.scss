@@ -18,7 +18,7 @@
 .programs-list__item {
   min-height: 266px;
   box-sizing: border-box;
-  padding: 22px 22px 18px;
+  padding: 29px 20px 18px;
 
   list-style: none;
   background-color: $sg--basic_grey;
@@ -28,9 +28,14 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
+    min-height: 372px;
     padding: 0;
     display: grid;
     grid-column: 1 / -1;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -55,11 +60,11 @@
   box-sizing: border-box;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    padding: 77px 0 53px 53px;
+    padding: 75px 0 44px 53px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    padding: 41px 53px 55px;
+    padding: 41px 51px 48px;
   }
 }
 
@@ -67,8 +72,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 71px;
-  margin-bottom: 22px;
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 30px;
 
   @include set-font("Oswald", 24px, 37px, uppercase);
   font-weight: 400;
@@ -77,14 +83,14 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 
     @include set-font("Oswald", 36px, 36px, uppercase);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     margin-left: 162px;
-    margin-bottom: 39px;
+    margin-bottom: 41px;
     height: 106px;
   }
 
@@ -110,7 +116,7 @@
     background-image: url("../../img/svg/cat_in_circle_slim.svg");
     background-size: 50px 53px;
     top: -8px;
-    left: -71px;
+    left: -68px;
     width: 50px;
     height: 53px;
 
@@ -126,15 +132,15 @@
   &--pro::after {
     background-image: url("../../img/svg/cat_in_circle_pro.svg");
     background-size: 67px 50px;
-    top: -8px;
+    top: -6px;
     left: calc(-71px - 8px);
     width: 67px;
     height: 50px;
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       background-size: 134px 100px;
-      top: 0;
-      left: calc(-162px - 8px * 2);
+      top: 4px;
+      left: calc(-162px - 8px * 2 - 3px);
       width: 134px;
       height: 100px;
     }
@@ -150,22 +156,6 @@
   width: 200px;
   height: 200px;
 
-  &--slim {
-    background-image: url("../../img/svg/cat_in_circle_slim.svg");
-    background-position: left center;
-    background-size: 200px 211px;
-    width: calc(200px / 2 + 62px + 200px / 2);
-    height: 211px;
-  }
-
-  &--pro {
-    background-image: url("../../img/svg/cat_in_circle_pro.svg");
-    background-position: left center;
-    background-size: 268px 200px;
-    width: calc(268px / 2 + 28px + 268px / 2);
-    height: 200px;
-  }
-
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: block;
     grid-column: 3 / 5;
@@ -175,22 +165,55 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     display: none;
   }
+
+  &--slim {
+    background-image: url("../../img/svg/cat_in_circle_slim.svg");
+    background-position: left center;
+    background-size: 200px 211px;// 200 211
+    width: calc(200px / 2 + 62px + 200px / 2);
+    height: 211px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-position: calc(0% + 0px) calc(50% - 2px);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
+  }
+
+  &--pro {
+    background-image: url("../../img/svg/cat_in_circle_pro.svg");
+    background-position: left center;
+    background-size: 266px 202px;// 268 200
+    width: calc(268px / 2 + 28px + 268px / 2);
+    height: 204px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-position: calc(0% - 0px) calc(50% + 3px);
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
+  }
 }
 
 .programs-list__description {
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  margin-top: 0;
+  margin: 0 0 22px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
-    margin-bottom: 48px;
+    margin-bottom: 57px;
     margin-right: 17px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin-bottom: 23px;
+    @include set-font("Arial", 16px, 24px);
+    margin-bottom: 32px;
     margin-right: 0;
   }
 }
@@ -200,7 +223,7 @@
 
   height: 38px;
   box-sizing: border-box;
-  padding-top: 15px;
+  padding-top: 19px;
 
   border-top: 1px solid $sg--gray_na1;
 
@@ -222,8 +245,42 @@
   @include set-font("Oswald", 16px, 16px, uppercase);
   font-weight: 400;
   color: $sg--black;
+  text-decoration: none;
+  display: inline-block;
+  padding-right: 60px;
+  position: relative;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 20px;
+    top: 1px;
+
+    background-image: url("../../img/svg/icon_arrow_small.svg");
+    background-position: 0 center;
+    background-size: (24px + 4px) (12px + 2px);
+    width: 24px;
+    height: 12px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      right: 10px;
+      top: 3px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
+  }
+
+  &:hover {
+    color: gray;
   }
 }

@@ -6,7 +6,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 71px;
+    margin: 0 0 69px;
   }
 }
 
@@ -18,12 +18,14 @@
   margin: 0 0 38px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 60px, 60px);
     padding: 0 $gl--padding-side--tablet;
     margin: 0 0 72px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     padding: 0 $gl--padding-side--desctop;
+    margin: 0 0 70px;
   }
 }
 
@@ -31,13 +33,11 @@
   margin: 0 0 42px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    //padding: 0 $gl--padding-side--tablet;
-    margin: 0 0 90px;
+    margin: 0 0 47px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    //padding: 0 $gl--padding-side--desctop;
-    margin: 0 0 205px;//69
+    margin: 0;
   }
 }
 
@@ -49,7 +49,27 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    background-color: $sg--gray_na3;
+    // empty
+  }
+}
+
+.page-main-index__example-title {
+  @include set-font("Oswald", 36px, 40px);
+  font-weight: 400;
+  color: $sg--black;
+  margin: 0 0 33px;
+  padding: 27px $gl--padding-side--mobile 0;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    @include set-font("Oswald", 60px, 60px);
+    padding: 43px $gl--padding-side--tablet 0;
+    margin: 0 0 64px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    border-top: 1px solid $line-border-light;
+    padding: 68px $gl--padding-side--desctop 0;
+    margin: 0 0 75px;
   }
 }
 
@@ -63,65 +83,51 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     @include set-grid-desctop();
     padding: 0 $gl--padding-side--desctop;
+    background-color: $sg--gray_na3;
   }
 }
 
 .page-main-index__example-info {
-  padding: 27px $gl--padding-side--mobile 0;
+  padding: 0 $gl--padding-side--mobile;
   background-color: $sg--gray_na3;
-  margin: 0 0 42px;
+  margin: 0 0 41px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     background-color: $sg--white;
     margin: 0;
-    padding-top: 0;
-    padding-bottom: 250px;
+    //padding-top: 0;
+    //padding-bottom: 250px;
+    padding: 0 $gl--padding-side--tablet 254px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     background-color: transparent;
     grid-column: 1 / 3;
-    margin: -136px 0 0;
-    width: 436px;
-    padding: 0 0 75px;
+    //margin: -136px 0 0;
+    //min-width: 436px;
+    width: 100%;
+    padding: 0 0 72px;//72
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
-
-.page-main-index__example-title {
-  @include set-font("Oswald", 36px, 40px);
-  font-weight: 400;
-  color: $sg--black;
-  margin: 0 0 33px;
-
-  @media screen and (min-width: $gl--breakpoint--tablet) {
-    @include set-font("Oswald", 60px, 60px);
-    margin: 0 0 63px;
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 76px;
-  }
-}
-
 
 .page-main-index__example-result {
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  margin: 0 0 25px;
+  margin: 0 0 24px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
-    margin: 0 0 54px;
+    margin: 0 0 52px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 69px;
-    padding-top: 70px;
+    margin: 0;
+    padding-top: 73px;
   }
 }
 
@@ -142,14 +148,13 @@
   background-color: $sg--gray_na3;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    //margin-top: -191px;
     padding-bottom: 64px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     background-color: transparent;
     grid-column: 3 / 5;
-    padding: 0 0 75px;
+    padding: 0 0 72px;//72
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
