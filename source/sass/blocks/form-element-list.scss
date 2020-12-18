@@ -24,12 +24,13 @@ $md--padding-before-hr: 25px;
   background-color: $sg--basic_green;
   color: $sg--basic_green;
 
-  margin: calc(27px + 18px) 0 -18px;
+  margin: calc(24px + 18px) 0 -18px;
   margin-right: (-1) * $gl--padding-side--mobile;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin-left: (-1) * ($gl--padding-side--tablet + 40px);
     margin-right: (-1) * ($gl--padding-side--tablet + 40px);
+    margin-bottom: -22px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {

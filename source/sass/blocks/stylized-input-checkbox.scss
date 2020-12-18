@@ -1,23 +1,34 @@
-$stylized-input-checkbox--height: 30px;
-$stylized-input-checkbox--inner-interval: 18px;
+$stylized-input-checkbox--height-mobile: 30px;
+$stylized-input-checkbox--height-tablet: 40px;
+$stylized-input-checkbox--inner-interval-mobile: 16px;
+$stylized-input-checkbox--inner-interval-tablet: 18px;
 $stylized-input-checkbox--border-width: 1px;
 
 .stylized-input-checkbox {
   display: flex;
   align-items: center;
-  height: $stylized-input-checkbox--height;
+  height: $stylized-input-checkbox--height-mobile;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    height: $stylized-input-checkbox--height-tablet;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    // empty
+  }
 }
 
 .stylized-input-checkbox__label {
-  margin-left: $stylized-input-checkbox--height + $stylized-input-checkbox--inner-interval;
+  margin-left: $stylized-input-checkbox--height-mobile + $stylized-input-checkbox--inner-interval-mobile;
   padding: 0;
 
   @include set-font("Oswald", 16px, 18px, uppercase);
   font-weight: 400;
-  color: $sg--special_dark_grey_2; // в макете просто черный... Что ставим???
+  color: $sg--special_dark_grey_2;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 24px, uppercase);
+    margin-left: $stylized-input-checkbox--height-tablet + $stylized-input-checkbox--inner-interval-tablet;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -50,12 +61,21 @@ $stylized-input-checkbox--border-width: 1px;
     position: absolute;
     z-index: 1;
     content: "";
-    width: $stylized-input-checkbox--height - 2 * $stylized-input-checkbox--border-width;
-    height: $stylized-input-checkbox--height - 2 * $stylized-input-checkbox--border-width;
+    width: $stylized-input-checkbox--height-mobile - 2 * $stylized-input-checkbox--border-width;
+    height: $stylized-input-checkbox--height-mobile - 2 * $stylized-input-checkbox--border-width;
     border: $stylized-input-checkbox--border-width solid $sg--special_grey;
     background-color: $sg--white;
     top: 0;
     left: 0;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: $stylized-input-checkbox--height-tablet - 2 * $stylized-input-checkbox--border-width;
+      height: $stylized-input-checkbox--height-tablet - 2 * $stylized-input-checkbox--border-width;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 
   &:hover::before {
@@ -87,6 +107,17 @@ $stylized-input-checkbox--border-width: 1px;
     opacity: 0;
     top: 7px;
     left: 5px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      width: 26px;
+      height: 16px;
+      top: 12px;
+      left: 7px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 
   &:hover::after {

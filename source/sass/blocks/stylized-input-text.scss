@@ -1,6 +1,7 @@
 $stylized-input-text--height-mobile: 46px;
-$stylized-input-text--height-tablet: 52px;
-$stylized-input-text--inner-interval: 14px;
+$stylized-input-text--height-tablet: 53px;
+$stylized-input-text--inner-interval-mobile: 14px;
+$stylized-input-text--inner-interval-tablet: 18px;
 $stylized-input-text--border-width: 1px;
 
 .stylized-input-text {
@@ -26,7 +27,7 @@ $stylized-input-text--border-width: 1px;
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  margin-right: $stylized-input-text--inner-interval;
+  margin-right: $stylized-input-text--inner-interval-mobile;
 
   @include set-font("Oswald", 16px, 18px, uppercase);
   font-weight: 400;
@@ -34,6 +35,7 @@ $stylized-input-text--border-width: 1px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 24px, uppercase);
+    margin-right: $stylized-input-text--inner-interval-tablet;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
