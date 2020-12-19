@@ -1,6 +1,7 @@
 $stylized-input-radio--height-mobile: 30px;
 $stylized-input-radio--height-tablet: 40px;
-$stylized-input-radio--inner-interval: 15px;
+$stylized-input-radio--inner-interval-mobile: 16px;
+$stylized-input-radio--inner-interval-tablet: 21px;
 $stylized-input-radio--border-width: 1px;
 
 .stylized-input-radio {
@@ -18,7 +19,7 @@ $stylized-input-radio--border-width: 1px;
 }
 
 .stylized-input-radio__label {
-  margin-left: $stylized-input-radio--height-mobile + $stylized-input-radio--inner-interval;
+  margin-left: $stylized-input-radio--height-mobile + $stylized-input-radio--inner-interval-mobile;
   padding: 0;
 
   @include set-font("Oswald", 16px, 18px, uppercase);
@@ -27,7 +28,7 @@ $stylized-input-radio--border-width: 1px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 24px, uppercase);
-    margin-left: $stylized-input-radio--height-tablet + $stylized-input-radio--inner-interval;
+    margin-left: $stylized-input-radio--height-tablet + $stylized-input-radio--inner-interval-tablet;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {

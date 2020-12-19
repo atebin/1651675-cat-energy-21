@@ -3,7 +3,7 @@
     box-sizing: border-box;
     padding: 0 $gl--padding-side--tablet;
 
-    .form-element-list {
+    & .form-element-list {
       padding: 0 40px;
     }
   }
@@ -11,14 +11,14 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     padding: 0 $gl--padding-side--desctop;
 
-    .form-element-list {
+    & .form-element-list {
       padding: 0;
     }
   }
 }
 
 .page-main-form__form-header {
-  margin: 27px 0 27px;
+  margin: 27px 0 39px;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
 
@@ -70,18 +70,18 @@
 
 .page-main-form__form-wrapper {
   display: block;
-  margin: 0 0 27px;
+  margin: 0 0 23px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin: 0 0 (70px + $md--padding-before-hr);
 
-    .form-element-list--special {
-      padding: 28px 25px;
+    & .form-element-list--special {
+      padding: 25px 28px;
     }
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 (65px + $md--padding-before-hr);
+    margin: 0 0 (63px + $md--padding-before-hr);
 
     @include set-grid-desctop();
 
@@ -94,7 +94,7 @@
 ////////////////////////////////////////////////////////////////
 // --- cat-data
 .page-main-form__form-cat-data {
-  margin: 0 0 23px;
+  margin: 0 0 22px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin: 0 0 72px;
@@ -106,14 +106,20 @@
     grid-column: 1 / 3;
   }
 
-  .form-element-list__item {
+  & .form-element-list__item {
     min-height: 46px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       min-height: 52px;
 
       &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+      }
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      &:not(:last-child) {
+        margin-bottom: 19px;
       }
     }
   }
@@ -123,12 +129,12 @@
 // --- target-program
 
 .page-main-form__form-target-program {
-  margin: 0 0 27px;
+  margin: 0;
 
   // ++++++++++++++++++++++++++++++++++++++++++++++
   // специфика блока - рамки паддинги вверху и внизу
   box-sizing: border-box;
-  padding: 21px $gl--padding-side--mobile 21px;
+  padding: 22px $gl--padding-side--mobile 18px;
 
   border-top: 1px solid $sg--gray_na1;
   border-bottom: 1px solid $sg--gray_na1;
@@ -136,6 +142,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin: 0 40px;
+    padding: 21px $gl--padding-side--mobile 19px;
     border: 1px solid $sg--gray_na5;
   }
 
@@ -160,24 +167,43 @@
 ////////////////////////////////////////////////////////////////
 // --- cat-owner-data
 .page-main-form__form-cat-owner-data {
-  margin: 0 0 27px;
+  margin: 0 0 20px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    margin: 0 0 (65px + $md--padding-before-hr);
+    margin: 0 0 (60px + $md--padding-before-hr);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 (70px + $md--padding-before-hr);
+    margin: 0 0 (43px + $md--padding-before-hr);
   }
 
-  .form-element-list__wrapper {
+  & .form-element-list__title {
+    margin-bottom: 34px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 75px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 74px;
+    }
+  }
+
+  & .form-element-list__wrapper {
     @media screen and (min-width: $gl--breakpoint--desctop) {
       @include set-grid-desctop();
       grid-template-rows: auto;
     }
   }
 
-  .form-element-list__item {
+
+  & .stylized-input-text__label {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      //margin-right: $stylized-input-text--inner-interval-tablet - ;
+    }
+  }
+
+  & .form-element-list__item {
     min-height: 46px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
@@ -210,11 +236,27 @@
 // --- comment
 .page-main-form__form-comment {
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    margin: 0 0 (65px + $md--padding-before-hr);
+    margin: 0 0 (58px + $md--padding-before-hr);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 (67px + $md--padding-before-hr);
+    margin: 0 0 (60px + $md--padding-before-hr);
+  }
+
+  & .form-element-list__hr {
+    margin-top: 40px;
+  }
+
+  & .form-element-list__title {
+    margin-bottom: 38px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 75px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      margin-bottom: 74px;
+    }
   }
 }
 
@@ -222,17 +264,29 @@
 // --- additionally
 
 .page-main-form__form-additionally {
-  margin: 0 0 34px;
+  margin: 0 0 35px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    margin: 0 0 55px;
+    margin: 0 0 22px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 60px;
+    margin: 0 0 50px;
   }
 
-  .form-element-list__wrapper {
+  & .form-element-list__hr {
+    margin-top: 33px;
+  }
+
+  & .form-element-list__title {
+    margin-bottom: 35px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 56px;
+    }
+  }
+
+  & .form-element-list__wrapper {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       @include set-grid-tablet();
     }
@@ -242,8 +296,16 @@
     }
   }
 
-  .form-element-list__item {
+  & .form-element-list__item {
     min-height: 30px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      min-height: 40px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
 
     &:nth-child(odd) {
       @media screen and (min-width: $gl--breakpoint--tablet) {
@@ -286,13 +348,13 @@
     @include set-grid-desctop();
   }
 
-  .stylized-button--primary {
+  & .stylized-button--primary {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       @include set-font("Oswald", 20px, 20px, uppercase);
     }
   }
 
-  .page-main-form__form-footer-legend {
+  & .page-main-form__form-footer-legend {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       @include set-font("Arial", 16px, 16px);
     }
