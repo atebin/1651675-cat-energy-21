@@ -11,7 +11,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page__body-header page-header main-nav main-nav--closed">
+  <header class="page__body-header page-header main-nav main-nav--closed main-nav--nojs">
     <div class="page-header__wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-link">
@@ -29,7 +29,7 @@
 
       <ul class="page-header__main-nav-list main-nav-list main-nav-list--light-theme">
         <li class="main-nav-list__item">
-          <a class="main-nav-list__link main-nav-list__link--active">главная</a>
+          <a class="main-nav-list__link" href="/index.html">главная</a>
         </li>
 
         <li class="main-nav-list__item">
@@ -37,7 +37,7 @@
         </li>
 
         <li class="main-nav-list__item">
-          <a class="main-nav-list__link" href="/form.html">подбор программы</a>
+          <a class="main-nav-list__link main-nav-list__link--active">подбор программы</a>
         </li>
       </ul>
     </div>
@@ -108,13 +108,13 @@
             class="br-for--mobile">(владельца кота)</h2>
 
         <div class="form-element-list__wrapper">
-          <div class="form-element-list__item stylized-input-text">
+          <div class="form-element-list__item stylized-input-text stylized-input-text--email">
             <label class="stylized-input-text__label" for="field-cat-owner-email">Email:*</label>
-            <input class="stylized-input-text__input stylized-input-text__input--email" type="email"
+            <input class="stylized-input-text__input" type="email"
               name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
           </div>
 
-          <div class="form-element-list__item stylized-input-text">
+          <div class="form-element-list__item stylized-input-text stylized-input-text--phone">
             <label class="stylized-input-text__label" for="field-cat-owner-phone">Телефон:*</label>
             <input class="stylized-input-text__input" type="tel" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
               name="cat-owner-phone" id="field-cat-owner-phone" value="8 (960) 900-60-90">
