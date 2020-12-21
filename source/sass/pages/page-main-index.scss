@@ -1,5 +1,5 @@
 .page-main-index__programs-list {
-  margin: 0 0 27px;
+  margin: 0 0 26px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin: 0 0 45px;
@@ -115,7 +115,7 @@
 }
 
 .page-main-index__example-result {
-  @include set-font("Arial", 14px, 18px);
+  @include set-font("Arial", 14px, 18.5px);
   font-weight: 400;
   color: $sg--special_dark_grey;
   margin: 0 0 24px;

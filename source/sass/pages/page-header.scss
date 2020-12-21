@@ -12,9 +12,22 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    height: 59px;
-    padding: 57px $gl--padding-side--desctop 0;
-    margin: 0 0 (75px - 2px);
+    padding: 37px $gl--padding-side--desctop 0;
+
+    &--index {
+      height: 30px;
+      margin: 0 0 122px;
+    }
+
+    &--form {
+      height: 59px;
+      margin: 0 0 73px;
+    }
+
+    &--catalog {
+      height: 59px;
+      margin: 0 0 73px;
+    }
   }
 }
 
@@ -46,36 +59,79 @@
   }
 }
 
+.page-header__logo-svg {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-header__logo-icon {
+  &--mobile {
+    display: inline-block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desctop {
+    display: none;
+  }
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    background-image: url("../../img/svg/logo_tablet.svg");
-    background-size: 61px 50px;
     width: 61px;
     height: 50px;
     margin-right: 13px;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline-block;
+    }
+
+    &--desctop {
+      display: none;
+    }
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    background-image: url("../../img/svg/logo_desctop.svg");
-    background-size: 71px 60px;
     width: 71px;
-    height: 60px;
+    height: 59px;
     margin-right: 14px;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desctop {
+      display: inline-block;
+    }
   }
 }
 
 .page-header__logo-text {
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    background-image: url("../../img/svg/logo_text.svg");
-    background-size: 102px 19px;
+    /*background-image: url("../../img/svg/logo_text.svg");
+    background-size: 102px 19px;*/
+    padding-top: 6px;
     width: 102px;
     height: 19px;
-    margin-right: 13px;
+    margin-right: 14px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    background-image: url("../../img/svg/logo_text.svg");
-    background-size: 118px 22px;
+    /*background-image: url("../../img/svg/logo_text.svg");
+    background-size: 118px 22px;*/
     width: 118px;
     height: 22px;
     margin-right: 14px;

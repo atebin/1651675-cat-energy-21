@@ -11,16 +11,25 @@
 </head>
 
 <body class="page__body">
-  <header class="page__body-header page-header main-nav main-nav--closed main-nav--nojs">
-    <div class="page-header__wrapper">
+  <header class="page__body-header page-header main-nav main-nav--closed">
+    <div class="page-header__wrapper page-header__wrapper--form">
       <div class="page-header__logo">
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-icon" src="./img/svg/logo_mobile.svg" width="34" height="38"
-            title="Лого с иконкой CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--mobile" width="34"
+            height="38">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__mobile"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__tablet"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--desctop" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__desctop"></use>
+          </svg>
         </a>
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-text" src="./img/svg/logo_text.svg" width="101" height="18"
-            title="Лого с текстом CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-text" width="101" height="18">
+            <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+          </svg>
         </a>
         <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -110,14 +119,25 @@
         <div class="form-element-list__wrapper">
           <div class="form-element-list__item stylized-input-text stylized-input-text--email">
             <label class="stylized-input-text__label" for="field-cat-owner-email">Email:*</label>
-            <input class="stylized-input-text__input" type="email"
-              name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
+            <div class="stylized-input-text__icon-wrapper">
+              <input class="stylized-input-text__input stylized-input-text__input--email" type="email"
+                name="cat-owner-email" id="field-cat-owner-email" value="kuklachev@gmail.com">
+              <svg class="stylized-input-text__icon" width="19" height="14">
+                <use xlink:href="./img/svg/mail.svg#input-mail"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-element-list__item stylized-input-text stylized-input-text--phone">
             <label class="stylized-input-text__label" for="field-cat-owner-phone">Телефон:*</label>
-            <input class="stylized-input-text__input" type="tel" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-              name="cat-owner-phone" id="field-cat-owner-phone" value="8 (960) 900-60-90">
+            <div class="stylized-input-text__icon-wrapper">
+              <input class="stylized-input-text__input stylized-input-text__input--phone" type="tel"
+                pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="cat-owner-phone" id="field-cat-owner-phone"
+                value="8 (960) 900-60-90">
+              <svg class="stylized-input-text__icon" width="20" height="20">
+                <use xlink:href="./img/svg/phone.svg#input-phone"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </article>

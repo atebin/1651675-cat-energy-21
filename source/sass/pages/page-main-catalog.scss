@@ -3,14 +3,55 @@
 }
 
 .page-main-catalog__catalog {
-  margin: 27px 0 27px;
+  margin: 28px 0 25px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    margin: 0 0 (68px + $md--padding-before-hr);
+    margin: 0 0 (65px + $md--padding-before-hr);
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 (76px + $md--padding-before-hr);
+    margin: 0 0 (69px + $md--padding-before-hr);
+  }
+
+  & .stylized-button {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      height: 39px;
+      min-height: 39px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      height: 40px;
+    }
+  }
+
+  & .card-product__name {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 22px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      margin-bottom: 24px;
+    }
+  }
+
+  & .card-product__property-row {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      padding-bottom: 7px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      padding-bottom: 8px;
+    }
+  }
+
+  & .card-product__property-row:not(:last-child) {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      // empty
+    }
   }
 }
 
@@ -39,7 +80,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-grid-tablet();
-    row-gap: 51px;
+    row-gap: 60.2px;
     padding: 0 $gl--padding-side--tablet;
     margin: 0;
   }
@@ -56,7 +97,7 @@
   margin: 0;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    min-height: 430px;
+    min-height: 428px;
     margin: 81px 0 0; // 51px
     background-color: $sg--basic_grey;
     border: none;
@@ -71,6 +112,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    min-height: 431px;
     margin: 81px 0 0; // 62px
 
     &:nth-child(odd) {
@@ -81,7 +123,23 @@
       grid-column: auto;
     }
   }
+
+  &:first-child {
+    border-top: 1px solid $sg--gray_na6;
+  }
+
+  &:not(:first-child) {
+    border-top: 0.2px solid transparent;
+  }
+
+  &--special {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      background-color: $sg--white;
+      border: 2px solid $sg--basic_grey;
+    }
+  }
 }
+
 
 .page-main-catalog__additionally {
   margin: 0 0 35px;
@@ -96,6 +154,22 @@
     margin: 0 0 86px;
   }
 
+  & .form-element-list__hr {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-top: 38px;
+      margin-bottom: -23px;
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      margin-top: 44px;
+      margin-bottom: -23px;
+      margin-left: -110px;
+      margin-right: -110px;
+    }
+  }
+
   & .form-element-list__title {
     margin: 0 0 35px;
 
@@ -106,25 +180,28 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       @include set-font("Oswald", 36px, 36px);
       margin: 0 0 80px;
+      padding-left: 37px;
+      padding-right: 37px;
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
+      margin-left: -37px;
     }
   }
 
   & .form-element-list__item {
     box-sizing: border-box;
-    padding: 0 0 19px;
+    padding: 0 0 17px;
     border-bottom: 1px solid $sg--special_grey;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       padding: 26px 38px 28px;
+      margin: 0;
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      padding: 16px 0;
-      margin: 0;
+      //padding: 16px 0;
+      padding: 15px 0 16px;
     }
 
     &:last-child {
@@ -137,9 +214,21 @@
       }
     }
 
+    &:not(:last-child) {
+      margin-bottom: 12.5px;
+
+      @media screen and (min-width: $gl--breakpoint--tablet) {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: $gl--breakpoint--desctop) {
+        // empty
+      }
+    }
+
     &:first-child {
       border-top: 1px solid #cdcdcd;
-      padding-top: 13px;
+      padding-top: 14px;
 
       @media screen and (min-width: $gl--breakpoint--tablet) {
         padding-top: 26px;
@@ -147,9 +236,22 @@
       }
 
       @media screen and (min-width: $gl--breakpoint--desctop) {
-        padding: 16px 0;
+        padding: 15px 0 16px;
         border-top: 1px solid $sg--special_grey;
       }
+    }
+  }
+
+  & .additional-goods__order {
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-top: 25px;
+      height: 39px;
+      min-height: 39px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) {
+      margin-top: 0;
+      height: 40px;
     }
   }
 }

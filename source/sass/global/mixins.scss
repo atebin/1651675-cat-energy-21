@@ -15,7 +15,7 @@
 
 @mixin set-grid-tablet() {
   display: grid;
-  grid-template-columns: 112px 112px 112px 112px;//132px 132px 132px 132px
+  grid-template-columns: 1fr 1fr 1fr 1fr;//112px 112px 112px 112px;//132px 132px 132px 132px
   column-gap: 60px;
 }
 

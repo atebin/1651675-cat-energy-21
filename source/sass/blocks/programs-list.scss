@@ -84,6 +84,7 @@
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 26px;
+    padding-top: 2px;
 
     @include set-font("Oswald", 36px, 36px, uppercase);
   }
@@ -203,7 +204,7 @@
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  margin: 0 0 22px;
+  margin: 0 0 25px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);

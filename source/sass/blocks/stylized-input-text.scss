@@ -20,53 +20,6 @@ $stylized-input-text--border-width: 1px;
   @media screen and (min-width: $gl--breakpoint--desctop) {
     // empty
   }
-
-  &--phone,
-  &--email {
-    position: relative;
-
-    .stylized-input-text__input {
-      // Увеличение паддинга для показа значка конверта правого отступа.
-      // Интервал между текстом и значком уменьшаем
-
-      padding-right: calc(5px + 20px + 16px);
-    }
-  }
-
-  &--phone::before,
-  &--email::before {
-    display: block;
-    position: absolute;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 1;
-    content: "";
-    height: 100%;
-  }
-
-  &--phone::before {
-    background-image: url("../../img/svg/phone.svg");
-    background-size: 20px 20px;
-    width: 20px;
-    right: 13px;
-    top: 2;
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      right: 17px;
-    }
-  }
-
-  &--email::before {
-    background-image: url("../../img/svg/mail.svg");
-    background-size: 20px 15px;
-    width: 20px;
-    right: 14px;
-    top: 0;
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      right: 18px;
-    }
-  }
 }
 
 .stylized-input-text__label {
@@ -142,4 +95,64 @@ $stylized-input-text--border-width: 1px;
     border-color: $sg--status-error;
     outline: $stylized-input-text--border-width solid $sg--status-error;
   }
+}
+
+.stylized-input-text__icon-wrapper {
+  position: relative;
+  width: auto;
+  display: block;
+  flex-grow: 50;
+}
+
+.stylized-input-text__input--phone,
+.stylized-input-text__input--email {
+  padding-right: calc(5px + 20px + 16px);
+  width: 100%;
+}
+
+.stylized-input-text__input--phone + .stylized-input-text__icon,
+.stylized-input-text__input--email + .stylized-input-text__icon {
+  display: block;
+  position: absolute;
+  height: 100%;
+}
+
+.stylized-input-text__input--phone + .stylized-input-text__icon {
+  width: 20px;
+  right: 13px;
+  top: 2px;
+  color: $sg--special_dark_grey_2;
+  fill: currentColor;
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    right: 17px;
+  }
+}
+
+.stylized-input-text__input--phone:invalid + .stylized-input-text__icon {
+  color: $sg--status-error;
+}
+
+.stylized-input-text__input--phone:focus:valid + .stylized-input-text__icon {
+  color: $sg--basic_green;
+}
+
+.stylized-input-text__input--email + .stylized-input-text__icon {
+  right: 14px;
+  width: 19px;
+  top: 0;
+  color: $sg--special_dark_grey_2;
+  stroke: currentColor;
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    right: 18px;
+  }
+}
+
+.stylized-input-text__input--email:invalid + .stylized-input-text__icon {
+  color: $sg--status-error;
+}
+
+.stylized-input-text__input--email:focus:valid + .stylized-input-text__icon {
+  color: $sg--basic_green;
 }
