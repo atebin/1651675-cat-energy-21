@@ -51,7 +51,8 @@
 }
 
 .additional-goods__promo-text {
-  margin-bottom: 43px;
+  margin-bottom: 42px;
+  margin-left: -3px;
 
   @include set-font("Arial", 16px, 20px);
   font-weight: 400;
@@ -62,11 +63,11 @@
     margin: 0;
     margin-left: 423px;
     text-align: left;
+    padding-top: 2px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0;
-    margin-bottom: 43px;
+    margin: 0 0 43px;
     text-align: center;
   }
 }
@@ -88,7 +89,7 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    margin: 0 0 69px;
+    margin: 0 0 67px;
     border: 1px solid $sg--special_grey;
   }
 
@@ -170,6 +171,7 @@
     grid-row: 1 / -1;
     text-align: left;
     justify-content: space-between;
+    padding-top: 7px;
   }
 }
 
@@ -194,11 +196,12 @@
     grid-row: 1 / -1;
     text-align: left;
     justify-content: space-between;
+    padding-top: 7px;
   }
 }
 
 .additional-goods__order {
-  margin-top: 15px;
+  margin-top: 16px;
   width: 100%;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {

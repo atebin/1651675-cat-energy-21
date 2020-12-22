@@ -1,11 +1,11 @@
 .card-product {
   box-sizing: border-box;
-  padding: 19px $gl--padding-side--mobile 25px;
+  padding: 19.5px $gl--padding-side--mobile 24px;
   border-bottom: 1px solid $sg--gray_na6;
   position: relative;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    padding: 0 39px 40px;
+    padding: 0 39px 38px;//38
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,48 +14,49 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     // empty
   }
-
-  &:first-child {
-    border-top: 1px solid $sg--gray_na6;
-  }
 }
 
 .card-product__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0 0 13px;
+  margin: 0 0 8px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: block;
-    margin: 161px 0 33px;
+    margin: 161px 0 32px;
     min-height: 157px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
+    margin-top: 162px;
   }
 }
 
 .card-product__image {
   width: 50%;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     position: absolute;
-    top: -73px;
+    top: -74px;
     left: 0;
     width: 100%;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    top: -80px;
+    top: -79px;//-77
+    left: 3px;
   }
 }
 
 .card-product__image-content {
+  margin-top: -1px;
+  margin-left: -1px;
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 168px;
     height: 200px;
@@ -63,7 +64,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     width: 172px;
-    height: 196px;
+    height: 202px;//196
   }
 }
 
@@ -71,16 +72,19 @@
   width: 50%;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin-top: -1px;
     width: 100%;
+    margin-bottom: 1px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     // empty
+    margin: 0;
   }
 }
 
 .card-product__name {
-  margin: 0 0 18px;
+  margin: 0 0 15px;
 
   @include set-font("Oswald", 16px, 20px, uppercase);
   font-weight: 400;
@@ -93,6 +97,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    @include set-font("Oswald", 20px, 22px, uppercase);
     // empty
   }
 }
@@ -171,9 +176,6 @@
   }
 }
 
-.card-product__order {
-  // empty
-}
 
 ///////////////////////////////////////////////////////////////
 // -- special
@@ -190,7 +192,7 @@
     background-size: 30px 30px;
     width: 100%;
     height: 30px;
-    margin: 6px 0 23px;
+    margin: 5px 0 23px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       top: 0;
@@ -213,10 +215,6 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 21px;
-  }
-
-  & br {
-    display: none;
   }
 
   & .card-product__name-item {

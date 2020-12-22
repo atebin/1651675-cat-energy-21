@@ -11,21 +11,29 @@
 </head>
 
 <body class="page__body">
+
   <!-- header *** -->
-  <header class="page__body-header page-header">
-    <div class="page-header__wrapper">
+  <header class="page__body-header page-header main-nav main-nav--closed">
+    <div class="page-header__wrapper page-header__wrapper--catalog">
       <div class="page-header__logo">
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-icon" src="./img/svg/logo_mobile.svg" width="34" height="38"
-            title="Лого с иконкой CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--mobile" width="34"
+            height="38">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__mobile"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__tablet"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--desctop" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__desctop"></use>
+          </svg>
         </a>
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-text" src="./img/svg/logo_text.svg" width="101" height="18"
-            title="Лого с текстом CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-text" width="101" height="18">
+            <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+          </svg>
         </a>
         <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
-          <!-- временно здесь img - далее заменю на кнопку, созданную в CSS -->
-          <img src="./img/button/button_menu_is_open.png" width="18" height="18" alt="Кнопка закрыть/открыть меню">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
@@ -60,13 +68,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-1-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-1-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-1-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">500 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -86,7 +96,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -97,13 +108,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-2-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-2-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-2-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item ">Cat Energy <br class="card-product__name-br1">PRO<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item ">Cat Energy <br class="card-product__name-br1">PRO<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -123,7 +136,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -134,13 +148,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-3-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-3-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-3-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">500 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -160,7 +176,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -171,13 +188,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-4-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-4-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-4-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -197,7 +216,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -208,13 +228,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-5-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-5-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-5-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">500 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -234,7 +256,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -245,13 +268,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-6-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-6-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-6-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -271,7 +296,8 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
@@ -282,13 +308,15 @@
               <div class="card-product__image">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./img/catalog/catalog-7-desctop.png">
-                  <img class="card-product__image-content"  src="./img/catalog/catalog-7-mobile.jpg" width="140" height="112" alt="Фото товара">
+                  <img class="card-product__image-content" src="./img/catalog/catalog-7-mobile.jpg" width="140"
+                    height="112" alt="Фото товара">
                 </picture>
               </div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br class="card-product__name-br2"></span>
+                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                      class="card-product__name-br2"></span>
                   <span class="card-product__name-item card-product__name-item--special">500 г</span>
                 </div>
                 <ul class="card-product__property-table">
@@ -308,26 +336,29 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="card-product__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </div>
         </li>
 
         <!-- card # 8 *** special -->
-        <li class="page-main-catalog__item">
+        <li class="page-main-catalog__item page-main-catalog__item--special">
           <div class="card-product card-product--special">
             <div class="card-product__wrapper">
               <div class="card-product__image"></div>
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Показать еще <br>100500 товаров</span>
-                  <span class="card-product__name-item card-product__name-item--special">На самом деле вкусов гораздо
+                  <span class="card-product__name-item">Показать еще <br class="br-for--tablet">100500 товаров</span>
+                  <span class="card-product__name-item card-product__name-item--special">На самом деле вкусов <br
+                      class="br-for--tablet">гораздо
                     больше!</span>
                 </div>
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--secondary" type="button">показать все</button>
+            <button class="card-product__order stylized-button  stylized-button--secondary" type="button">показать
+              все</button>
           </div>
         </li>
       </ul>
@@ -345,7 +376,8 @@
             <h3 class="additional-goods__name">Сахарозаменитель</h3>
             <span class="additional-goods__packing">1 упаковка (100 г)</span>
             <span class="additional-goods__price">200 Р.</span>
-            <button class="additional-goods__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="additional-goods__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </li>
 
           <!-- add # 2 -->
@@ -353,7 +385,8 @@
             <h3 class="additional-goods__name">питьевая вода</h3>
             <span class="additional-goods__packing">5 литров</span>
             <span class="additional-goods__price">50 Р.</span>
-            <button class="additional-goods__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="additional-goods__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </li>
 
           <!-- add # 3 -->
@@ -361,7 +394,8 @@
             <h3 class="additional-goods__name">молоко</h3>
             <span class="additional-goods__packing">1 литр</span>
             <span class="additional-goods__price">100 Р.</span>
-            <button class="additional-goods__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="additional-goods__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </li>
 
           <!-- add # 4 -->
@@ -369,7 +403,8 @@
             <h3 class="additional-goods__name">витамины</h3>
             <span class="additional-goods__packing">1 упаковка (30 г)</span>
             <span class="additional-goods__price">300 Р.</span>
-            <button class="additional-goods__order stylized-button  stylized-button--primary" type="button">заказать</button>
+            <button class="additional-goods__order stylized-button  stylized-button--primary"
+              type="button">заказать</button>
           </li>
         </ul>
 
@@ -382,11 +417,11 @@
     </section>
 
     <!-- section address *** -->
-    <section class="page-main-catalog__contacts">
+    <section class="page-main-index__contacts">
 
       <h3 class="visually-hidden">Контактная информация</h3>
 
-      <div class="page-main-form__contacts-address address">
+      <div class="page-main-index__contacts-address address">
         <div class="address__info address__info--dark-theme">
           <p class="address__info-message">
             приглашаем <br>к сотрудничеству <br>дилеров!
@@ -394,7 +429,7 @@
 
           <div class="address__info-location">
             <p>
-              ул. Большая Конюшенная, д. 19/8
+              ул. Большая <br>Конюшенная, д. 19/8
             </p>
             <p>
               Санкт-Петербург

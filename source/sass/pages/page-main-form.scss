@@ -18,7 +18,7 @@
 }
 
 .page-main-form__form-header {
-  margin: 27px 0 39px;
+  margin: 28px 0 39px;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
 
@@ -33,14 +33,14 @@
 }
 
 .page-main-form__form-title {
-  margin: 0 0 37px;
+  margin: 0 0 38px;
 
   @include set-font("Oswald", 36px, 36px);
   font-weight: 400;
   color: $sg--black;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    margin: 0 0 54px;
+    margin: 0 0 56px;
 
     @include set-font("Oswald", 60px, 60px);
   }
@@ -94,7 +94,7 @@
 ////////////////////////////////////////////////////////////////
 // --- cat-data
 .page-main-form__form-cat-data {
-  margin: 0 0 22px;
+  margin: 0 0 23px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     margin: 0 0 72px;
@@ -177,6 +177,15 @@
     margin: 0 0 (43px + $md--padding-before-hr);
   }
 
+  & .form-element-list__hr {
+    margin-top: 42px;
+    margin-bottom: -16px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: -22px;
+    }
+  }
+
   & .form-element-list__title {
     margin-bottom: 34px;
 
@@ -244,7 +253,12 @@
   }
 
   & .form-element-list__hr {
-    margin-top: 40px;
+    margin-top: 38px;
+    margin-bottom: -16px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: -22px;
+    }
   }
 
   & .form-element-list__title {
@@ -255,7 +269,7 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      margin-bottom: 74px;
+      margin-bottom: 76px;
     }
   }
 }
@@ -276,13 +290,18 @@
 
   & .form-element-list__hr {
     margin-top: 33px;
+    margin-bottom: -16px;
+
+    @media screen and (min-width: $gl--breakpoint--tablet) {
+      margin-bottom: -24px;
+    }
   }
 
   & .form-element-list__title {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      margin-bottom: 56px;
+      margin-bottom: 57px;
     }
   }
 

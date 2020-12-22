@@ -12,16 +12,25 @@
 
 <body class="page__body">
   <!-- header **** -->
-  <header class="page__body-header page-header main-nav main-nav--opened  main-nav--nojs">
-    <div class="page-header__wrapper">
+  <header class="page__body-header page-header main-nav main-nav--closed">
+    <div class="page-header__wrapper page-header__wrapper--index">
       <div class="page-header__logo">
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-icon" src="./img/svg/logo_mobile.svg" width="34" height="38"
-            title="Лого с иконкой CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--mobile" width="34"
+            height="38">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__mobile"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__tablet"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--desctop" width="0" height="0">
+            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__desctop"></use>
+          </svg>
         </a>
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-text" src="./img/svg/logo_text.svg" width="101" height="18"
-            title="Лого с текстом CAT ENERGY">
+        <a class="page-header__logo-link" href="/index.html">
+          <svg class="page-header__logo-svg page-header__logo-text" width="101" height="18">
+            <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+          </svg>
         </a>
         <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -163,8 +172,10 @@
           <h3 class="visually-hidden">Изменения в жизни кота Бориса</h3>
 
           <p class="page-main-index__example-result">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой <br class="br-for br-for--desctop">обычный корм на Cat Energy Slim.
-            Отличный результат <br class="br-for br-for--desctop">без изнуряющих тренировок! При этом он не менял своих <br class="br-for br-for--desctop">привычек и
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой <br class="br-for br-for--desctop">обычный корм на Cat
+            Energy Slim.
+            Отличный результат <br class="br-for br-for--desctop">без изнуряющих тренировок! При этом он не менял своих
+            <br class="br-for br-for--desctop">привычек и
             <br class="br-for br-for--tablet">по-прежнему спит по 16 часов в день.
           </p>
 
