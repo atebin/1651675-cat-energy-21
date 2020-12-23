@@ -92,7 +92,7 @@
   height: 362px;
 
   @media screen and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/location_mobile 2x.jpg");
+    background-image: url("../../img/picture/location_mobile_2x.jpg");
   }
 
   /* --- tablet --- */
@@ -105,7 +105,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/location_tablet 2x.jpg");
+    background-image: url("../../img/picture/location_tablet_2x.jpg");
   }
 
   /* --- desctop --- */
@@ -118,7 +118,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/location_desctop 2x.jpg");
+    background-image: url("../../img/picture/location_desctop_2x.jpg");
   }
 
   &::before {

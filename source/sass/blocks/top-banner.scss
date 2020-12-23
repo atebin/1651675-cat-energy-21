@@ -134,7 +134,7 @@
   height: calc(167px + 270px);
 
   @media screen and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/active_element_mobile 2x.png");
+    background-image: url("../../img/picture/active_element_mobile_2x.png");
   }
 
   /* --- tablet --- */
@@ -149,7 +149,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/active_element_tablet 2x.jpg");
+    background-image: url("../../img/picture/active_element_tablet_2x.jpg");
   }
 
   /* --- desctop --- */
@@ -165,6 +165,6 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/active_element_desctop 2x.png");
+    background-image: url("../../img/picture/active_element_desctop_2x.png");
   }
 }
