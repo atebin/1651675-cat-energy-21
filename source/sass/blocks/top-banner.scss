@@ -1,6 +1,6 @@
 .top-banner__wrapper {
   position: relative;
-  background-image: url("../../img/background/background-banner-mobile.png");
+  background-image: url("../../img/picture/background-banner-mobile.jpg");
   background-size: 320px 302px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@
     @media screen and (min-width: $gl--breakpoint--desctop) {
       position: absolute;
       content: "";
-      background-image: url("../../img/background/background-banner-desctop.png");
+      background-image: url("../../img/picture/background-banner-desctop.jpg");
       background-size: 720px 694px;
       background-position: center center;
       background-repeat: no-repeat;
@@ -133,6 +133,12 @@
   width: $gl--breakpoint--mobile;
   height: calc(167px + 270px);
 
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/active_element_mobile 2x.png");
+  }
+
+  /* --- tablet --- */
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
     background-image: url("../../img/picture/active_element_tablet.jpg");
     background-size: 708px 609px;
@@ -142,13 +148,23 @@
     top: 200px;
   }
 
+  @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/active_element_tablet 2x.jpg");
+  }
+
+  /* --- desctop --- */
+
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    background-image: url("../../img/picture/active_element_desctop.png");
     background-size: 552px 499px;
+    background-image: url("../../img/picture/active_element_desctop.png");
     background-position: center center;
     width: 552px;
     height: 499px;
     top: -82px;
     left: 558px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/active_element_desctop 2x.png");
   }
 }
