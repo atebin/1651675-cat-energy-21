@@ -15,6 +15,10 @@
   margin: 0 auto 22px;
   height: 480px;
 
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/background-banner-mobile_2x.jpg");
+  }
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: $gl--breakpoint--tablet;
     padding: 0 $gl--padding-side--tablet;
@@ -69,6 +73,10 @@
       right: 0;
       width: 720px;
       height: 694px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/background-banner-desctop_2x.jpg");
     }
   }
 }
