@@ -18,7 +18,7 @@
 }
 
 .page-main-form__form-header {
-  margin: 28px 0 39px;
+  margin: 28px 0 38px;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
 
@@ -33,7 +33,7 @@
 }
 
 .page-main-form__form-title {
-  margin: 0 0 38px;
+  margin: 0 0 37px;
 
   @include set-font("Oswald", 36px, 36px);
   font-weight: 400;
@@ -179,7 +179,7 @@
 
   & .form-element-list__hr {
     margin-top: 42px;
-    margin-bottom: -16px;
+    margin-bottom: -18px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       margin-bottom: -22px;
@@ -253,8 +253,8 @@
   }
 
   & .form-element-list__hr {
-    margin-top: 38px;
-    margin-bottom: -16px;
+    margin-top: 39px;
+    margin-bottom: -17px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       margin-bottom: -22px;
@@ -285,12 +285,12 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 50px;
+    margin: 0 0 48px;
   }
 
   & .form-element-list__hr {
     margin-top: 33px;
-    margin-bottom: -16px;
+    margin-bottom: -17px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       margin-bottom: -24px;
@@ -298,7 +298,7 @@
   }
 
   & .form-element-list__title {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       margin-bottom: 57px;

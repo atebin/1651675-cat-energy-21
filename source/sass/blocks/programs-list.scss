@@ -60,7 +60,7 @@
   box-sizing: border-box;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    padding: 75px 0 44px 53px;
+    padding: 75px 0 42px 53px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -91,7 +91,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     margin-left: 162px;
-    margin-bottom: 41px;
+    margin-bottom: 39px;
     height: 106px;
   }
 
@@ -201,14 +201,14 @@
 }
 
 .programs-list__description {
-  @include set-font("Arial", 14px, 19px);
+  @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
   margin: 0 0 23px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
-    margin-bottom: 57px;
+    margin-bottom: 56px;
     margin-right: 17px;
   }
 

@@ -5,12 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Подбор программы</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
+  <!-- header **** -->
   <header class="page__body-header page-header main-nav main-nav--closed">
     <div class="page-header__wrapper page-header__wrapper--form">
       <div class="page-header__logo">
@@ -19,10 +18,11 @@
             height="38">
             <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__mobile"></use>
           </svg>
-          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
+          <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
             <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__tablet"></use>
           </svg>
-          <svg class="page-header__logo page-header__logo-icon page-header__logo-icon--desctop" width="0" height="0">
+          <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--desctop" width="0"
+            height="0">
             <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__desctop"></use>
           </svg>
         </a>
@@ -217,24 +217,53 @@
   <!-- footer **** -->
   <footer class="page__body-footer page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo-link" title="CAT ENERGY"></a>
+      <a class="page-footer__logo-link" href="/index.html" title="CAT ENERGY">
+        <svg class="page-header__logo-svg" width="128" height="24">
+          <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+        </svg>
+      </a>
 
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy"
-            title="CAT ENERGY в Вконтаке"></a>
+            title="CAT ENERGY в Вконтаке">
+            <svg class="page-footer__social-svg" width="23" height="16">
+              <use xlink:href="./img/svg/icon_social.svg#logo-social-vkontakte"></use>
+            </svg>
+          </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--instagram"
-            href="https://www.instagram.com/htmlacademy" title="CAT ENERGY в Инстаграм"></a>
+            href="https://www.instagram.com/htmlacademy" title="CAT ENERGY в Инстаграм">
+            <svg class="page-footer__social-svg" width="16" height="16">
+              <use xlink:href="./img/svg/icon_social.svg#logo-social-instagram"></use>
+            </svg>
+          </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--facebook"
-            href="https://www.facebook.com/htmlacademy" title="CAT ENERGY в Фэйсбук"></a>
+            href="https://www.facebook.com/htmlacademy" title="CAT ENERGY в Фэйсбук">
+            <svg class="page-footer__social-svg" width="22" height="22">
+              <use xlink:href="./img/svg/icon_social.svg#logo-social-facebook"></use>
+            </svg>
+          </a>
         </li>
       </ul>
 
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__copyright">
+        <a class="page-footer__copyright-link page-footer__copyright-text"
+          href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
+          HTML Academy
+        </a>
+
+        <a class="page-footer__copyright-link page-footer__copyright-icon"
+          href="https://htmlacademy.ru/intensive/adaptive" title="Лого HTML Academy">
+          <svg class="page-footer__copyright-svg" width="27" height="34">
+            <use xlink:href="./img/svg/logo_htmlacademy.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+
     </div>
   </footer>
 

@@ -1,7 +1,7 @@
 // FONTS
 
-@mixin set-font($arg-name, $arg-size, $arg-line, $arg-transform: "none") {
-  font-family: $arg-name, sans-serif;
+@mixin set-font($arg-name, $arg-size, $arg-line, $arg-transform: none) {
+  font-family: $arg-name, "Arial", sans-serif;
   font-size: $arg-size;
   line-height: $arg-line;
   text-transform: $arg-transform;
