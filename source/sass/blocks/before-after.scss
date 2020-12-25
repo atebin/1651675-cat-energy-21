@@ -30,6 +30,12 @@
     height: calc(100% - 2px);
     content: "";
 
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_before_mobile_2x.png");
+    }
+
+    /* --- tablet --- */
+
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_before_tablet.png");
       background-size: 354px 620px;
@@ -37,6 +43,12 @@
       top: -191px;
       height: 620px;
     }
+
+    @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_before_tablet_2x.png");
+    }
+
+    /* --- desctop --- */
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       background-image: url("../../img/picture/example_before_desctop.png");
@@ -47,6 +59,10 @@
       overflow: visible;
       height: 536px;
       width: 100%;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_before_desctop_2x.png");
     }
   }
 
@@ -62,6 +78,12 @@
     height: 100%;
     content: "";
 
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_after_mobile_2x.png");
+    }
+
+    /* --- tablet --- */
+
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-image: url("../../img/picture/example_after_tablet.png");
       background-size: 354px 607px;
@@ -69,6 +91,12 @@
       top: (-191px + 8px);
       height: 620px;
     }
+
+    @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_after_tablet_2x.png");
+    }
+
+    /* --- desctop --- */
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       background-image: url("../../img/picture/example_after_desctop.png");
@@ -78,6 +106,10 @@
       top: (-191px + 8px - 10px);
       width: 325px;
       height: 536px;
+    }
+
+    @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
+      background-image: url("../../img/picture/example_after_desctop_2x.png");
     }
   }
 }
@@ -244,6 +276,7 @@
 
 .before-after__indicator-slider {
   position: absolute;
+  z-index: 2;
   box-sizing: border-box;
   width: 32px;
   height: 32px;

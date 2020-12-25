@@ -201,10 +201,10 @@
 }
 
 .programs-list__description {
-  @include set-font("Arial", 14px, 18px);
+  @include set-font("Arial", 14px, 19px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  margin: 0 0 25px;
+  margin: 0 0 23px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
