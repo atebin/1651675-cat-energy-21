@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
 
-  margin: 0 0 33px;
+  margin: 0 0 34px;
   padding: 0;
   width: 100%;
 
@@ -116,7 +116,7 @@
 
     & .precedent__value {
       @include set-font("Oswald", 24px, 24px, uppercase);
-      padding: 15px 0 11px;
+      padding: 13px 0 13px;
 
       @media screen and (min-width: $gl--breakpoint--tablet) {
         @include set-font("Oswald", 30px, 37px, uppercase);

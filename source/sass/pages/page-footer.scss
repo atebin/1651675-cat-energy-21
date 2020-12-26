@@ -62,7 +62,7 @@
   height: 60px;
   padding: 0;
   padding-right: 4px;
-  padding-top: 2px;
+  padding-top: 4px;
   margin: 0 auto;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
@@ -141,7 +141,7 @@
   height: 77px;
   border-top: 1px solid $sg--gray_na1;
   box-sizing: border-box;
-  padding-top: 4px;
+  padding-top: 2px;
 
   @include set-font("Arial", 16px, 16px);
   font-weight: 400;
