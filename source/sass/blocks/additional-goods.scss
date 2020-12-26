@@ -5,14 +5,20 @@
   justify-content: flex-end;
   box-sizing: border-box;
 
-  background-image: url("../../img/background/promo-mobile.jpg");
+  background-image: url("../../img/picture/promo-mobile.jpg");
+  background-size: 280px 289px;
   background-position: center center;
   background-repeat: no-repeat;
   width: 280px;
   height: 289px;
 
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/promo-mobile@2x.jpg");
+  }
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    background-image: url("../../img/background/promo-tablet.jpg");
+    background-image: url("../../img/picture/promo-tablet.jpg");
+    background-size: 708px 200px;
     width: 708px;
     height: 200px;
     grid-column: 1 / -1;
@@ -20,13 +26,22 @@
     justify-content: center;
   }
 
+  @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/promo-tablet@2x.jpg");
+  }
+
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    background-image: url("../../img/background/promo-desctop.jpg");
+    background-image: url("../../img/picture/promo-desctop.jpg");
+    background-size: 248px 289px;
     width: 245px;
     height: 289px;
     grid-column: 4 / 5;
     grid-row: auto;
     justify-content: flex-end;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
+    background-image: url("../../img/picture/promo-desctop@2x.jpg");
   }
 
   &::before {
@@ -63,7 +78,7 @@
     margin: 0;
     margin-left: 423px;
     text-align: left;
-    padding-top: 2px;
+    padding-top: 4px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -89,7 +104,7 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    margin: 0 0 67px;
+    margin: 0 0 69px;
     border: 1px solid $sg--special_grey;
   }
 
@@ -162,6 +177,7 @@
     grid-row: 1 / 2;
     width: 100%;
     text-align: right;
+    padding-top: 2px;
 
     @include set-font("Arial", 16px, 20px);
   }
@@ -187,6 +203,7 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     width: 100%;
+    padding-top: 2px;
 
     @include set-font("Arial", 16px, 20px);
   }
@@ -201,7 +218,7 @@
 }
 
 .additional-goods__order {
-  margin-top: 16px;
+  margin-top: 14px;
   width: 100%;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {

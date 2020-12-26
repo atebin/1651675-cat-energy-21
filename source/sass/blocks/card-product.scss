@@ -1,6 +1,6 @@
 .card-product {
   box-sizing: border-box;
-  padding: 19.5px $gl--padding-side--mobile 24px;
+  padding: 20px $gl--padding-side--mobile 23px;
   border-bottom: 1px solid $sg--gray_na6;
   position: relative;
 
@@ -13,6 +13,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     // empty
+    padding-bottom: 40px;
   }
 }
 
@@ -20,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0 0 8px;
+  margin: 0 0 9px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: block;
@@ -29,7 +30,8 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin-top: 162px;
+    margin-top: 163px;//162
+    margin-bottom: 30.2px;//30
   }
 }
 
@@ -56,6 +58,7 @@
 .card-product__image-content {
   margin-top: -1px;
   margin-left: -1px;
+  object-fit: cover;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 168px;
@@ -64,7 +67,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     width: 172px;
-    height: 202px;//196
+    height: 200px;
   }
 }
 
@@ -97,8 +100,9 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    @include set-font("Oswald", 20px, 22px, uppercase);
+    @include set-font("Oswald", 20px, 21px, uppercase);
     // empty
+    margin: 0 0 21px;
   }
 }
 
@@ -181,6 +185,10 @@
 // -- special
 
 .card-product--special {
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    padding: 0 37px 39px;
+  }
+
   & .card-product__wrapper {
     display: block;
   }
