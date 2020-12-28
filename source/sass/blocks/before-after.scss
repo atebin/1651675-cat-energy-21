@@ -3,7 +3,6 @@
   width: 100%;
   height: calc(240px + 2px);
   margin: 0 0 13px;
-  //overflow: visible;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     width: 708px;
@@ -18,12 +17,11 @@
   }
 
   &::before {
-    //display: none;
     position: absolute;
     z-index: 2;
     background-image: url("../../img/picture/example_before_mobile.png");
     background-repeat: no-repeat;
-    background-size: 311px 232px;//311 232
+    background-size: 311px 232px;
     background-position: calc(50% - 0px) 2px;
     left: -5px;
     width: 100%;
@@ -67,7 +65,6 @@
   }
 
   &::after {
-    //display: none;
     position: absolute;
     z-index: 1;
     background-image: url("../../img/picture/example_after_mobile.png");

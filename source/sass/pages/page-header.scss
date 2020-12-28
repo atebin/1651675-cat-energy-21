@@ -1,6 +1,5 @@
 .page-header__wrapper {
   margin: 0;
-  //padding: 0 $gl--padding-side--mobile;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: 52px;
@@ -42,7 +41,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0 $gl--padding-side--mobile;
-  height: 67px;//
+  height: 67px;
 
   border-bottom: 1px solid $line-border-light;
 
