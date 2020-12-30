@@ -18,8 +18,8 @@
 .programs-list__item {
   min-height: 266px;
   box-sizing: border-box;
-  padding: 29px 20px 18px;
-
+  padding: 29px 20px 40px;//18
+  position: relative;
   list-style: none;
   background-color: $sg--basic_grey;
 
@@ -39,6 +39,8 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
+    min-height: 374px;
+
     &:not(:last-child) {
       margin-bottom: 0;
     }
@@ -60,11 +62,11 @@
   box-sizing: border-box;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    padding: 75px 0 42px 53px;
+    padding: 77px 0 62px 52px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    padding: 41px 51px 48px;
+    padding: 41px 51px 63px;
   }
 }
 
@@ -84,7 +86,6 @@
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 26px;
-    padding-top: 2px;
 
     @include set-font("Oswald", 36px, 36px, uppercase);
   }
@@ -92,6 +93,7 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     margin-left: 162px;
     margin-bottom: 39px;
+    padding-top: 2px;
     height: 106px;
   }
 
@@ -170,7 +172,7 @@
   &--slim {
     background-image: url("../../img/svg/cat_in_circle_slim.svg");
     background-position: left center;
-    background-size: 200px 211px;// 200 211
+    background-size: 200px 211px;
     width: calc(200px / 2 + 62px + 200px / 2);
     height: 211px;
 
@@ -186,7 +188,7 @@
   &--pro {
     background-image: url("../../img/svg/cat_in_circle_pro.svg");
     background-position: left center;
-    background-size: 266px 202px;// 268 200
+    background-size: 266px 202px;
     width: calc(268px / 2 + 28px + 268px / 2);
     height: 204px;
 
@@ -204,31 +206,37 @@
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  margin: 0 0 23px;
+  //margin: 0 0 23px;
+  margin: 0;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
-    margin-bottom: 56px;
+    //margin-bottom: 56px;
     margin-right: 17px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     @include set-font("Arial", 16px, 24px);
-    margin-bottom: 32px;
+    //margin-bottom: 32px;
     margin-right: 0;
   }
 }
 
 .programs-list__footer {
   display: flex;
-
-  height: 38px;
+  justify-content: flex-start;
+  align-items: center;
   box-sizing: border-box;
   padding-top: 19px;
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 20px;
+  bottom: 22px;
 
   border-top: 1px solid $sg--gray_na1;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
+    position: static;
     border-top: none;
     padding-top: 0;
   }
@@ -239,7 +247,7 @@
 }
 
 .programs-list__goto_catalog {
-  height: 16px; //    временно, до установки иконки
+  height: 16px;
 }
 
 .programs-list__catalog-section-name {
@@ -248,8 +256,8 @@
   color: $sg--black;
   text-decoration: none;
   display: inline-block;
-  padding-right: 60px;
-  position: relative;
+  //padding-right: 25px;
+  //position: relative;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
@@ -259,29 +267,41 @@
     // empty
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    right: 20px;
-    top: 1px;
-
-    background-image: url("../../img/svg/icon_arrow_small.svg");
-    background-position: 0 center;
-    background-size: (24px + 4px) (12px + 2px);
-    width: 24px;
-    height: 12px;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      right: 10px;
-      top: 3px;
+  &:hover {
+    & .programs-list__catalog-section-arrow--small {
+      display: none;
     }
 
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
+    & .programs-list__catalog-section-arrow--big {
+      width: 32px;
+      height: 12px;
     }
   }
 
-  &:hover {
+  &:active {
     color: gray;
+
+    & .programs-list__catalog-section-arrow--small {
+      display: none;
+    }
+
+    & .programs-list__catalog-section-arrow--big {
+      width: 32px;
+      height: 12px;
+    }
+  }
+}
+
+.programs-list__catalog-section-arrow {
+  display: inline-block;
+  margin-left: 11px;
+  padding-bottom: 2px;
+
+  @media screen and (min-width: $gl--breakpoint--tablet) {
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $gl--breakpoint--desctop) {
+    margin-left: 24px;
   }
 }

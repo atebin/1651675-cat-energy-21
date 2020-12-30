@@ -11,7 +11,7 @@ $md--padding-before-hr: 25px;
 }
 
 .form-element-list__item {
-  min-height: 50px; // - переопределяемая величина!
+  min-height: 50px;
 
   &:not(:last-child) {
     margin-bottom: 13px;

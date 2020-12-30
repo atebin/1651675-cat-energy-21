@@ -12,6 +12,11 @@
 }
 
 .page-footer__wrapper {
+  /*
+  width: $gl--breakpoint--mobile;
+  margin: 0 auto;
+  */
+
   @media screen and (min-width: $gl--breakpoint--tablet) {
     box-sizing: border-box;
     height: 150px;
@@ -173,6 +178,7 @@
 
 .page-footer__copyright-link {
   text-decoration: none;
+  color: $sg--special_grey_2;
 
   &:visited {
     color: $sg--special_grey_2;

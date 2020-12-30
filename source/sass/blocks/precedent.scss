@@ -14,7 +14,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     width: calc(100% * 366 / 570);
-    margin: 0 0 55px;//60
+    margin: 0 0 55px;
   }
 }
 
@@ -138,27 +138,27 @@
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: 12px;
-      width: calc(100% - 100% * 366 / 708);//100% - 366px
+      width: calc(100% - 100% * 366 / 708);
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      width: calc(100% * 366 / 570);//366px;
+      width: calc(100% * 366 / 570);
       box-sizing: border-box;
       height: 27px;
 
       & .precedent__label {
         display: inline-block;
-        width: calc(100% - (100% - 42px) / 2);//100% - 166px
+        width: calc(100% - (100% - 42px) / 2);
         text-align: left;
       }
 
       & .precedent__value {
         @include set-font("Oswald", 20px, 20px);
         display: inline-block;
-        width: calc((100% - 42px) / 2);//166px
+        width: calc((100% - 42px) / 2);
         text-align: center;
         padding-right: 4px;
       }

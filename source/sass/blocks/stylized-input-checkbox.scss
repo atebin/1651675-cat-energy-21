@@ -129,6 +129,6 @@ $stylized-input-checkbox--border-width: 1px;
   }
 
   &:disabled:checked::after {
-    //opacity: 0.3; // не снижаем прозрачность галочик для неактивного установленного чекбокса ???
+    //opacity: 0.3;
   }
 }

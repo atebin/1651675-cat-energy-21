@@ -15,7 +15,6 @@
 .main-nav-list {
   margin: 0;
   padding: 0;
-  //display: none;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: flex;
@@ -151,8 +150,6 @@
       }
 
       @media screen and (min-width: $gl--breakpoint--desctop) {
-        //border-bottom: 2px solid $sg--basic_green;
-
         &::before {
           background-color: $sg--basic_green;
         }

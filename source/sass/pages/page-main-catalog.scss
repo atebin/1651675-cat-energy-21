@@ -99,7 +99,7 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     min-height: 428px;
-    margin: 81px 0 0; // 51px
+    margin: 81px 0 0;
     background-color: $sg--basic_grey;
     border: none;
 
@@ -114,7 +114,7 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     min-height: 431px;
-    margin: 81px 0 0; // 62px
+    margin: 81px 0 0;
 
     &:nth-child(odd) {
       grid-column: auto;

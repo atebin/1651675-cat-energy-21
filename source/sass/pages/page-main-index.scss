@@ -6,7 +6,7 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    margin: 0 0 69px;
+    margin: 0 0 72px;
   }
 }
 
@@ -78,7 +78,7 @@
   display: block;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    //padding: 0 $gl--padding-side--tablet;
+    // empty
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
@@ -96,18 +96,14 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     background-color: $sg--white;
     margin: 0;
-    //padding-top: 0;
-    //padding-bottom: 250px;
     padding: 0 $gl--padding-side--tablet 254px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     background-color: transparent;
     grid-column: 1 / 3;
-    //margin: -136px 0 0;
-    //min-width: 436px;
     width: 100%;
-    padding: 0 0 72px;//72
+    padding: 0 0 72px;
 
     display: flex;
     flex-direction: column;
@@ -155,7 +151,7 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     background-color: transparent;
     grid-column: 3 / 5;
-    padding: 0 0 72px;//72
+    padding: 0 0 72px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

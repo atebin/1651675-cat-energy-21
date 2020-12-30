@@ -39,7 +39,6 @@
   background-color: $sg--black;
 }
 
-
 .main-nav--opened .main-nav-toggle::before {
   transform: rotate(45deg);
   box-shadow: none;
@@ -52,4 +51,9 @@
 .main-nav--opened .main-nav-toggle:active::before,
 .main-nav--opened .main-nav-toggle:active::after {
   background-color: lighten($sg--black, 60%);
+}
+
+.main-nav--nojs .main-nav-toggle::before,
+.main-nav--nojs .main-nav-toggle::after {
+  display: none;
 }
