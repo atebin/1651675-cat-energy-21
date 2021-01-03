@@ -5,6 +5,8 @@
 }
 
 .page__body {
+  margin: 0;
+  /*
   margin: 0 auto;
 
   box-sizing: border-box;
@@ -18,4 +20,5 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     width: $gl--breakpoint--desctop;
   }
+  */
 }

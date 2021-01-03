@@ -82,16 +82,16 @@
 }
 
 .address__map {
-  width: $gl--breakpoint--mobile;
+  //width: $gl--breakpoint--mobile;
   height: 362px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    width: $gl--breakpoint--tablet;
+    //width: $gl--breakpoint--tablet;
     height: 400px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    width: $gl--breakpoint--desctop;
+    //width: $gl--breakpoint--desctop;
     height: 400px;
   }
 }
