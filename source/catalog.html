@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" sizes="16x16" href="./img/picture/favicon_16.png">
+  <link rel="icon" sizes="32x32" href="./img/picture/favicon_32.png">
   <title>Подбор программы</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -14,22 +16,22 @@
   <header class="page__body-header page-header main-nav main-nav--closed">
     <div class="page-header__wrapper page-header__wrapper--catalog">
       <div class="page-header__logo">
-        <a class="page-header__logo-link" href="/index.html">
+        <a class="page-header__logo-link" href="/index.html" aria-label="Переход на главную страницу сайта">
           <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--mobile" width="34"
             height="38">
-            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__mobile"></use>
+            <use xlink:href="./img/svg/svg_sprite.svg#logo-cat-energy__mobile"></use>
           </svg>
           <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--tablet" width="0" height="0">
-            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__tablet"></use>
+            <use xlink:href="./img/svg/svg_sprite.svg#logo-cat-energy__tablet"></use>
           </svg>
           <svg class="page-header__logo-svg page-header__logo-icon page-header__logo-icon--desctop" width="0"
             height="0">
-            <use xlink:href="./img/svg/logo_icon_cat_energy.svg#logo-cat-energy__desctop"></use>
+            <use xlink:href="./img/svg/svg_sprite.svg#logo-cat-energy__desctop"></use>
           </svg>
         </a>
-        <a class="page-header__logo-link" href="/index.html">
+        <a class="page-header__logo-link" href="/index.html" aria-label="Переход на главную страницу сайта">
           <svg class="page-header__logo-svg page-header__logo-text" width="101" height="18">
-            <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+            <use xlink:href="./img/svg/svg_sprite.svg#logo-text-cat-energy"></use>
           </svg>
         </a>
         <button class="page-header__main-nav-toggle main-nav-toggle" type="button">
@@ -54,10 +56,11 @@
   </header>
 
   <main class="page__body-main page-main-catalog">
+    <h1 class="visually-hidden">Каталог питания для котов</h1>
 
     <!-- section catalog *** -->
     <section class="page-main-catalog__catalog">
-      <h1 class="page-main-catalog__title">Каталог продукции</h1>
+      <h2 class="page-main-catalog__title">Каталог продукции</h2>
 
       <ul class="page-main-catalog__list">
         <!-- card # 1 -->
@@ -65,22 +68,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-1-desctop.png 1x, ./img/catalog/catalog-1-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-1-tablet.png 1x, ./img/catalog/catalog-1-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-1-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-1-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=1" aria-label="Перейти в картчку товара Cat PRO 500 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-1-desctop.webp 1x, ./img/catalog/catalog-1-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-1-desctop.png 1x, ./img/catalog/catalog-1-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-1-tablet.webp 1x, ./img/catalog/catalog-1-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-1-tablet.png 1x, ./img/catalog/catalog-1-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-1-mobile.webp 1x, ./img/catalog/catalog-1-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-1-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-1-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">500 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=1"
+                    aria-label="Перейти в картчку товара Cat PRO 500 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">500 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -98,8 +114,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=1">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -108,22 +125,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-2-desctop.png 1x, ./img/catalog/catalog-2-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-2-tablet.png 1x, ./img/catalog/catalog-2-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-2-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-2-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=2" aria-label="Перейти в картчку товара Cat PRO 1000 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-2-desctop.webp 1x, ./img/catalog/catalog-2-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-2-desctop.png 1x, ./img/catalog/catalog-2-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-2-tablet.webp 1x, ./img/catalog/catalog-2-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-2-tablet.png 1x, ./img/catalog/catalog-2-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-2-mobile.webp 1x, ./img/catalog/catalog-2-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-2-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-2-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item ">Cat Energy <br class="card-product__name-br1">PRO<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">1000 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=2"
+                    aria-label="Перейти в картчку товара Cat PRO 1000 г">
+                    <span class="card-product__name-item ">Cat Energy <br class="card-product__name-br1">PRO<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">1000 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -141,8 +171,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=2">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -151,22 +182,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-3-desctop.png 1x, ./img/catalog/catalog-3-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-3-tablet.png 1x, ./img/catalog/catalog-3-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-3-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-3-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=3" aria-label="Перейти в картчку товара Cat PRO 500 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-3-desctop.webp 1x, ./img/catalog/catalog-3-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-3-desctop.png 1x, ./img/catalog/catalog-3-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-3-tablet.webp 1x, ./img/catalog/catalog-3-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-3-tablet.png 1x, ./img/catalog/catalog-3-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-3-mobile.webp 1x, ./img/catalog/catalog-3-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-3-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-3-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">500 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=3"
+                    aria-label="Перейти в картчку товара Cat PRO 500 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">500 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -184,8 +228,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=3">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -194,22 +239,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-4-desctop.png 1x, ./img/catalog/catalog-4-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-4-tablet.png 1x, ./img/catalog/catalog-4-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-4-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-4-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=4" aria-label="Перейти в картчку товара Cat PRO 1000 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-4-desctop.webp 1x, ./img/catalog/catalog-4-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-4-desctop.png 1x, ./img/catalog/catalog-4-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-4-tablet.webp 1x, ./img/catalog/catalog-4-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-4-tablet.png 1x, ./img/catalog/catalog-4-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-4-mobile.webp 1x, ./img/catalog/catalog-4-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-4-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-4-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">1000 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=4"
+                    aria-label="Перейти в картчку товара Cat PRO 1000 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">1000 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -227,8 +285,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=4">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -237,22 +296,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-5-desctop.png 1x, ./img/catalog/catalog-5-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-5-tablet.png 1x, ./img/catalog/catalog-5-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-5-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-5-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=5" aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-5-desctop.webp 1x, ./img/catalog/catalog-5-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-5-desctop.png 1x, ./img/catalog/catalog-5-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-5-tablet.webp 1x, ./img/catalog/catalog-5-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-5-tablet.png 1x, ./img/catalog/catalog-5-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-5-mobile.webp 1x, ./img/catalog/catalog-5-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-5-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-5-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">500 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=5"
+                    aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">500 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -270,8 +342,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=5">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -280,22 +353,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-6-desctop.png 1x, ./img/catalog/catalog-6-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-6-tablet.png 1x, ./img/catalog/catalog-6-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-6-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-6-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=6" aria-label="Перейти в картчку товара Cat Energy SLIM 1000 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-6-desctop.webp 1x, ./img/catalog/catalog-6-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-6-desctop.png 1x, ./img/catalog/catalog-6-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-6-tablet.webp 1x, ./img/catalog/catalog-6-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-6-tablet.png 1x, ./img/catalog/catalog-6-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-6-mobile.webp 1x, ./img/catalog/catalog-6-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-6-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-6-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">1000 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=6"
+                    aria-label="Перейти в картчку товара Cat Energy SLIM 1000 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">1000 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -313,8 +399,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=6">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -323,22 +410,35 @@
           <div class="card-product">
             <div class="card-product__wrapper">
               <div class="card-product__image">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/catalog/catalog-7-desctop.png 1x, ./img/catalog/catalog-7-desctop@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="./img/catalog/catalog-7-tablet.png 1x, ./img/catalog/catalog-7-tablet@2x.png 2x">
-                  <img class="card-product__image-content" src="./img/catalog/catalog-7-mobile.jpg" width="140"
-                    height="112" alt="Фото товара" srcset="./img/catalog/catalog-7-mobile@2x.jpg 2x">
-                </picture>
+                <a href="card.html?id=7" aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-7-desctop.webp 1x, ./img/catalog/catalog-7-desctop@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/catalog/catalog-7-desctop.png 1x, ./img/catalog/catalog-7-desctop@2x.png 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-7-tablet.webp 1x, ./img/catalog/catalog-7-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/catalog/catalog-7-tablet.png 1x, ./img/catalog/catalog-7-tablet@2x.png 2x">
+
+                    <source type="image/webp"
+                      srcset="./img/catalog/catalog-7-mobile.webp 1x, ./img/catalog/catalog-7-mobile@2x.webp 2x">
+                    <img class="card-product__image-content" src="./img/catalog/catalog-7-mobile.jpg" width="140"
+                      height="112" alt="Фото товара" srcset="./img/catalog/catalog-7-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
 
               <div class="card-product__info">
-                <div class="card-product__name">
-                  <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                      class="card-product__name-br2"></span>
-                  <span class="card-product__name-item card-product__name-item--special">500 г</span>
-                </div>
+                <h3 class="card-product__name">
+                  <a class="card-product__name-link" href="card.html?id=7"
+                    aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
+                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
+                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item card-product__name-item--special">500 г</span>
+                  </a>
+                </h3>
                 <ul class="card-product__property-table">
                   <li class="card-product__property-row">
                     <span class="card-product__property-cell">Масса</span>
@@ -356,8 +456,9 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--primary"
-              type="button">заказать</button>
+            <form action="order.html?id=7">
+              <input type="submit" class="stylized-button stylized-button--primary" value="заказать" />
+            </form>
           </div>
         </li>
 
@@ -377,8 +478,10 @@
               </div>
             </div>
 
-            <button class="card-product__order stylized-button  stylized-button--secondary" type="button">показать
-              все</button>
+            <form action="new.html">
+              <input type="submit" class="card-product__order stylized-button  stylized-button--secondary"
+                value="показать все" />
+            </form>
           </div>
         </li>
       </ul>
@@ -428,10 +531,12 @@
           </li>
         </ul>
 
+        <!--div class="additional-goods__wrapper-promo"-->
         <div class="additional-goods__promo">
           <p class="additional-goods__promo-text">
             Закажите все <br>и получите чехол для <br>кота в подарок!
           </p>
+          <!--/div-->
         </div>
       </div>
     </section>
@@ -459,9 +564,9 @@
 
         <div class="address__map">
           <p class="visually-hidden">Наше расположение на карте города</p>
-          <script type="text/javascript" charset="utf-8" async
+          <script async
             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23a0aeb5aef3e844cd2676644e97d57a498e2171ce2e44c19e60f6efc4547b60&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true">
-          </script>
+            </script>
         </div>
       </div>
     </section>
@@ -470,34 +575,34 @@
   <!-- footer *** -->
   <footer class="page__body-footer page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo-link" href="/index.html" title="CAT ENERGY">
+      <a class="page-footer__logo-link" href="/index.html" aria-label="На главную страницу CAT ENERGY">
         <svg class="page-header__logo-svg" width="128" height="24">
-          <use xlink:href="./img/svg/logo_text_cat_energy.svg#logo-text-cat-energy"></use>
+          <use xlink:href="./img/svg/svg_sprite.svg#logo-text-cat-energy"></use>
         </svg>
       </a>
 
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy"
-            title="CAT ENERGY в Вконтаке">
+            aria-label="CAT ENERGY в Вконтаке">
             <svg class="page-footer__social-svg" width="23" height="16">
-              <use xlink:href="./img/svg/icon_social.svg#logo-social-vkontakte"></use>
+              <use xlink:href="./img/svg/svg_sprite.svg#logo-social-vkontakte"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--instagram"
-            href="https://www.instagram.com/htmlacademy" title="CAT ENERGY в Инстаграм">
+            href="https://www.instagram.com/htmlacademy" aria-label="CAT ENERGY в Инстаграм">
             <svg class="page-footer__social-svg" width="16" height="16">
-              <use xlink:href="./img/svg/icon_social.svg#logo-social-instagram"></use>
+              <use xlink:href="./img/svg/svg_sprite.svg#logo-social-instagram"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--facebook"
-            href="https://www.facebook.com/htmlacademy" title="CAT ENERGY в Фэйсбук">
+            href="https://www.facebook.com/htmlacademy" aria-label="CAT ENERGY в Фэйсбук">
             <svg class="page-footer__social-svg" width="22" height="22">
-              <use xlink:href="./img/svg/icon_social.svg#logo-social-facebook"></use>
+              <use xlink:href="./img/svg/svg_sprite.svg#logo-social-facebook"></use>
             </svg>
           </a>
         </li>
@@ -505,14 +610,14 @@
 
       <div class="page-footer__copyright">
         <a class="page-footer__copyright-link page-footer__copyright-text"
-          href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
+          href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           HTML Academy
         </a>
 
         <a class="page-footer__copyright-link page-footer__copyright-icon"
-          href="https://htmlacademy.ru/intensive/adaptive" title="Лого HTML Academy">
+          href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           <svg class="page-footer__copyright-svg" width="27" height="34">
-            <use xlink:href="./img/svg/logo_htmlacademy.svg#logo-htmlacademy"></use>
+            <use xlink:href="./img/svg/svg_sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
