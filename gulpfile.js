@@ -35,7 +35,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build' //  source
     },
     cors: true,
     notify: false,
@@ -54,7 +54,7 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  server // styles, server, watcher
 );
 
 // **********************************************************************
@@ -99,13 +99,18 @@ const minifyJs = () => {
 }
 
 
-const copyImg = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+const optimizeImg = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.svgo()
+      //imagemin.svgo()
     ]))
+    .pipe(gulp.dest("build/img"))
+}
+
+const copyImg = () => {
+  return gulp.src("source/img/**/*.{svg,webp}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -117,7 +122,7 @@ const buildcss = () => {
     .pipe(replace("../../img/", "../img/"))
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
@@ -137,11 +142,10 @@ const clear = () => {
   return del("build");
 }
 
-
 exports.build = gulp.series(
   clear,
   buildcss,
-  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, copyImg),
+  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyImg),
   buildmapjs
 );
 
