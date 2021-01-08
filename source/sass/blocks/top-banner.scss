@@ -1,12 +1,7 @@
 .top-banner__wrapper {
   position: relative;
   //background-image: url("../../img/picture/background-banner-mobile.jpg");
-  background-image: image-set(
-    "../../img/picture/background-banner-mobile@2x.webp" 2x,
-    "../../img/picture/background-banner-mobile.webp" 1x,
-    "../../img/picture/background-banner-mobile@2x.jpg" 2x,
-    "../../img/picture/background-banner-mobile.jpg" 1x,
-  );
+  background-image: image-set("../../img/picture/background-banner-mobile@2x.webp" 2x, "../../img/picture/background-banner-mobile.webp" 1x, "../../img/picture/background-banner-mobile@2x.jpg" 2x, "../../img/picture/background-banner-mobile.jpg" 1x);
   background-size: 320px 302px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -52,12 +47,7 @@
     @media screen and (min-width: $gl--breakpoint--desctop) {
       display: block;
       //background-image: url("../../img/picture/background-banner-desctop.jpg");
-      background-image: image-set(
-        "../../img/picture/background-banner-desctop@2x.webp" 2x,
-        "../../img/picture/background-banner-desctop.webp" 1x,
-        "../../img/picture/background-banner-desctop@2x.jpg" 2x,
-        "../../img/picture/background-banner-desctop.jpg" 1x,
-      );
+      background-image: image-set("../../img/picture/background-banner-desctop@2x.webp" 2x, "../../img/picture/background-banner-desctop.webp" 1x, "../../img/picture/background-banner-desctop@2x.jpg" 2x, "../../img/picture/background-banner-desctop.jpg" 1x);
       background-position: right center;
       background-repeat: no-repeat;
       overflow: visible;
