@@ -141,16 +141,6 @@ const spriteSvg = () => {
     .pipe(gulp.dest("build/img/svg"))
 }
 
-// ---------- временно для проверки работы SVG после сжатия
-const copySpriteSvg = () => {
-  return gulp.src("source/img/svg_sprite/*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("build/img/svg_sprite"))
-}
-// ---------- временно для проверки работы SVG после сжатия
-
 const buildcss = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -185,7 +175,7 @@ const clear = () => {
 const build = gulp.series(
   clear,
   buildcss,
-  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyWebp, copySvg, spriteSvg, copySpriteSvg),
+  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyWebp, copySvg, spriteSvg),
   buildmapjs
 );
 
