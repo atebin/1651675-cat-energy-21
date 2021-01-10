@@ -19,7 +19,8 @@
   &::before {
     position: absolute;
     z-index: 2;
-    background-image: url("../../img/picture/example_before_mobile.png");
+    //background-image: url("../../img/picture/example_before_mobile.png");
+    background-image: image-set("../../img/picture/example_before_mobile@2x.webp" 2x, "../../img/picture/example_before_mobile.webp" 1x, "../../img/picture/example_before_mobile@2x.png" 2x, "../../img/picture/example_before_mobile.png" 1x);
     background-repeat: no-repeat;
     background-size: 311px 232px;
     background-position: calc(50% - 0px) 2px;
@@ -29,13 +30,14 @@
     content: "";
 
     @media screen and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_before_mobile@2x.png");
+      //background-image: url("../../img/picture/example_before_mobile@2x.png");
     }
 
     /* --- tablet --- */
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      background-image: url("../../img/picture/example_before_tablet.png");
+      //background-image: url("../../img/picture/example_before_tablet.png");
+      background-image: image-set("../../img/picture/example_before_tablet@2x.webp" 2x, "../../img/picture/example_before_tablet.webp" 1x, "../../img/picture/example_before_tablet@2x.png" 2x, "../../img/picture/example_before_tablet.png" 1x,);
       background-size: 354px 620px;
       background-position: calc(0% + 5px) top;
       top: -191px;
@@ -43,13 +45,14 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_before_tablet@2x.png");
+      //background-image: url("../../img/picture/example_before_tablet@2x.png");
     }
 
     /* --- desctop --- */
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      background-image: url("../../img/picture/example_before_desctop.png");
+      //background-image: url("../../img/picture/example_before_desctop.png");
+      background-image: image-set("../../img/picture/example_before_desctop@2x.webp" 2x, "../../img/picture/example_before_desctop.webp" 1x, "../../img/picture/example_before_desctop@2x.png" 2x, "../../img/picture/example_before_desctop.png" 1x);
       background-size: 405px 536px;
       background-position: left top;
       left: -60px - 20px;
@@ -60,14 +63,15 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_before_desctop@2x.png");
+      //background-image: url("../../img/picture/example_before_desctop@2x.png");
     }
   }
 
   &::after {
     position: absolute;
     z-index: 1;
-    background-image: url("../../img/picture/example_after_mobile.png");
+    //background-image: url("../../img/picture/example_after_mobile.png");
+    background-image: image-set("../../img/picture/example_after_mobile@2x.webp" 2x, "../../img/picture/example_after_mobile.webp" 1x, "../../img/picture/example_after_mobile@2x.png" 2x, "../../img/picture/example_after_mobile.png" 1x);
     background-repeat: no-repeat;
     background-size: 251px 240px;
     background-position: center top;
@@ -76,13 +80,14 @@
     content: "";
 
     @media screen and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_after_mobile@2x.png");
+      //background-image: url("../../img/picture/example_after_mobile@2x.png");
     }
 
     /* --- tablet --- */
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      background-image: url("../../img/picture/example_after_tablet.png");
+      //background-image: url("../../img/picture/example_after_tablet.png");
+      background-image: image-set("../../img/picture/example_after_tablet@2x.webp" 2x, "../../img/picture/example_after_tablet.webp" 1x, "../../img/picture/example_after_tablet@2x.png" 2x, "../../img/picture/example_after_tablet.png" 1x);
       background-size: 354px 607px;
       background-position: calc(100% - 1px) top;
       top: (-191px + 8px);
@@ -90,13 +95,14 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_after_tablet@2x.png");
+      //background-image: url("../../img/picture/example_after_tablet@2x.png");
     }
 
     /* --- desctop --- */
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      background-image: url("../../img/picture/example_after_desctop.png");
+      //background-image: url("../../img/picture/example_after_desctop.png");
+      background-image: image-set("../../img/picture/example_after_desctop@2x.webp" 2x, "../../img/picture/example_after_desctop.webp" 1x, "../../img/picture/example_after_desctop@2x.png" 2x, "../../img/picture/example_after_desctop.png" 1x);
       background-size: 325px 654px;
       background-position: left top;
       left: (405px - 100px - 20px);
@@ -106,7 +112,7 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/example_after_desctop@2x.png");
+      //background-image: url("../../img/picture/example_after_desctop@2x.png");
     }
   }
 }

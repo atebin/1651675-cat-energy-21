@@ -12,6 +12,7 @@ const uglify = require("gulp-uglify-es").default;
 const rename = require("gulp-rename");
 const del = require("del");
 const csso = require("postcss-csso");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -35,7 +36,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -49,13 +50,22 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/sass/**/*.scss", gulp.series(
+    buildcss,
+    gulp.parallel(copyCss, copyFonts),
+  ));
+  gulp.watch("source/img/**/*.*", gulp.series(
+    gulp.parallel(optimizeImg, copyWebp, copySvg, spriteSvg)
+  ));
+  gulp.watch("source/js/**/*.js", gulp.series(
+    gulp.parallel(copyJs, minifyJs),
+    buildmapjs
+  ));
+  gulp.watch("source/*.html", gulp.series(
+    gulp.parallel(copyHtml, copyFavicon)
+  ));
+  gulp.watch("build/**/*.*").on("change", sync.reload);
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 // **********************************************************************
 
@@ -99,14 +109,36 @@ const minifyJs = () => {
 }
 
 
-const copyImg = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+const optimizeImg = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
+}
+
+const copyWebp = () => {
+  return gulp.src("source/img/**/*.webp")
+    .pipe(gulp.dest("build/img"))
+}
+
+const copySvg = () => {
+  return gulp.src("source/img/svg/*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img/svg"))
+}
+
+const spriteSvg = () => {
+  return gulp.src("source/img/svg_sprite/*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(svgstore())
+    .pipe(rename("svg_sprite.svg"))
+    .pipe(gulp.dest("build/img/svg"))
 }
 
 const buildcss = () => {
@@ -117,7 +149,7 @@ const buildcss = () => {
     .pipe(replace("../../img/", "../img/"))
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
@@ -137,12 +169,20 @@ const clear = () => {
   return del("build");
 }
 
+// **********************************************************************
 
-exports.build = gulp.series(
+// полная сборка
+const build = gulp.series(
   clear,
   buildcss,
-  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, copyImg),
+  gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyWebp, copySvg, spriteSvg),
   buildmapjs
 );
 
+exports.build = build;
+
 // **********************************************************************
+
+exports.default = gulp.series(
+  build, server, watcher // styles, server, watcher
+);

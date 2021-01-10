@@ -1,24 +1,22 @@
 .top-banner__wrapper {
   position: relative;
-  background-image: url("../../img/picture/background-banner-mobile.jpg");
+  //background-image: url("../../img/picture/background-banner-mobile.jpg");
+  background-image: image-set("../../img/picture/background-banner-mobile@2x.webp" 2x, "../../img/picture/background-banner-mobile.webp" 1x, "../../img/picture/background-banner-mobile@2x.jpg" 2x, "../../img/picture/background-banner-mobile.jpg" 1x);
   background-size: 320px 302px;
   background-position: center top;
   background-repeat: no-repeat;
-
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  //width: $gl--breakpoint--mobile;
   margin: 0 auto 22px;
   height: 480px;
 
   @media screen and (min-resolution: 2dppx) {
-    background-image: url("../../img/picture/background-banner-mobile@2x.jpg");
+    //background-image: url("../../img/picture/background-banner-mobile@2x.jpg");
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    //width: $gl--width--tablet;//$gl--breakpoint--tablet;
     padding: 0 $gl--padding-side--tablet;
     height: 810px;
     background-image: none;
@@ -27,7 +25,6 @@
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    //width: $gl--breakpoint--desctop;
     padding: 0 $gl--padding-side--desctop;
     height: 470px;
     margin-bottom: 82px;
@@ -39,7 +36,6 @@
     box-sizing: border-box;
     content: "";
     z-index: -1;
-    //bottom: 0;
     padding: 0;
     width: 100%;
     height: 302px;
@@ -50,21 +46,20 @@
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       display: block;
-      background-image: url("../../img/picture/background-banner-desctop.jpg");
-      //background-size: 720px 694px;
+      //background-image: url("../../img/picture/background-banner-desctop.jpg");
+      background-image: image-set("../../img/picture/background-banner-desctop@2x.webp" 2x, "../../img/picture/background-banner-desctop.webp" 1x, "../../img/picture/background-banner-desctop@2x.jpg" 2x, "../../img/picture/background-banner-desctop.jpg" 1x);
       background-position: right center;
       background-repeat: no-repeat;
       overflow: visible;
       background-color: #505050;
       top: calc((53px + 59px + 111px) * (-1));//
       right: 0;
-      //width: 720px;
       width: 50%;
       height: 694px;
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-      background-image: url("../../img/picture/background-banner-desctop@2x.jpg");
+      //background-image: url("../../img/picture/background-banner-desctop@2x.jpg");
     }
   }
 
