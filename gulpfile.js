@@ -72,10 +72,11 @@ const watcher = () => {
 
 const copyHtml = () => {
   return gulp.src("source/*.html")
+    .pipe(replace("css/style.css", "css/style.min.css"))
     .pipe(htmlmin({
-      collapseWhitespace: true,
-    }))
-    .pipe(gulp.dest("build"))
+    collapseWhitespace: true,
+  }))
+  .pipe(gulp.dest("build"))
 }
 
 const copyFavicon = () => {
@@ -148,10 +149,12 @@ const buildcss = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(replace("../../img/", "../img/"))
+    .pipe(replace("../../fonts/", "../fonts/"))
     .pipe(postcss([
       autoprefixer(),
       csso
     ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -166,14 +169,19 @@ const buildmapjs = () => {
     .pipe(sync.stream());
 }
 
-const clear = () => {
+const clearbuild = () => {
   return del("build");
+}
+
+const clearcss = () => {
+  return del("source/css/*.{css,map}");
 }
 
 // **********************************************************************
 // полная сборка
 const build = gulp.series(
-  clear,
+  clearbuild,
+  clearcss,
   buildcss,
   gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyWebp, copySvg, spriteSvg),
   buildmapjs
