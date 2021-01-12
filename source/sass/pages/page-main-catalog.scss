@@ -1,7 +1,3 @@
-.page-main-catalog {
-  // empty
-}
-
 .page-main-catalog__catalog {
   margin: 27px 0 23px;
 
@@ -47,10 +43,6 @@
   & .card-product__property-row:not(:last-child) {
     @media screen and (min-width: $gl--breakpoint--tablet) {
       margin-bottom: 8px;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
     }
   }
 }
@@ -210,7 +202,6 @@
     }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      //padding: 16px 0;
       padding: 15px 0 16px;
     }
 
@@ -229,10 +220,6 @@
 
       @media screen and (min-width: $gl--breakpoint--tablet) {
         margin-bottom: 0;
-      }
-
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        // empty
       }
     }
 

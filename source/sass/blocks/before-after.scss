@@ -19,7 +19,6 @@
   &::before {
     position: absolute;
     z-index: 2;
-    //background-image: url("../../img/picture/example_before_mobile.png");
     background-image: image-set("../../img/picture/example_before_mobile@2x.webp" 2x, "../../img/picture/example_before_mobile.webp" 1x, "../../img/picture/example_before_mobile@2x.png" 2x, "../../img/picture/example_before_mobile.png" 1x);
     background-repeat: no-repeat;
     background-size: 311px 232px;
@@ -29,29 +28,15 @@
     height: calc(100% - 2px);
     content: "";
 
-    @media screen and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_before_mobile@2x.png");
-    }
-
-    /* --- tablet --- */
-
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      //background-image: url("../../img/picture/example_before_tablet.png");
       background-image: image-set("../../img/picture/example_before_tablet@2x.webp" 2x, "../../img/picture/example_before_tablet.webp" 1x, "../../img/picture/example_before_tablet@2x.png" 2x, "../../img/picture/example_before_tablet.png" 1x,);
       background-size: 354px 620px;
-      background-position: calc(0% + 5px) top;
+      background-position: calc(5px) top;
       top: -191px;
       height: 620px;
     }
 
-    @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_before_tablet@2x.png");
-    }
-
-    /* --- desctop --- */
-
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      //background-image: url("../../img/picture/example_before_desctop.png");
       background-image: image-set("../../img/picture/example_before_desctop@2x.webp" 2x, "../../img/picture/example_before_desctop.webp" 1x, "../../img/picture/example_before_desctop@2x.png" 2x, "../../img/picture/example_before_desctop.png" 1x);
       background-size: 405px 536px;
       background-position: left top;
@@ -61,16 +46,11 @@
       height: 536px;
       width: 100%;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_before_desctop@2x.png");
-    }
   }
 
   &::after {
     position: absolute;
     z-index: 1;
-    //background-image: url("../../img/picture/example_after_mobile.png");
     background-image: image-set("../../img/picture/example_after_mobile@2x.webp" 2x, "../../img/picture/example_after_mobile.webp" 1x, "../../img/picture/example_after_mobile@2x.png" 2x, "../../img/picture/example_after_mobile.png" 1x);
     background-repeat: no-repeat;
     background-size: 251px 240px;
@@ -79,14 +59,7 @@
     height: 100%;
     content: "";
 
-    @media screen and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_after_mobile@2x.png");
-    }
-
-    /* --- tablet --- */
-
     @media screen and (min-width: $gl--breakpoint--tablet) {
-      //background-image: url("../../img/picture/example_after_tablet.png");
       background-image: image-set("../../img/picture/example_after_tablet@2x.webp" 2x, "../../img/picture/example_after_tablet.webp" 1x, "../../img/picture/example_after_tablet@2x.png" 2x, "../../img/picture/example_after_tablet.png" 1x);
       background-size: 354px 607px;
       background-position: calc(100% - 1px) top;
@@ -94,14 +67,7 @@
       height: 620px;
     }
 
-    @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_after_tablet@2x.png");
-    }
-
-    /* --- desctop --- */
-
     @media screen and (min-width: $gl--breakpoint--desctop) {
-      //background-image: url("../../img/picture/example_after_desctop.png");
       background-image: image-set("../../img/picture/example_after_desctop@2x.webp" 2x, "../../img/picture/example_after_desctop.webp" 1x, "../../img/picture/example_after_desctop@2x.png" 2x, "../../img/picture/example_after_desctop.png" 1x);
       background-size: 325px 654px;
       background-position: left top;
@@ -109,10 +75,6 @@
       top: (-191px + 8px - 10px);
       width: 325px;
       height: 536px;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-      //background-image: url("../../img/picture/example_after_desctop@2x.png");
     }
   }
 }
@@ -163,11 +125,11 @@
     box-sizing: border-box;
 
     padding-bottom: 6px;
-    border-bottom: 1px dotted lighten($sg--black, 60%);
+    border-bottom: 1px dotted rgba($sg--black, 0.6);
     height: 27px;
 
     &:hover {
-      border-bottom: 1px solid lighten($sg--black, 50%);
+      border-bottom: 1px solid rgba($sg--black, 0.5);
     }
 
     &:active {
@@ -175,25 +137,13 @@
     }
   }
 
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
-
   &--before {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      // empty
-    }
-
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: left;
     }
   }
 
   &--after {
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      // empty
-    }
-
     @media screen and (min-width: $gl--breakpoint--desctop) {
       text-align: right;
     }
@@ -207,10 +157,6 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: none;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 
@@ -221,14 +167,6 @@
   width: 86px;
   height: 14px;
   border-radius: 7px;
-
-  @media screen and (min-width: $gl--breakpoint--tablet) {
-    // empty
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .before-after__indicator-check {
@@ -240,14 +178,6 @@
   top: 4px;
   left: 8px;
   background-color: $sg--basic_green;
-
-  @media screen and (min-width: $gl--breakpoint--tablet) {
-    // empty
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .before-after__control-slide {
@@ -256,10 +186,6 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     display: block;
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 }
 
@@ -270,10 +196,6 @@
     width: 428px;
     height: 6px;
     border-radius: 3px;
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 }
 
@@ -307,9 +229,5 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     top: calc(50% - 17px);
     left: calc(50% - 17px);
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 }

@@ -1,5 +1,3 @@
-// FONTS
-
 @mixin set-font($arg-name, $arg-size, $arg-line, $arg-transform: none) {
   font-family: $arg-name, "Arial", sans-serif;
   font-size: $arg-size;
@@ -15,13 +13,13 @@
 
 @mixin set-grid-tablet() {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;//112px 112px 112px 112px;//132px 132px 132px 132px
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 60px;
 }
 
 @mixin set-grid-desctop() {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;//grid-template-columns: 245px 245px 245px 245px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 80px;
 }
 

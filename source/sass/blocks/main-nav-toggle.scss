@@ -23,8 +23,8 @@
 }
 
 .main-nav--closed .main-nav-toggle:active::before {
-  background-color: lighten($sg--black, 60%);
-  box-shadow: 0 8px 0 0 lighten($sg--black, 60%), 0 16px 0 0 lighten($sg--black, 60%);
+  background-color: rgba($sg--black, 0.6);
+  box-shadow: 0 8px 0 0 rgba($sg--black, 0.6), 0 16px 0 0 rgba($sg--black, 0.6);
 }
 
 .main-nav--opened .main-nav-toggle::before,
@@ -50,7 +50,7 @@
 
 .main-nav--opened .main-nav-toggle:active::before,
 .main-nav--opened .main-nav-toggle:active::after {
-  background-color: lighten($sg--black, 60%);
+  background-color: rgba($sg--black, 0.6);
 }
 
 .main-nav--nojs .main-nav-toggle::before,

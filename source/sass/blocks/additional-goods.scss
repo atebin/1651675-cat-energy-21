@@ -5,8 +5,6 @@
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
-
-  //background-image: url("../../img/picture/promo-mobile.jpg");
   background-image: image-set("../../img/picture/promo-mobile@2x.webp" 2x, "../../img/picture/promo-mobile.webp" 1x, "../../img/picture/promo-mobile@2x.jpg" 2x, "../../img/picture/promo-mobile.jpg" 1x);
   background-size: 280px 289px;
   background-position: center center;
@@ -14,12 +12,7 @@
   width: 280px;
   height: 289px;
 
-  @media screen and (min-resolution: 2dppx) {
-    //background-image: url("../../img/picture/promo-mobile@2x.jpg");
-  }
-
   @media screen and (min-width: $gl--breakpoint--tablet) {
-    //background-image: url("../../img/picture/promo-tablet.jpg");
     background-image: image-set("../../img/picture/promo-tablet@2x.webp" 2x, "../../img/picture/promo-tablet.webp" 1x, "../../img/picture/promo-tablet@2x.jpg" 2x, "../../img/picture/promo-tablet.jpg" 1x);
     background-size: 708px 200px;
     width: 708px;
@@ -29,12 +22,7 @@
     justify-content: center;
   }
 
-  @media screen and (min-width: $gl--breakpoint--tablet) and (min-resolution: 2dppx) {
-    //background-image: url("../../img/picture/promo-tablet@2x.jpg");
-  }
-
   @media screen and (min-width: $gl--breakpoint--desctop) {
-    //background-image: url("../../img/picture/promo-desctop.jpg");
     background-image: image-set("../../img/picture/promo-desctop@2x.webp" 2x, "../../img/picture/promo-desctop.webp" 1x, "../../img/picture/promo-desctop@2x.jpg" 2x, "../../img/picture/promo-desctop.jpg" 1x);
     background-size: 248px 289px;
     width: 245px;
@@ -42,10 +30,6 @@
     grid-column: 4 / 5;
     grid-row: auto;
     justify-content: flex-end;
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) and (min-resolution: 2dppx) {
-    //background-image: url("../../img/picture/promo-desctop@2x.jpg");
   }
 
   &::before {

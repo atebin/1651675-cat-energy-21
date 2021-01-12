@@ -50,10 +50,6 @@ $md--padding-before-hr: 25px;
     margin: 0 0 76px;
   }
 
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
-
   &--hr {
     display: inline-block;
     background-color: $sg--white;
@@ -65,10 +61,6 @@ $md--padding-before-hr: 25px;
       padding-left: 40px;
 
       @include set-font("Oswald", 36px, 36px);
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
     }
   }
 }

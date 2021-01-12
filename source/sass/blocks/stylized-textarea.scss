@@ -17,10 +17,6 @@
     padding: 13px 18px;
   }
 
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
-
   &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-moz-placeholder,
@@ -31,10 +27,6 @@
 
     @media screen and (min-width: $gl--breakpoint--tablet) {
       @include set-font("Oswald", 20px, 24px, uppercase);
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
     }
   }
 

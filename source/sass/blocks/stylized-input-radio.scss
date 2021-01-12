@@ -12,10 +12,6 @@ $stylized-input-radio--border-width: 1px;
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: $stylized-input-radio--height-tablet;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .stylized-input-radio__label {
@@ -30,17 +26,11 @@ $stylized-input-radio--border-width: 1px;
     @include set-font("Oswald", 20px, 24px, uppercase);
     margin-left: $stylized-input-radio--height-tablet + $stylized-input-radio--inner-interval-tablet;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .stylized-input-radio__input {
   position: relative;
   align-self: start;
-  //-webkit-appearance: none;/* Chrome */
-  //-moz-appearance: none;/* Firefox */
   appearance: none;
   margin: 0;
   cursor: pointer;
@@ -73,18 +63,10 @@ $stylized-input-radio--border-width: 1px;
       width: $stylized-input-radio--height-tablet - 2 * $stylized-input-radio--border-width;
       height: $stylized-input-radio--height-tablet - 2 * $stylized-input-radio--border-width;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &:hover::before {
     border-color: $sg--gray_na4;
-  }
-
-  &:checked::before {
-    // empty
   }
 
   &:disabled::before {
@@ -112,14 +94,6 @@ $stylized-input-radio--border-width: 1px;
       top: 11px;
       left: 11px;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
-  }
-
-  &:hover::after {
-    // empty
   }
 
   &:checked::after {

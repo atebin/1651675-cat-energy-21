@@ -22,7 +22,6 @@ $gl--width--desctop: $gl--breakpoint--desctop - 2 * $gl--padding-side--desctop;
 
 // COLORS
 
-//styleguide
 $sg--basic_grey: #f2f2f2;
 $sg--special_grey: #cdcdcd;
 $sg--special_grey_2: #666666;
@@ -33,9 +32,9 @@ $sg--basic_green: #68b738;
 $sg--basic_green_2: #5eaa2f;
 $sg--status-error: #ff8282;
 
-$sg--white: #ffffff; // Нет в styleguide!
-$sg--black: #000000; // Нет в styleguide!
-$sg--gray_na1: #d9d9d9; // Нет в styleguide!
+$sg--white: #ffffff;
+$sg--black: #000000;
+$sg--gray_na1: #d9d9d9;
 $sg--gray_na2: #111111;
 $sg--gray_na3: #eaeaea;
 $sg--gray_na4: #bababa;
@@ -46,5 +45,4 @@ $color-text: #000000;
 $color-text--theme-light: #000000;
 $color-text--theme-dark: #ffffff;
 
-// LINES
 $line-border-light: #e6e6e6;

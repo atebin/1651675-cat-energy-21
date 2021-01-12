@@ -68,12 +68,14 @@ const watcher = () => {
 }
 
 // **********************************************************************
-
-// Build
+// составные части Build
 
 const copyHtml = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeTagWhitespace: false,
+    }))
     .pipe(gulp.dest("build"))
 }
 
@@ -170,7 +172,6 @@ const clear = () => {
 }
 
 // **********************************************************************
-
 // полная сборка
 const build = gulp.series(
   clear,
@@ -184,5 +185,5 @@ exports.build = build;
 // **********************************************************************
 
 exports.default = gulp.series(
-  build, server, watcher // styles, server, watcher
+  build, server, watcher
 );

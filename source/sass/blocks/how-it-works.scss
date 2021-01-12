@@ -22,7 +22,7 @@
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
@@ -73,10 +73,6 @@
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     align-items: flex-start;
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 
   &--leaf,
@@ -131,10 +127,6 @@
       display: unset;
     }
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .how-it-works__number {
@@ -152,9 +144,5 @@
     margin-top: -40px;
 
     @include set-font("Oswald", 280px, 280px);
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 }

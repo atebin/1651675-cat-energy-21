@@ -12,11 +12,6 @@
 }
 
 .page-footer__wrapper {
-  /*
-  width: $gl--breakpoint--mobile;
-  margin: 0 auto;
-  */
-
   @media screen and (min-width: $gl--breakpoint--tablet) {
     box-sizing: border-box;
     height: 150px;
@@ -50,7 +45,6 @@
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     padding-bottom: 4px;
-    // empty
   }
 
   & .page-header__logo-svg {
@@ -105,10 +99,6 @@
       width: 30px;
       height: 22px;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &--instagram .page-footer__social-svg {
@@ -118,10 +108,6 @@
       padding-top: 4px;
       padding-left: 12px;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &--facebook .page-footer__social-svg {
@@ -130,10 +116,6 @@
       height: 33px;
       padding-top: 4px;
       padding-left: 2px;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
     }
   }
 }
@@ -160,10 +142,6 @@
     padding-top: 6px;
     border: none;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .page-footer__copyright-text {
@@ -186,10 +164,6 @@
 }
 
 .page-footer__copyright:hover {
-  & .page-footer__copyright-text {
-    //empty
-  }
-
   & .page-footer__copyright-svg {
     color: $sg--basic_green;
   }

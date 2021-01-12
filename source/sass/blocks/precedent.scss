@@ -26,10 +26,6 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .precedent__value {
@@ -39,10 +35,6 @@
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 36px, uppercase);
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    //empty
   }
 }
 
@@ -58,7 +50,6 @@
   @media screen and (min-width: $gl--breakpoint--desctop) {
     text-align: left;
   }
-
 
   &--special {
     width: calc((100% - 31px) / 2);
@@ -79,10 +70,6 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       width: calc((100% - 42px) / 2);
       height: 72px;
-    }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
     }
 
     & .precedent__label {
@@ -122,16 +109,10 @@
         @include set-font("Oswald", 30px, 37px, uppercase);
         padding: 15px 0 11px;
       }
-
-      @media screen and (min-width: $gl--breakpoint--desctop) {
-        // empty
-      }
     }
   }
 
   &--cost {
-    //empty
-
     @media screen and (min-width: $gl--breakpoint--tablet) {
       display: flex;
       flex-direction: column;

@@ -15,7 +15,7 @@
   font-weight: 400;
   color: $sg--black;
   padding: 0 $gl--padding-side--mobile;
-  margin: 0 0 38px;
+  margin: 0 0 33px;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 60px, 60px);
@@ -47,10 +47,6 @@
   @media screen and (min-width: $gl--breakpoint--tablet) {
     background-color: $sg--white;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .page-main-index__example-title {
@@ -76,10 +72,6 @@
 
 .page-main-index__example-wrapper {
   display: block;
-
-  @media screen and (min-width: $gl--breakpoint--tablet) {
-    // empty
-  }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     @include set-grid-desctop();

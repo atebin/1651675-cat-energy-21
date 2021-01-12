@@ -18,7 +18,7 @@
 .programs-list__item {
   min-height: 266px;
   box-sizing: border-box;
-  padding: 29px 20px 40px;//18
+  padding: 29px 20px 40px;
   position: relative;
   list-style: none;
   background-color: $sg--basic_grey;
@@ -179,10 +179,6 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-position: calc(0% + 0px) calc(50% - 2px);
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &--pro {
@@ -195,10 +191,6 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       background-position: calc(0% - 0px) calc(50% + 3px);
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 }
 
@@ -206,18 +198,15 @@
   @include set-font("Arial", 14px, 18px);
   font-weight: 400;
   color: $sg--special_dark_grey;
-  //margin: 0 0 23px;
   margin: 0;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Arial", 16px, 24px);
-    //margin-bottom: 56px;
     margin-right: 17px;
   }
 
   @media screen and (min-width: $gl--breakpoint--desctop) {
     @include set-font("Arial", 16px, 24px);
-    //margin-bottom: 32px;
     margin-right: 0;
   }
 }
@@ -240,10 +229,6 @@
     border-top: none;
     padding-top: 0;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .programs-list__goto_catalog {
@@ -256,15 +241,9 @@
   color: $sg--black;
   text-decoration: none;
   display: inline-block;
-  //padding-right: 25px;
-  //position: relative;
 
   @media screen and (min-width: $gl--breakpoint--tablet) {
     @include set-font("Oswald", 20px, 20px, uppercase);
-  }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
   }
 
   &:hover {

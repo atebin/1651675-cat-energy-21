@@ -15,7 +15,8 @@
 <body class="page__body">
 
   <!-- header *** -->
-  <header class="page__body-header page-header main-nav main-nav--closed">
+  <!-- Класс  main_nav__nojs отображает меню в мобильной версии в потоке. Снять класс при загрузке JS -->
+  <header class="page__body-header page-header main-nav main-nav--closed main-nav--nojs">
     <div class="page-header__wrapper page-header__wrapper--catalog">
       <div class="page-header__logo">
         <a class="page-header__logo-link" href="/index.html" aria-label="Переход на главную страницу сайта">
@@ -94,8 +95,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=1"
                     aria-label="Перейти в картчку товара Cat PRO 500 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">PRO&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">500 г</span>
                   </a>
                 </h3>
@@ -151,8 +152,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=2"
                     aria-label="Перейти в картчку товара Cat PRO 1000 г">
-                    <span class="card-product__name-item ">Cat Energy <br class="card-product__name-br1">PRO<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item ">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">PRO&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                   </a>
                 </h3>
@@ -208,8 +209,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=3"
                     aria-label="Перейти в картчку товара Cat PRO 500 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">PRO&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">500 г</span>
                   </a>
                 </h3>
@@ -265,8 +266,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=4"
                     aria-label="Перейти в картчку товара Cat PRO 1000 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">PRO<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">PRO&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                   </a>
                 </h3>
@@ -322,8 +323,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=5"
                     aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">SLIM&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">500 г</span>
                   </a>
                 </h3>
@@ -379,8 +380,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=6"
                     aria-label="Перейти в картчку товара Cat Energy SLIM 1000 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">SLIM&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">1000 г</span>
                   </a>
                 </h3>
@@ -436,8 +437,8 @@
                 <h3 class="card-product__name">
                   <a class="card-product__name-link" href="card.html?id=7"
                     aria-label="Перейти в картчку товара Cat Energy SLIM 500 г">
-                    <span class="card-product__name-item">Cat Energy <br class="card-product__name-br1">SLIM<br
-                        class="card-product__name-br2"></span>
+                    <span class="card-product__name-item">Cat Energy&nbsp;<br
+                        class="card-product__name-br1">SLIM&nbsp;<br class="card-product__name-br2"></span>
                     <span class="card-product__name-item card-product__name-item--special">500 г</span>
                   </a>
                 </h3>
@@ -472,8 +473,9 @@
 
               <div class="card-product__info">
                 <div class="card-product__name">
-                  <span class="card-product__name-item">Показать еще <br class="br-for--tablet">100500 товаров</span>
-                  <span class="card-product__name-item card-product__name-item--special">На самом деле вкусов <br
+                  <span class="card-product__name-item">Показать еще&nbsp;<br class="br-for--tablet"><br
+                      class="br-for--desctop">100500 товаров</span>
+                  <span class="card-product__name-item card-product__name-item--special">На самом деле вкусов&nbsp;<br
                       class="br-for--tablet">гораздо
                     больше!</span>
                 </div>
@@ -536,7 +538,7 @@
         <!--div class="additional-goods__wrapper-promo"-->
         <div class="additional-goods__promo">
           <p class="additional-goods__promo-text">
-            Закажите все <br>и получите чехол для <br>кота в подарок!
+            Закажите все&nbsp;<br>и получите чехол для&nbsp;<br>кота в подарок!
           </p>
           <!--/div-->
         </div>
@@ -551,12 +553,12 @@
       <div class="page-main-index__contacts-address address">
         <div class="address__info address__info--dark-theme">
           <p class="address__info-message">
-            приглашаем <br>к сотрудничеству <br>дилеров!
+            приглашаем&nbsp;<br>к сотрудничеству&nbsp;<br>дилеров!
           </p>
 
           <div class="address__info-location">
             <p>
-              ул. Большая <br>Конюшенная, д. 19/8
+              ул. Большая&nbsp;<br>Конюшенная, д. 19/8
             </p>
             <p>
               Санкт-Петербург

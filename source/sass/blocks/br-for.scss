@@ -5,10 +5,6 @@
     @media screen and (min-width: $gl--breakpoint--tablet) {
       display: none;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &--tablet {
@@ -25,10 +21,6 @@
 
   &--desctop {
     display: none;
-
-    @media screen and (min-width: $gl--breakpoint--tablet) {
-      // empty
-    }
 
     @media screen and (min-width: $gl--breakpoint--desctop) {
       display: unset;

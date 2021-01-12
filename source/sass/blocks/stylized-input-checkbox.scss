@@ -12,10 +12,6 @@ $stylized-input-checkbox--border-width: 1px;
   @media screen and (min-width: $gl--breakpoint--tablet) {
     height: $stylized-input-checkbox--height-tablet;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .stylized-input-checkbox__label {
@@ -30,17 +26,11 @@ $stylized-input-checkbox--border-width: 1px;
     @include set-font("Oswald", 20px, 24px, uppercase);
     margin-left: $stylized-input-checkbox--height-tablet + $stylized-input-checkbox--inner-interval-tablet;
   }
-
-  @media screen and (min-width: $gl--breakpoint--desctop) {
-    // empty
-  }
 }
 
 .stylized-input-checkbox__input {
   position: relative;
   align-self: start;
-  //-webkit-appearance: none;/* Chrome */
-  //-moz-appearance: none;/* Firefox */
   appearance: none;
   margin: 0;
   cursor: pointer;
@@ -72,18 +62,10 @@ $stylized-input-checkbox--border-width: 1px;
       width: $stylized-input-checkbox--height-tablet - 2 * $stylized-input-checkbox--border-width;
       height: $stylized-input-checkbox--height-tablet - 2 * $stylized-input-checkbox--border-width;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
   }
 
   &:hover::before {
     border-color: $sg--gray_na4;
-  }
-
-  &:checked::before {
-    // empty
   }
 
   &:disabled::before {
@@ -114,21 +96,9 @@ $stylized-input-checkbox--border-width: 1px;
       top: 12px;
       left: 7px;
     }
-
-    @media screen and (min-width: $gl--breakpoint--desctop) {
-      // empty
-    }
-  }
-
-  &:hover::after {
-    // empty
   }
 
   &:checked::after {
     opacity: 1;
-  }
-
-  &:disabled:checked::after {
-    //opacity: 0.3;
   }
 }
