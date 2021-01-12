@@ -74,7 +74,6 @@ const copyHtml = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({
       collapseWhitespace: true,
-      removeTagWhitespace: false,
     }))
     .pipe(gulp.dest("build"))
 }
