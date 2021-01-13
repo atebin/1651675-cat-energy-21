@@ -152,6 +152,21 @@ const buildcss = () => {
     .pipe(replace("../../fonts/", "../fonts/"))
     .pipe(postcss([
       autoprefixer(),
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("source/css"))
+    .pipe(sync.stream());
+}
+
+const buildcssmin = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(replace("../../img/", "../img/"))
+    .pipe(replace("../../fonts/", "../fonts/"))
+    .pipe(postcss([
+      autoprefixer(),
       csso
     ]))
     .pipe(rename("style.min.css"))
@@ -183,6 +198,7 @@ const build = gulp.series(
   clearbuild,
   clearcss,
   buildcss,
+  buildcssmin,
   gulp.parallel(copyHtml, copyFavicon, copyCss, copyFonts, copyJs, minifyJs, optimizeImg, copyWebp, copySvg, spriteSvg),
   buildmapjs
 );
